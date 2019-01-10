@@ -1,47 +1,45 @@
 export class Dictionary<T> {
-    private _values: { [key: string]: T; } = {};
-    private _keys: string[] = [];
+  private dictValues: { [key: string]: T } = {};
+  private dictKeys: string[] = [];
 
-    public get(key: string): T {
-        return this._values[key];        
-    }
+  public get(key: string): T {
+    return this.dictValues[key];
+  }
 
-    public contains(key: string): boolean {
-        return key in this._values;
-    }
+  public contains(key: string): boolean {
+    return key in this.dictValues;
+  }
 
-    public remove(key: string) {
-        var index = this._keys.indexOf(key, 0);
-        this._keys.splice(index, 1);
-        delete this._values[key];
-    }
+  public remove(key: string) {
+    const index = this.dictKeys.indexOf(key, 0);
+    this.dictKeys.splice(index, 1);
+    delete this.dictValues[key];
+  }
 
-    public set(key: string, value: T) {
-        if (!(key in this._values)) {
-            this._keys.push(key);
-        }
-        this._values[key] = value;
+  public set(key: string, value: T) {
+    if (!(key in this.dictValues)) {
+      this.dictKeys.push(key);
     }
+    this.dictValues[key] = value;
+  }
 
-    public get keys(): string[] {
-        return this._keys;
-    }
+  public get keys(): string[] {
+    return this.dictKeys;
+  }
 
-    public getAll(): { [key: string]: T; } {
-        return this._values;
-    }
+  public getAll(): { [key: string]: T } {
+    return this.dictValues;
+  }
 
-    public getSet(key: string, valueGetter: () => T): T;
-    public getSet(key: string, value: T): T;
-    public getSet(key: string, valueOrvalueGetter: any): T {
-        if (!this.contains(key)) {
-            this.set(key, typeof valueOrvalueGetter == 'function' ? valueOrvalueGetter() : valueOrvalueGetter);
-        }
-        return this.get(key);
+  public getSet(key: string, valueOrvalueGetter: T | { (): T }): T {
+    if (!this.contains(key)) {
+      this.set(key, typeof valueOrvalueGetter === 'function' ? (valueOrvalueGetter as any)() : valueOrvalueGetter);
     }
+    return this.get(key);
+  }
 
-    public clear() {
-        this._keys = [];
-        this._values = {};
-    }
+  public clear() {
+    this.dictKeys = [];
+    this.dictValues = {};
+  }
 }

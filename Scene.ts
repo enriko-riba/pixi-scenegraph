@@ -1,90 +1,90 @@
 ﻿import * as PIXI from 'pixi.js';
-import { SceneManager } from "./SceneManager";
+import { SceneManager } from './SceneManager';
 
 /**
- *   Represents a scene. 
+ *   Represents a scene.
  *   Only one scene at a time is rendered.
  */
 export abstract class Scene extends PIXI.Container {
-    private paused: boolean = false;
-    private hudScene: PIXI.Container | null = null;
-    private backgroundColor: number;
-    public sceneManager: SceneManager;
-    public onActivate(): void{}
-    public onDeactivate(): void{}
-    public onResize(): void{}
-    public onUpdate(dt: number):void{};
-    public onDestroy(options?: PIXI.DestroyOptions | boolean): void{}
+  public sceneManager: SceneManager;
+  public Name: string;
 
-    /**
-     *   Creates a new scene instance.
-     *   @param name the scene name.
-     */
-    constructor(scm: SceneManager, name: string) {
-        super();
-        this.sceneManager = scm;
-        this.backgroundColor = 0x0;
-        this.Name = name;
-    }
+  private paused: boolean = false;
+  private hudScene: PIXI.Container | null = null;
+  private backgroundColor: number;
+  private clearValue: boolean = true;
 
-    public Name: string;
+  /**
+   *   Creates a new scene instance.
+   *   @param name the scene name.
+   */
+  constructor(scm: SceneManager, name: string) {
+    super();
+    this.sceneManager = scm;
+    this.backgroundColor = 0x0;
+    this.Name = name;
+  }
 
-    public get BackGroundColor():number {
-        return this.backgroundColor;
-    }
-    public set BackGroundColor(color: number) {
-        this.backgroundColor = color;
-    }
+  public onActivate(): void {}
+  public onDeactivate(): void {}
+  public onResize(): void {}
+  public onUpdate(dt: number): void {}
+  public onDestroy(options?: PIXI.DestroyOptions | boolean): void {}
 
-    public get HudOverlay(): PIXI.Container | null {
-        return this.hudScene;
-    }
-    public set HudOverlay(hud: PIXI.Container | null) {
-        if (this.hudScene) {
-            this.removeChild(this.hudScene);
-        }
-        this.hudScene = hud;
+  public get BackGroundColor(): number {
+    return this.backgroundColor;
+  }
+  public set BackGroundColor(color: number) {
+    this.backgroundColor = color;
+  }
 
-        if (this.hudScene) {
-            var maxIndex = this.children.length;
-            this.addChildAt(this.hudScene, maxIndex);
-        }
+  public get HudOverlay(): PIXI.Container | null {
+    return this.hudScene;
+  }
+  public set HudOverlay(hud: PIXI.Container | null) {
+    if (this.hudScene) {
+      this.removeChild(this.hudScene);
     }
+    this.hudScene = hud;
 
-    public addChild<T extends PIXI.DisplayObject>(child: T): T {
-        var dispObj = super.addChild(child);
-        if (this.hudScene) {
-            var maxIndex = this.children.length - 1;
-            this.setChildIndex(this.hudScene, maxIndex);
-        }        
-        return dispObj;
+    if (this.hudScene) {
+      const maxIndex = this.children.length;
+      this.addChildAt(this.hudScene, maxIndex);
     }
+  }
 
-    public addChildAt<T extends PIXI.DisplayObject>(child: T, index: number): T {
-        var dispObj = super.addChildAt(child, index);
-        if (this.hudScene) {
-            var maxIndex = this.children.length - 1;
-            this.setChildIndex(this.hudScene, maxIndex);
-        }        
-        return dispObj;
+  public addChild<T extends PIXI.DisplayObject>(child: T): T {
+    const dispObj = super.addChild(child);
+    if (this.hudScene) {
+      const maxIndex = this.children.length - 1;
+      this.setChildIndex(this.hudScene, maxIndex);
     }
+    return dispObj;
+  }
 
-    public pause():void {
-        this.paused = true;
+  public addChildAt<T extends PIXI.DisplayObject>(child: T, index: number): T {
+    const dispObj = super.addChildAt(child, index);
+    if (this.hudScene) {
+      const maxIndex = this.children.length - 1;
+      this.setChildIndex(this.hudScene, maxIndex);
     }
-    public resume():void {
-        this.paused = false;
-    }
-    public isPaused():boolean {
-        return this.paused;
-    }
+    return dispObj;
+  }
 
-    private _clear:boolean = true;
-    public get clear() {
-        return this._clear;
-    }
+  public pause(): void {
+    this.paused = true;
+  }
+  public resume(): void {
+    this.paused = false;
+  }
+  public isPaused(): boolean {
+    return this.paused;
+  }
+  public get clear() {
+    return this.clearValue;
+  }
 
-    public set clear(clearFlag: boolean) {
-        this._clear = clearFlag;
-    }    
+  public set clear(clearFlag: boolean) {
+    this.clearValue = clearFlag;
+  }
 }
