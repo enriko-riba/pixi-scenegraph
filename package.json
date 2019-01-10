@@ -2,7 +2,8 @@
   "name": "pixi-scenegraph",
   "version": "1.0.0",
   "description": "typescript scene engine for pixi.js",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types":"dist/index.d.ts",
   "files": [
     "lib/**/*"
   ],
