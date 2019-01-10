@@ -35,7 +35,7 @@ export class TextureLoader {
   };
 
   /**
-   * simple cache used to apply mipmap and scaleMode only the first time an atlas is loaded.[]
+   * simple cache used to apply mipmap and scaleMode only the first time an atlas is loaded.
    */
   private static resourceCache: any = {};
 }

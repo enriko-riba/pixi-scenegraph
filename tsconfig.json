@@ -54,6 +54,7 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "./webpack.config.ts"
   ]   
 }
