@@ -1,0 +1,26 @@
+{
+  "name": "pixi-scenegraph",
+  "version": "1.0.0",
+  "description": "typescript scene engine for pixi.js",
+  "main": "index.js",
+  "files":["lib/**/*"],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pixi",
+    "scenegraph",
+    "engine"
+  ],
+  "author": "Enriko Riba",
+  "license": "MIT",
+  "dependencies": {
+    "pixi-filters": "^2.6.2",
+    "pixi.js": "^4.8.5"
+  },
+  "devDependencies": {
+    "@types/pixi.js": "^4.8.6",
+    "typescript": "^3.2.2"
+  }
+}
