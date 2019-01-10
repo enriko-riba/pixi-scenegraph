@@ -18,6 +18,10 @@
     "scenegraph",
     "engine"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enriko-riba/pixi-scenegraph.git"
+  },
   "author": "Enriko Riba",
   "license": "MIT",
   "dependencies": {
