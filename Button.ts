@@ -74,7 +74,7 @@ export class Button extends PIXI.Sprite {
   public set outlineColor(value: number) {
     this.outlineColorValue = value;
     this.filters =
-     this.outlineModeValue === OutlineMode.Filter ? [new OutlineFilter(1, this.outlineColorValue, 0.5)] : null;
+      this.outlineModeValue === OutlineMode.Filter ? [new OutlineFilter(1, this.outlineColorValue, 0.5)] : null;
   }
 
   public get disabled() {
