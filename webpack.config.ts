@@ -4,6 +4,10 @@ const config: webpack.Configuration = {
   entry: {
     index: './src/index.ts',
   },
+  output: {
+    library: 'pixi-scenegraph',
+    libraryTarget: 'umd',
+  },
 
   resolve: {
     extensions: ['.ts', '.js'],
