@@ -1,9 +1,9 @@
 {
   "name": "pixi-scenegraph",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "typescript scene engine for pixi.js",
   "main": "dist/index.js",
-  "types":"dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "lib/**/*"
   ],
@@ -25,13 +25,12 @@
   },
   "author": "Enriko Riba",
   "license": "MIT",
-  "dependencies": {
-    "pixi-filters": "^2.6.2",
-    "pixi.js": "^4.8.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/pixi.js": "^4.8.6",
     "@types/webpack": "^4.4.22",
+    "pixi-filters": "^2.6.2",
+    "pixi.js": "^4.8.5",
     "prettier": "^1.15.3",
     "ts-loader": "^5.3.3",
     "ts-node": "^7.0.1",
@@ -40,5 +39,8 @@
     "typescript": "^3.2.2",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1"
+  },
+  "peerDependencies": {
+    "pixi.js": ">=4"
   }
 }

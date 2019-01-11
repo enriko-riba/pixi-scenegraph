@@ -2,7 +2,7 @@ import * as webpack from 'webpack';
 
 const config: webpack.Configuration = {
   entry: {
-    index: './index.ts',
+    index: './src/index.ts',
   },
 
   resolve: {
@@ -10,7 +10,7 @@ const config: webpack.Configuration = {
   },
 
   mode: 'development', //'production',
-  devtool: false,
+  devtool: 'source-map',
   externals: [
     // Don't bundle pixi.js and filters.
     { 'pixi.js': 'PIXI' },
