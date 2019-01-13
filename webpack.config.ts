@@ -6,7 +6,7 @@ const config: webpack.Configuration = {
   },
   output: {
     library: 'pixi-scenegraph',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
 
   resolve: {
