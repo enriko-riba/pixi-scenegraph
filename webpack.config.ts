@@ -13,22 +13,22 @@ const config: webpack.Configuration = {
     extensions: ['.ts', '.js'],
   },
 
-  mode: 'development', //'production',
-  devtool: 'source-map',
+  mode: 'production',
+  //devtool: 'source-map',
   externals: [
     // Don't bundle pixi.js and filters.
     { 
       'pixi.js': {
         root: 'PIXI',
-        commonjs2:'PIXI',
-        commonjs:'PIXI'
+        commonjs2:'pixi.js',
+        commonjs:'pixi.js'
       }
     },
     { 
       '@pixi/filter-outline': {
         root: 'PIXI.filters',
-        commonjs2:'PIXI.filters',
-        commonjs:'PIXI.filters'
+        commonjs2:'@pixi/filter-outline',
+        commonjs:'@pixi/filter-outline'
       }
     }
   ],
