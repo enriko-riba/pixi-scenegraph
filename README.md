@@ -11,7 +11,7 @@ It is written in typescript and aimed for typescript users but not limited to ty
 
 ### Show me da stuff
 
-The following image is represents the object hierarchy:
+The following image represents the object hierarchy:
 
 ![Hierarchy](./doc/img/Hierarchy.png "Object hierarchy")
 
