@@ -1,5 +1,6 @@
 ﻿import * as PIXI from 'pixi.js';
-import { Scene } from './Scene';
+import { ISceneResizer, DefaultResizer, Scene } from '.';
+
 export enum State {
   GLOBAL,
   MENU,
@@ -280,46 +281,4 @@ export class SceneManager {
 
     // stats.end();
   };
-}
-
-export class DefaultResizer implements ISceneResizer {
-  constructor(protected designedWidth: number, protected designedHeight: number) {}
-  public GetAvailableSize(): ISize {
-    return { x: window.innerWidth, y: window.innerHeight };
-  }
-  public GetAspectRatio(): number {
-    return this.designedWidth / this.designedHeight;
-  }
-  public CalculateSize(availableSize: ISize, aspect: number): ISize {
-    const maxWidth = Math.floor(aspect * availableSize.y);
-    const maxHeight = Math.floor(window.innerHeight);
-    return { x: Math.min(maxWidth, availableSize.x), y: Math.min(maxHeight, availableSize.y) };
-  }
-  public CalculateScale(newSize: ISize): number {
-    return newSize.x / this.designedWidth;
-  }
-}
-
-export interface ISize {
-  x: number;
-  y: number;
-}
-
-/**
- *   Object passed to the SceneManager handling various aspects of scene resizing.
- */
-export interface ISceneResizer {
-  /*
-   *   Returns the available width.
-   */
-  GetAvailableSize: () => ISize;
-
-  /*
-   *   Returns the desired aspect ratio for the stage.
-   */
-  GetAspectRatio: () => number;
-
-  CalculateSize: (availableSize: ISize, aspect: number) => ISize;
-
-  CalculateScale(newSize: ISize): number;
 }

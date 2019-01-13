@@ -2,7 +2,7 @@
 import { SceneManager } from './SceneManager';
 
 /**
- *   Represents a scene.
+ *   Represents a scene instance.
  *   Only one scene at a time is rendered.
  */
 export abstract class Scene extends PIXI.Container {
@@ -53,6 +53,10 @@ export abstract class Scene extends PIXI.Container {
     }
   }
 
+  /**
+   * Adds a child object to the scene.
+   * @param child PIXI.DisplayObject
+   */
   public addChild<T extends PIXI.DisplayObject>(child: T): T {
     const dispObj = super.addChild(child);
     if (this.hudScene) {
@@ -62,6 +66,11 @@ export abstract class Scene extends PIXI.Container {
     return dispObj;
   }
 
+  /**
+   * Adds a child object to the scene.
+   * @param child PIXI.DisplayObject 
+   * @param index position in the display object list where the child is inserted 
+   */
   public addChildAt<T extends PIXI.DisplayObject>(child: T, index: number): T {
     const dispObj = super.addChildAt(child, index);
     if (this.hudScene) {
