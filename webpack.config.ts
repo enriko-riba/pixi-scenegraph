@@ -17,8 +17,20 @@ const config: webpack.Configuration = {
   devtool: 'source-map',
   externals: [
     // Don't bundle pixi.js and filters.
-    { 'pixi.js': 'PIXI' },
-    { '@pixi/filter-outline': 'PIXI.filters' },
+    { 
+      'pixi.js': {
+        root: 'PIXI',
+        commonjs2:'PIXI',
+        commonjs:'PIXI'
+      }
+    },
+    { 
+      '@pixi/filter-outline': {
+        root: 'PIXI.filters',
+        commonjs2:'PIXI.filters',
+        commonjs:'PIXI.filters'
+      }
+    }
   ],
 
   module: {
