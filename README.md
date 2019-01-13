@@ -49,4 +49,4 @@ inside the MenuScene class:
     btnStart.onClick = () => this.sceneManager.ActivateScene("scene_1");
 
 ### Documentation
-[API documentation](./doc/generated/index.html))
+[API documentation](./doc/generated/index.html)
