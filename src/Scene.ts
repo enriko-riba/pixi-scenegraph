@@ -28,7 +28,7 @@ export abstract class Scene extends PIXI.Container {
   public onActivate(): void {}
   public onDeactivate(): void {}
   public onResize(): void {}
-  public onUpdate(dt: number): void {}
+  public onUpdate(dt: number, timestamp:number): void {}
   public onDestroy(options?: PIXI.DestroyOptions | boolean): void {}
 
   public get BackGroundColor(): number {

@@ -274,7 +274,7 @@ export class SceneManager {
     if (dt > 50) {
       dt = 50;
     }
-    this.currentScene.onUpdate(dt);
+    this.currentScene.onUpdate(dt, timestamp);
 
     this.startTime = timestamp;
     this.renderer.render(this.masterContainer, undefined, this.currentScene.clear);
