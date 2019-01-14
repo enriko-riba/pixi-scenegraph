@@ -13,7 +13,7 @@ It is written in typescript and aimed for typescript users but not limited to ty
 
 The following image represents the object hierarchy:
 
-![Hierarchy](https://enriko-riba.github.io/pixi-scenegraph/img/Hierarchy.png "Object hierarchy")
+![Hierarchy](../img/Hierarchy.png "Object hierarchy")
 
 
 ### What is a Scene
@@ -27,7 +27,7 @@ Only one scene at a time is active and only the active scene is rendered. A scen
 
 Z-Index
 
-![z ordering](https://enriko-riba.github.io/pixi-scenegraph/img/zindex.png "Z Ordering")
+![z ordering](../img/zindex.png "Z Ordering")
 
 ### Show me a 'Hello World' example
     const scm = new SceneManager(SCENE_WIDTH, SCENE_HEIGHT, renderOptions);
