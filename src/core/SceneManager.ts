@@ -1,5 +1,5 @@
 ﻿import * as PIXI from 'pixi.js';
-import { ISceneResizer, DefaultResizer, Scene } from '..';
+import { IScreenSizeCalculator, DefaultScreenSizeCalculator, Scene } from '..';
 
 export enum State {
   GLOBAL,
@@ -32,22 +32,23 @@ export class SceneManager {
 
   private designWidth: number;
   private designHeight: number;
-  private sceneResizer: ISceneResizer;
+  private screenSizeCalculator: IScreenSizeCalculator;
 
   private startTime: number;
   private animationFrameHandle: number = -1;
 
   /**
-   *   Creates a new SceneManager instance.
+   * Creates a new SceneManager instance.
    *
-   *   @param width - the width of the scene
-   *   @param height - the height of the scene
-   *   @param resizer - custom resize function
+   * @param width - the width of the scene
+   * @param height - the height of the scene
+   * @param screenSizeCalculator - custom screen size calculator implementation, if undefined the default is used
+   * @remarks The DefaultScreenSizeCalculator returns screen dimensions that horizontaly fit in the real screen and preserve the aspect ratio of the given width and height values.
    */
-  constructor(width: number, height: number, options?: PIXI.RendererOptions, resizer?: ISceneResizer) {
+  constructor(width: number, height: number, options?: PIXI.RendererOptions, screenSizeCalculator?: IScreenSizeCalculator) {
     this.designWidth = width;
     this.designHeight = height;
-    this.sceneResizer = resizer || new DefaultResizer(this.designWidth, this.designHeight);
+    this.screenSizeCalculator = screenSizeCalculator || new DefaultScreenSizeCalculator(this.designWidth, this.designHeight);
     this.masterContainer = new PIXI.Container();
 
     if (!options) {
@@ -153,7 +154,7 @@ export class SceneManager {
       scene = sceneOrName as Scene;
     }
 
-    if (this.currentScene /*&& this.currentScene.onDeactivate*/ && this.currentScene !== scene) {
+    if (this.currentScene && this.currentScene !== scene) {
       console.log('DeactivateScene ' + this.currentScene.Name);
       this.currentScene.onDeactivate();
     }
@@ -231,18 +232,20 @@ export class SceneManager {
   };
 
   private resizeHandler = () => {
-    const avlSize = this.sceneResizer.GetAvailableSize();
-    const aspect = this.sceneResizer.GetAspectRatio();
-    const size = this.sceneResizer.CalculateSize(avlSize, aspect);
+    const avlSize = this.screenSizeCalculator.GetAvailableSize();
+    const aspect = this.screenSizeCalculator.GetAspectRatio();
+    const size = this.screenSizeCalculator.CalculateSize(avlSize, aspect);
     this.renderer.resize(size.x, size.y);
 
+    const scale = this.screenSizeCalculator.CalculateScale(size);
+
     if (this.currentScene) {
-      this.currentScene.scale.set(this.sceneResizer.CalculateScale(size));
+      this.currentScene.scale.set(scale.x, scale.y);
       this.currentScene.onResize();
     }
 
     if (this.masterHudOverlay) {
-      this.masterHudOverlay.scale.set(this.sceneResizer.CalculateScale(size));
+      this.masterHudOverlay.scale.set(scale.x, scale.y);
     }
   };
 

@@ -29,38 +29,50 @@ export abstract class Scene extends PIXI.Container {
    * Fired every time the scene is to be activated.
    * @remarks If a new scene is activated, `currentScene.onDeactivate()` is fired first followed by `newScene.onActivate()`
    */
-  public onActivate(): void {}
+  public onActivate(): void { }
 
   /**
    * Fired every time the scene is deactivated.
    */
-  public onDeactivate(): void {}
+  public onDeactivate(): void { }
 
   /**
    * Fired every time the window resizes, the scene is about to be activated (before `onActivate`) and after a MasterHudOverlay is set.
    * @remarks Note that this function is fired only for the current (active) scene! 
    */
-  public onResize(): void {}
+  public onResize(): void { }
 
   /**
    * Fired on each animation frame
    * @param dt - ellapsed time delta
    * @param timestamp - total time, usefull for TWEEN.update and other libs depending on total time
    */
-  public onUpdate(dt: number, timestamp:number): void {}
+  public onUpdate(dt: number, timestamp: number): void { }
 
-  public onDestroy(options?: PIXI.DestroyOptions | boolean): void {}
+  public onDestroy(options?: PIXI.DestroyOptions | boolean): void { }
 
+  /**
+   * Gets the scene background color.
+   */
   public get BackGroundColor(): number {
     return this.backgroundColor;
   }
+  /**
+   * Sets the scene background color.
+   */
   public set BackGroundColor(color: number) {
     this.backgroundColor = color;
   }
 
+  /**
+   * Gets the scene hud overlay container.
+   */
   public get HudOverlay(): PIXI.Container | null {
     return this.hudScene;
   }
+  /**
+   * Sets the scene hud overlay container.
+   */
   public set HudOverlay(hud: PIXI.Container | null) {
     if (this.hudScene) {
       this.removeChild(this.hudScene);
@@ -100,20 +112,34 @@ export abstract class Scene extends PIXI.Container {
     return dispObj;
   }
 
+  /**
+   * Pauses the scene. A paused scene is not rendered and its onUpdate events are not fired.
+   */
   public pause(): void {
     this.paused = true;
   }
+  /**
+   * Resumes the scene.
+   */
   public resume(): void {
     this.paused = false;
   }
+  /**
+   * Returns true if the scene is paused.
+   */
   public isPaused(): boolean {
     return this.paused;
   }
-  
+  /**
+   * Gets the clear flag used by the PIXI renderer.
+   */
   public get clear() {
     return this.clearValue;
   }
-
+  
+  /**
+   * Sets the clear flag used by the PIXI renderer.
+   */
   public set clear(clearFlag: boolean) {
     this.clearValue = clearFlag;
   }

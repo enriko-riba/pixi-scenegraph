@@ -6,8 +6,8 @@ export { LinkedList } from './utility/LinkedList';
 export { TextureLoader } from './core/TextureLoader';
 
 //  resizing
-export { ISize, ISceneResizer } from './core/ISceneResizer';
-export { DefaultResizer } from './core/DefaultResizer';
+export { ISize, IScreenSizeCalculator } from './core/IScreenSizeCalculator';
+export { DefaultScreenSizeCalculator } from './core/DefaultScreenSizeCalculator';
 
 //  scenegraph
 export { SceneManager } from './core/SceneManager';
