@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>DefaultResizer | pixi-scenegraph</title>
+	<title>AnimationSequence | pixi-scenegraph</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,28 +56,29 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="defaultresizer.html">DefaultResizer</a>
+					<a href="animationsequence.html">AnimationSequence</a>
 				</li>
 			</ul>
-			<h1>Class DefaultResizer</h1>
+			<h1>Class AnimationSequence</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>  Creates textures for all individual frames of the sequence from the given texture atlas.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">DefaultResizer</span>
+						<span class="target">AnimationSequence</span>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/isceneresizer.html" class="tsd-signature-type">ISceneResizer</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -87,23 +88,21 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="defaultresizer.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-private-protected">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="defaultresizer.html#designedheight" class="tsd-kind-icon">designed<wbr>Height</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="defaultresizer.html#designedwidth" class="tsd-kind-icon">designed<wbr>Width</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="animationsequence.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="defaultresizer.html#calculatescale" class="tsd-kind-icon">Calculate<wbr>Scale</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="defaultresizer.html#calculatesize" class="tsd-kind-icon">Calculate<wbr>Size</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="defaultresizer.html#getaspectratio" class="tsd-kind-icon">Get<wbr>Aspect<wbr>Ratio</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="defaultresizer.html#getavailablesize" class="tsd-kind-icon">Get<wbr>Available<wbr>Size</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="animationsequence.html#frames" class="tsd-kind-icon">frames</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="animationsequence.html#sequencename" class="tsd-kind-icon">sequence<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="animationsequence.html#spritesheet" class="tsd-kind-icon">sprite<wbr>Sheet</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="animationsequence.html#framecount" class="tsd-kind-icon">frame<wbr>Count</a></li>
 							</ul>
 						</section>
 					</div>
@@ -115,135 +114,87 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Default<wbr>Resizer<span class="tsd-signature-symbol">(</span>designedWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, designedHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="defaultresizer.html" class="tsd-signature-type">DefaultResizer</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Animation<wbr>Sequence<span class="tsd-signature-symbol">(</span>sequenceName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, spriteSheetName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, frames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, frameWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, frameHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/DefaultResizer.ts#L3">DefaultResizer.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/AnimationSequence.ts#L8">AnimationSequence.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>designedWidth: <span class="tsd-signature-type">number</span></h5>
+									<h5>sequenceName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>designedHeight: <span class="tsd-signature-type">number</span></h5>
+									<h5>spriteSheetName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> frames: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
+								</li>
+								<li>
+									<h5>frameWidth: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>frameHeight: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="defaultresizer.html" class="tsd-signature-type">DefaultResizer</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-					<a name="designedheight" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> designed<wbr>Height</h3>
-					<div class="tsd-signature tsd-kind-icon">designed<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="frames" class="tsd-anchor"></a>
+					<h3>frames</h3>
+					<div class="tsd-signature tsd-kind-icon">frames<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Rectangle</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/DefaultResizer.ts#L4">DefaultResizer.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/AnimationSequence.ts#L8">AnimationSequence.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-					<a name="designedwidth" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> designed<wbr>Width</h3>
-					<div class="tsd-signature tsd-kind-icon">designed<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="sequencename" class="tsd-anchor"></a>
+					<h3>sequence<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">sequence<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/DefaultResizer.ts#L4">DefaultResizer.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/AnimationSequence.ts#L11">AnimationSequence.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="spritesheet" class="tsd-anchor"></a>
+					<h3>sprite<wbr>Sheet</h3>
+					<div class="tsd-signature tsd-kind-icon">sprite<wbr>Sheet<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Texture</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/AnimationSequence.ts#L7">AnimationSequence.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="calculatescale" class="tsd-anchor"></a>
-					<h3>Calculate<wbr>Scale</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Calculate<wbr>Scale<span class="tsd-signature-symbol">(</span>newSize<span class="tsd-signature-symbol">: </span><a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/isceneresizer.html">ISceneResizer</a>.<a href="../interfaces/isceneresizer.html#calculatescale">CalculateScale</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/DefaultResizer.ts#L16">DefaultResizer.ts:16</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>newSize: <a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="calculatesize" class="tsd-anchor"></a>
-					<h3>Calculate<wbr>Size</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Calculate<wbr>Size<span class="tsd-signature-symbol">(</span>availableSize<span class="tsd-signature-symbol">: </span><a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a>, aspect<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></li>
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="framecount" class="tsd-anchor"></a>
+					<h3>frame<wbr>Count</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> frameCount<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/DefaultResizer.ts#L11">DefaultResizer.ts:11</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>availableSize: <a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></h5>
-								</li>
-								<li>
-									<h5>aspect: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getaspectratio" class="tsd-anchor"></a>
-					<h3>Get<wbr>Aspect<wbr>Ratio</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Get<wbr>Aspect<wbr>Ratio<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/DefaultResizer.ts#L8">DefaultResizer.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/AnimationSequence.ts#L43">AnimationSequence.ts:43</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getavailablesize" class="tsd-anchor"></a>
-					<h3>Get<wbr>Available<wbr>Size</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Get<wbr>Available<wbr>Size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/DefaultResizer.ts#L5">DefaultResizer.ts:5</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -268,42 +219,36 @@
 					<li class=" tsd-kind-class">
 						<a href="animatedsprite.html" class="tsd-kind-icon">Animated<wbr>Sprite</a>
 					</li>
-					<li class=" tsd-kind-class">
-						<a href="animationsequence.html" class="tsd-kind-icon">Animation<wbr>Sequence</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="button.html" class="tsd-kind-icon">Button</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="defaultresizer.html" class="tsd-kind-icon">Default<wbr>Resizer</a>
+						<a href="animationsequence.html" class="tsd-kind-icon">Animation<wbr>Sequence</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="defaultresizer.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="animationsequence.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-								<a href="defaultresizer.html#designedheight" class="tsd-kind-icon">designed<wbr>Height</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="animationsequence.html#frames" class="tsd-kind-icon">frames</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-								<a href="defaultresizer.html#designedwidth" class="tsd-kind-icon">designed<wbr>Width</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="animationsequence.html#sequencename" class="tsd-kind-icon">sequence<wbr>Name</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="defaultresizer.html#calculatescale" class="tsd-kind-icon">Calculate<wbr>Scale</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="animationsequence.html#spritesheet" class="tsd-kind-icon">sprite<wbr>Sheet</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="defaultresizer.html#calculatesize" class="tsd-kind-icon">Calculate<wbr>Size</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="defaultresizer.html#getaspectratio" class="tsd-kind-icon">Get<wbr>Aspect<wbr>Ratio</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="defaultresizer.html#getavailablesize" class="tsd-kind-icon">Get<wbr>Available<wbr>Size</a>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="animationsequence.html#framecount" class="tsd-kind-icon">frame<wbr>Count</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class">
+						<a href="button.html" class="tsd-kind-icon">Button</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="defaultresizer.html" class="tsd-kind-icon">Default<wbr>Resizer</a>
+					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="dictionary.html" class="tsd-kind-icon">Dictionary</a>
 					</li>

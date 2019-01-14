@@ -1,5 +1,4 @@
 import * as webpack from 'webpack';
-var TypedocWebpackPlugin = require("typedoc-webpack-plugin");
 
 const config: webpack.Configuration = {
   entry: {
@@ -37,19 +36,6 @@ const config: webpack.Configuration = {
   module: {
     rules: [{ test: /\.js$/, loader: 'source-map-loader', enforce: 'pre' }, { test: /\.ts$/, loader: 'ts-loader' }],
   },
-
-  plugins: [
-    new TypedocWebpackPlugin({
-      out: './doc/generated',
-      module: 'commonjs',
-      target: 'es5',
-      exclude: '**/node_modules/**/*.*',
-      experimentalDecorators: true,
-      excludeExternals: true,
-      includeDeclarations: false,
-      ignoreCompilerErrors: true,
-    })
-  ],
 
   optimization: {
     runtimeChunk: false,

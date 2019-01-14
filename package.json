@@ -8,7 +8,7 @@
     "dist/**/*"
   ],
   "scripts": {
-    "doc": "./node_modules/.bin/typedoc --out doc/generated --mode file",
+    "doc": "./node_modules/.bin/typedoc --out docs/generated --mode file",
     "build:p": "node_modules/.bin/webpack",
     "format": "prettier --write \"./**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
@@ -37,7 +37,6 @@
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.17.0",
     "typedoc": "^0.14.1",
-    "typedoc-webpack-plugin": "^1.1.4",
     "typescript": "^3.2.2",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1"

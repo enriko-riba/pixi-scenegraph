@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>AnimationSequence | pixi-scenegraph</title>
+	<title>KeyboardAction | pixi-scenegraph</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,28 +56,21 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="animationsequence.html">AnimationSequence</a>
+					<a href="keyboardaction.html">KeyboardAction</a>
 				</li>
 			</ul>
-			<h1>Class AnimationSequence</h1>
+			<h1>Class KeyboardAction</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>  Creates textures for all individual frames of the sequence from the given texture atlas.</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">AnimationSequence</span>
+						<span class="target">KeyboardAction</span>
 					</li>
 				</ul>
 			</section>
@@ -88,21 +81,25 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="animationsequence.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="keyboardaction.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="animationsequence.html#frames" class="tsd-kind-icon">frames</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="animationsequence.html#sequencename" class="tsd-kind-icon">sequence<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="animationsequence.html#spritesheet" class="tsd-kind-icon">sprite<wbr>Sheet</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="keyboardaction.html#altkey" class="tsd-kind-icon">alt<wbr>Key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="keyboardaction.html#ctrlkey" class="tsd-kind-icon">ctrl<wbr>Key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="keyboardaction.html#handler" class="tsd-kind-icon">handler</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="keyboardaction.html#key" class="tsd-kind-icon">key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="keyboardaction.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="keyboardaction.html#releasekeyafterinvoke" class="tsd-kind-icon">release<wbr>Key<wbr>After<wbr>Invoke</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="keyboardaction.html#shiftkey" class="tsd-kind-icon">shift<wbr>Key</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
-							<h3>Accessors</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="animationsequence.html#framecount" class="tsd-kind-icon">frame<wbr>Count</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="keyboardaction.html#isassigned" class="tsd-kind-icon">is<wbr>Assigned</a></li>
 							</ul>
 						</section>
 					</div>
@@ -114,34 +111,45 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Animation<wbr>Sequence<span class="tsd-signature-symbol">(</span>sequenceName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, spriteSheetName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, frames<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, frameWidth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, frameHeight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Keyboard<wbr>Action<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbol">?: </span><a href="../globals.html#keyboardactioncallback" class="tsd-signature-type">KeyboardActionCallback</a>, releaseKeyAfterInvoke<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, shiftKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, ctrlKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, altKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="keyboardaction.html" class="tsd-signature-type">KeyboardAction</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/AnimationSequence.ts#L8">AnimationSequence.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/KeyboardAction.ts#L3">KeyboardAction.ts:3</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>  Creates a new KeyboardAction instance.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>sequenceName: <span class="tsd-signature-type">string</span></h5>
+									<h5>key: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>spriteSheetName: <span class="tsd-signature-type">string</span></h5>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> frames: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> handler: <a href="../globals.html#keyboardactioncallback" class="tsd-signature-type">KeyboardActionCallback</a></h5>
 								</li>
 								<li>
-									<h5>frameWidth: <span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> releaseKeyAfterInvoke: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
 								</li>
 								<li>
-									<h5>frameHeight: <span class="tsd-signature-type">number</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> shiftKey: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> ctrlKey: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> altKey: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="keyboardaction.html" class="tsd-signature-type">KeyboardAction</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -149,52 +157,97 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="frames" class="tsd-anchor"></a>
-					<h3>frames</h3>
-					<div class="tsd-signature tsd-kind-icon">frames<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Rectangle</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
+					<a name="altkey" class="tsd-anchor"></a>
+					<h3>alt<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">alt<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/AnimationSequence.ts#L8">AnimationSequence.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/KeyboardAction.ts#L14">KeyboardAction.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="sequencename" class="tsd-anchor"></a>
-					<h3>sequence<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">sequence<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="ctrlkey" class="tsd-anchor"></a>
+					<h3>ctrl<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">ctrl<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/AnimationSequence.ts#L11">AnimationSequence.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/KeyboardAction.ts#L13">KeyboardAction.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="spritesheet" class="tsd-anchor"></a>
-					<h3>sprite<wbr>Sheet</h3>
-					<div class="tsd-signature tsd-kind-icon">sprite<wbr>Sheet<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Texture</span></div>
+					<a name="handler" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> handler</h3>
+					<div class="tsd-signature tsd-kind-icon">handler<span class="tsd-signature-symbol">:</span> <a href="../globals.html#keyboardactioncallback" class="tsd-signature-type">KeyboardActionCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/AnimationSequence.ts#L7">AnimationSequence.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/KeyboardAction.ts#L10">KeyboardAction.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="key" class="tsd-anchor"></a>
+					<h3>key</h3>
+					<div class="tsd-signature tsd-kind-icon">key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/KeyboardAction.ts#L8">KeyboardAction.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/KeyboardAction.ts#L9">KeyboardAction.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="releasekeyafterinvoke" class="tsd-anchor"></a>
+					<h3>release<wbr>Key<wbr>After<wbr>Invoke</h3>
+					<div class="tsd-signature tsd-kind-icon">release<wbr>Key<wbr>After<wbr>Invoke<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/KeyboardAction.ts#L11">KeyboardAction.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="shiftkey" class="tsd-anchor"></a>
+					<h3>shift<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">shift<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/KeyboardAction.ts#L12">KeyboardAction.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Accessors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-					<a name="framecount" class="tsd-anchor"></a>
-					<h3>frame<wbr>Count</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> frameCount<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isassigned" class="tsd-anchor"></a>
+					<h3>is<wbr>Assigned</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Assigned<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7273fe9/src/AnimationSequence.ts#L43">AnimationSequence.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7c43e5b/src/KeyboardAction.ts#L20">KeyboardAction.ts:20</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>  Returns true if the handler is assigned.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -219,30 +272,9 @@
 					<li class=" tsd-kind-class">
 						<a href="animatedsprite.html" class="tsd-kind-icon">Animated<wbr>Sprite</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="animationsequence.html" class="tsd-kind-icon">Animation<wbr>Sequence</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="animationsequence.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="animationsequence.html#frames" class="tsd-kind-icon">frames</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="animationsequence.html#sequencename" class="tsd-kind-icon">sequence<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="animationsequence.html#spritesheet" class="tsd-kind-icon">sprite<wbr>Sheet</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="animationsequence.html#framecount" class="tsd-kind-icon">frame<wbr>Count</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="button.html" class="tsd-kind-icon">Button</a>
 					</li>
@@ -252,9 +284,42 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="dictionary.html" class="tsd-kind-icon">Dictionary</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="keyboardaction.html" class="tsd-kind-icon">Keyboard<wbr>Action</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="keyboardaction.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="keyboardaction.html#altkey" class="tsd-kind-icon">alt<wbr>Key</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="keyboardaction.html#ctrlkey" class="tsd-kind-icon">ctrl<wbr>Key</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="keyboardaction.html#handler" class="tsd-kind-icon">handler</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="keyboardaction.html#key" class="tsd-kind-icon">key</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="keyboardaction.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="keyboardaction.html#releasekeyafterinvoke" class="tsd-kind-icon">release<wbr>Key<wbr>After<wbr>Invoke</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="keyboardaction.html#shiftkey" class="tsd-kind-icon">shift<wbr>Key</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="keyboardaction.html#isassigned" class="tsd-kind-icon">is<wbr>Assigned</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="keyboardmapper.html" class="tsd-kind-icon">Keyboard<wbr>Mapper</a>
 					</li>
