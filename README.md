@@ -1,6 +1,6 @@
 # Scene Graph Engine for PIXI
 
-Link to [API documentation](./docs/generated/index.html)
+Link to [API documentation](https://enriko-riba.github.io/pixi-scenegraph/generated/index.html)
 
 ## What is pixi-scenegraph?
 **pixi-scenegraph** is a library providing scene management features and several common prefab display objects.
@@ -13,7 +13,7 @@ It is written in typescript and aimed for typescript users but not limited to ty
 
 The following image represents the object hierarchy:
 
-![Hierarchy](./docs/img/Hierarchy.png "Object hierarchy")
+![Hierarchy](https://enriko-riba.github.io/pixi-scenegraph/img/Hierarchy.png "Object hierarchy")
 
 
 ### What is a Scene
@@ -27,7 +27,7 @@ Only one scene at a time is active and only the active scene is rendered. A scen
 
 Z-Index
 
-![z ordering](./docs/img/zindex.png "Z Ordering")
+![z ordering](https://enriko-riba.github.io/pixi-scenegraph/img/zindex.png "Z Ordering")
 
 ### Show me a 'Hello World' example
     const scm = new SceneManager(SCENE_WIDTH, SCENE_HEIGHT, renderOptions);
@@ -49,4 +49,4 @@ inside the MenuScene class:
     btnStart.onClick = () => this.sceneManager.ActivateScene("scene_1");
 
 ### Documentation
-[API documentation](./docs/generated/index.html)
+[API documentation](https://enriko-riba.github.io/pixi-scenegraph/generated/index.html)
