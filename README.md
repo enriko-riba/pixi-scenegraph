@@ -1,6 +1,6 @@
 # Scene Graph Engine for PIXI
 
-Link to [API documentation](./doc/generated/index.html)
+Link to [API documentation](./docs/generated/index.html)
 
 ## What is pixi-scenegraph?
 **pixi-scenegraph** is a library providing scene management features and several common prefab display objects.
