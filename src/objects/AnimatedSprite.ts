@@ -23,7 +23,8 @@ export class AnimatedSprite extends PIXI.Sprite {
 
   /**
    * Adds one or multiple animation sequences.
-   * @example ```
+   * @example
+   * ```
    * explode.addAnimations(new AnimationSequence("exp", "assets/atlas.json@big_bang.png", [0, 1, 2, 3, 4, 5], 32, 32));
    * ```
    * @param sequences - animation sequence instances to be added. All animation sequences added to an `AnimatedSprite` **must** have unique names.
