@@ -77,13 +77,13 @@
 				</blockquote>
 				<h3 id="show-me-da-stuff">Show me da stuff</h3>
 				<p>The following image represents the object hierarchy:</p>
-				<p><img src="../img/Hierarchy.png" alt="Hierarchy" title="Object hierarchy"></p>
+				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/Hierarchy.png" alt="Hierarchy" title="Object hierarchy"></p>
 				<h3 id="what-is-a-scene">What is a Scene</h3>
 				<p>A Scene is like a PIXI stage, a container holding all objects we want to display. Think of scenes as game state containers e.g: loading scene, menu scene, options scene, in-game scene etc. </p>
 				<p>A scene <strong>must have a unique name</strong> and the SceneManager can reference scenes by that name:</p>
 				<pre><code>sceneManager.ActivateScene(<span class="hljs-string">"sceneName"</span>)<span class="hljs-comment">;</span></code></pre><p>Only one scene at a time is active and only the active scene is rendered. A scene can have a HudOverlay which is a container object rendered over the scene. In addition a MasterHudOverlay can be attached to the SceneManager. The MasterHudOverlay is rendered over all other content.</p>
 				<p>Z-Index</p>
-				<p><img src="../img/zindex.png" alt="z ordering" title="Z Ordering"></p>
+				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/zindex.png" alt="z ordering" title="Z Ordering"></p>
 				<h3 id="show-me-a-hello-world-example">Show me a &#39;Hello World&#39; example</h3>
 				<pre><code>const <span class="hljs-keyword">scm </span>= new <span class="hljs-keyword">SceneManager(SCENE_WIDTH, </span><span class="hljs-keyword">SCENE_HEIGHT, </span>renderOptions)<span class="hljs-comment">;</span>
 const myScene = new MyScene(<span class="hljs-keyword">scm);
