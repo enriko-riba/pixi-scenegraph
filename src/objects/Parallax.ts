@@ -1,5 +1,5 @@
 ﻿import * as PIXI from 'pixi.js';
-import { TextureLoader } from '.';
+import { TextureLoader } from '..';
 
 /**
  *   Represents a parallax background with textures that tile inside the viewport.

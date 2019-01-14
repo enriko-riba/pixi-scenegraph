@@ -1,12 +1,21 @@
-import { TextureLoader } from '.';
+import { TextureLoader } from '..';
 
 /**
- *   Creates textures for all individual frames of the sequence from the given texture atlas.
+ *  Defines a single animation. Consists of a a texture and individual animation frames.
+ *  @remarks The texture (`spriteSheetName`) is either a spritesheet or an image inside a larger texture atlas.
  */
 export class AnimationSequence {
   public spriteSheet: PIXI.Texture;
   public frames: PIXI.Rectangle[] = [];
 
+  /**
+   * Creates a new AnimationSequence instance.
+   * @param sequenceName - the unique name of this animation
+   * @param spriteSheetName - the texture name holding all animation frames or atlas/image name
+   * @param frames - sequential list of frame indices defining the frame animation order. 
+   * @param frameWidth - width of a single frame in pixels
+   * @param frameHeight - height of a single frame in pixels
+   */
   constructor(
     public sequenceName: string,
     spriteSheetName: string,
@@ -40,6 +49,9 @@ export class AnimationSequence {
     });
   }
 
+  /**
+   * Returns the number of frames defined in this animation instance.
+   */
   public get frameCount(): number {
     return this.frames.length;
   }

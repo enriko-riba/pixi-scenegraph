@@ -1,6 +1,6 @@
 ﻿import * as PIXI from 'pixi.js';
 import { OutlineFilter } from '@pixi/filter-outline';
-import { TextureLoader } from '.';
+import { TextureLoader } from '..';
 
 export enum OutlineMode {
   /**

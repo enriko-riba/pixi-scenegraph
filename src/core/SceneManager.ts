@@ -1,5 +1,5 @@
 ﻿import * as PIXI from 'pixi.js';
-import { ISceneResizer, DefaultResizer, Scene } from '.';
+import { ISceneResizer, DefaultResizer, Scene } from '..';
 
 export enum State {
   GLOBAL,
@@ -40,9 +40,9 @@ export class SceneManager {
   /**
    *   Creates a new SceneManager instance.
    *
-   *   @param width the width of the scene
-   *   @param height the height of the scene
-   *   @param resizer custom resize function
+   *   @param width - the width of the scene
+   *   @param height - the height of the scene
+   *   @param resizer - custom resize function
    */
   constructor(width: number, height: number, options?: PIXI.RendererOptions, resizer?: ISceneResizer) {
     this.designWidth = width;
@@ -63,21 +63,6 @@ export class SceneManager {
 
     window.removeEventListener('resize', this.resizeHandler);
     window.addEventListener('resize', this.resizeHandler, true);
-
-    /*
-        stats.showPanel(0); // 0 – use the FPS mode, 1 – use the milliseconds mode
-
-        // Position the meter in the top-left corner
-        stats.domElement.style.position = "absolute";
-        stats.domElement.style.left = "";
-        stats.domElement.style.right = "20px";
-        stats.domElement.style.bottom = "20px";
-        stats.domElement.style.top = ""; 
-
-        // Append the meter to the body of your HTML5 document.
-        document.body.appendChild(stats.domElement);
-        */
-
     this.render(0);
   }
 
@@ -96,7 +81,7 @@ export class SceneManager {
   }
 
   /**
-   *   Adds a scene.
+   *   Adds a scene to the graph.
    */
   public AddScene(scene: Scene): void {
     this.scenes.push(scene);
@@ -104,7 +89,7 @@ export class SceneManager {
   }
 
   /**
-   *   Removes all scenes.
+   *   Removes all scenes from the graph.
    */
   public RemoveAllScenes(): void {
     this.scenes.forEach((scene: Scene) => {
@@ -116,7 +101,7 @@ export class SceneManager {
   }
 
   /**
-   *   Removes a scene.
+   *   Removes a scene from the graph.
    */
   public RemoveScene(scene: Scene): void {
     this.scenes = this.scenes.filter((item: Scene, index: number, arr) => {
@@ -126,8 +111,8 @@ export class SceneManager {
   }
 
   /**
-   * Returns true if the scene exists.
-   * @param name
+   * Returns true if the named scene exists.
+   * @param name - the scene name
    */
   public HasScene(name: string): boolean {
     const found = this.scenes.filter((item: Scene) => item.Name === name);
@@ -136,7 +121,7 @@ export class SceneManager {
 
   /**
    * Returns the scene by its name.
-   * @param name
+   * @param name - the scene name
    */
   public GetScene(name: string): Scene {
     const found = this.scenes.filter((item: Scene) => item.Name === name);
@@ -150,7 +135,8 @@ export class SceneManager {
   }
 
   /**
-   *   Activates the given scene.
+   * Activates a scene.
+   * @param sceneOrName - the scene instance or scene name
    */
   public ActivateScene(sceneOrName: Scene | string): void {
     let scene: Scene;
@@ -190,31 +176,38 @@ export class SceneManager {
     PIXI.settings.RESOLUTION = window.devicePixelRatio;
   }
 
+  /** 
+   * Activates the previous scene.
+   */
   public ActivatePreviousScene() {
     this.ActivateScene(this.lastScene);
   }
 
   /**
-   * gets the master HUD overlay object.
+   * Gets the master HUD overlay container.
    */
   public get MasterHudOverlay() {
     return this.masterHudOverlay;
   }
+
   /**
-   * Sets the master HUD overlay object.
+   * Sets the master HUD overlay container.
    */
   public set MasterHudOverlay(hud: PIXI.Container) {
     this.masterHudOverlay = hud;
-    this.masterContainer.removeChildren();
-    this.masterContainer.addChild(this.currentScene as Scene);
-    if (this.masterHudOverlay) {
-      this.masterContainer.addChild(this.masterHudOverlay);
+    if (!!hud) {
+      this.masterContainer.removeChildren();
+      this.masterContainer.addChild(this.currentScene as Scene);
+      if (this.masterHudOverlay) {
+        this.masterContainer.addChild(this.masterHudOverlay);
+      }
+      this.resizeHandler();
     }
-    this.resizeHandler();
   }
 
   /**
    *  Renders the current scene in a rendertexture.
+   *  @returns The `PIXI.RenderTexture` containing the current scene.
    */
   public CaptureScene(): PIXI.RenderTexture {
     console.log(`Capturing scene, width: ${this.renderer.width}, height: ${this.renderer.height}`);
@@ -254,12 +247,7 @@ export class SceneManager {
   };
 
   private render = (timestamp: number) => {
-    // stats.begin();
-
     this.animationFrameHandle = requestAnimationFrame(this.render);
-
-    //  for tween support
-    // TWEEN.update(timestamp);
 
     //  exit if no scene or paused
     if (!this.currentScene || this.currentScene.isPaused()) {
@@ -270,7 +258,7 @@ export class SceneManager {
       this.startTime = timestamp;
     }
 
-    let dt = timestamp - this.startTime!;
+    let dt = timestamp - this.startTime;
     if (dt > 50) {
       dt = 50;
     }
@@ -278,7 +266,5 @@ export class SceneManager {
 
     this.startTime = timestamp;
     this.renderer.render(this.masterContainer, undefined, this.currentScene.clear);
-
-    // stats.end();
   };
 }

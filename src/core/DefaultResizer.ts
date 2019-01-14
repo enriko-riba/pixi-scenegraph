@@ -1,4 +1,4 @@
-import { ISceneResizer, ISize } from '.';
+import { ISceneResizer, ISize } from '..';
 
 export class DefaultResizer implements ISceneResizer {
   constructor(protected designedWidth: number, protected designedHeight: number) {}

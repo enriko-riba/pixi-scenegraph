@@ -25,10 +25,30 @@ export abstract class Scene extends PIXI.Container {
     this.Name = name;
   }
 
+  /**
+   * Fired every time the scene is to be activated.
+   * @remarks If a new scene is activated, `currentScene.onDeactivate()` is fired first followed by `newScene.onActivate()`
+   */
   public onActivate(): void {}
+
+  /**
+   * Fired every time the scene is deactivated.
+   */
   public onDeactivate(): void {}
+
+  /**
+   * Fired every time the window resizes, the scene is about to be activated (before `onActivate`) and after a MasterHudOverlay is set.
+   * @remarks Note that this function is fired only for the current (active) scene! 
+   */
   public onResize(): void {}
+
+  /**
+   * Fired on each animation frame
+   * @param dt - ellapsed time delta
+   * @param timestamp - total time, usefull for TWEEN.update and other libs depending on total time
+   */
   public onUpdate(dt: number, timestamp:number): void {}
+
   public onDestroy(options?: PIXI.DestroyOptions | boolean): void {}
 
   public get BackGroundColor(): number {
@@ -89,6 +109,7 @@ export abstract class Scene extends PIXI.Container {
   public isPaused(): boolean {
     return this.paused;
   }
+  
   public get clear() {
     return this.clearValue;
   }

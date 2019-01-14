@@ -69,7 +69,8 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>  Creates textures for all individual frames of the sequence from the given texture atlas.</p>
+						<p> Defines a single animation. Consists of a a texture and individual animation frames.
+						@remarks The texture (<code>spriteSheetName</code>) is either a spritesheet or an image inside a larger texture atlas.</p>
 					</div>
 				</div>
 			</section>
@@ -120,25 +121,55 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/9f94a6f/src/AnimationSequence.ts#L8">AnimationSequence.ts:8</a></li>
+									<li>Defined in objects/AnimationSequence.ts:9</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new AnimationSequence instance.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>sequenceName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>the unique name of this animation</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>spriteSheetName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>the texture name holding all animation frames or atlas/image name</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> frames: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>sequential list of frame indices defining the frame animation order.</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>frameWidth: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>width of a single frame in pixels</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>frameHeight: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>height of a single frame in pixels</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a></h4>
@@ -154,7 +185,7 @@
 					<div class="tsd-signature tsd-kind-icon">frames<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Rectangle</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/9f94a6f/src/AnimationSequence.ts#L8">AnimationSequence.ts:8</a></li>
+							<li>Defined in objects/AnimationSequence.ts:9</li>
 						</ul>
 					</aside>
 				</section>
@@ -164,9 +195,14 @@
 					<div class="tsd-signature tsd-kind-icon">sequence<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/9f94a6f/src/AnimationSequence.ts#L11">AnimationSequence.ts:11</a></li>
+							<li>Defined in objects/AnimationSequence.ts:20</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the unique name of this animation</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="spritesheet" class="tsd-anchor"></a>
@@ -174,7 +210,7 @@
 					<div class="tsd-signature tsd-kind-icon">sprite<wbr>Sheet<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Texture</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/9f94a6f/src/AnimationSequence.ts#L7">AnimationSequence.ts:7</a></li>
+							<li>Defined in objects/AnimationSequence.ts:8</li>
 						</ul>
 					</aside>
 				</section>
@@ -191,9 +227,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/9f94a6f/src/AnimationSequence.ts#L43">AnimationSequence.ts:43</a></li>
+									<li>Defined in objects/AnimationSequence.ts:55</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the number of frames defined in this animation instance.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>

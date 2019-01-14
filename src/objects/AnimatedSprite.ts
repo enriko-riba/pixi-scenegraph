@@ -1,6 +1,9 @@
 ﻿import * as PIXI from 'pixi.js';
-import { AnimationSequence, Dictionary } from '.';
+import { AnimationSequence, Dictionary } from '..';
 
+/**
+ * Animated sprite display object. Holds a collection of `AnimationSequence` objects that can be started and stopped on demand.
+ */
 export class AnimatedSprite extends PIXI.Sprite {
   protected currentSequence: AnimationSequence | null = null;
 
@@ -18,6 +21,13 @@ export class AnimatedSprite extends PIXI.Sprite {
     this.anchor.set(0.5);
   }
 
+  /**
+   * Adds one or multiple animation sequences.
+   * @example ```
+   * explode.addAnimations(new AnimationSequence("exp", "assets/atlas.json@big_bang.png", [0, 1, 2, 3, 4, 5], 32, 32));
+   * ```
+   * @param sequences - animation sequence instances to be added. All animation sequences added to an `AnimatedSprite` **must** have unique names.
+   */
   public addAnimations(...sequences: AnimationSequence[]): void {
     sequences.forEach((seq: AnimationSequence, idx: number) => {
       this.animations.set(seq.sequenceName, seq);
@@ -37,7 +47,11 @@ export class AnimatedSprite extends PIXI.Sprite {
   }
 
   /**
-   *  Plays the animation sequence by name
+   * Plays the animation sequence by name.
+   * @param name - animation sequence to be played
+   * @param fps - animation speed in frames per second
+   * @param loop - if true the animation keeps looping else the animation stops once last frame is reached
+   * @remarks The `onComplete` callback will be invoked only if the `loop` parameter is false 
    */
   public play = (name: string, fps?: number, loop = true): void => {
     if (!this.currentSequence || this.currentSequence.sequenceName !== name) {
@@ -51,6 +65,9 @@ export class AnimatedSprite extends PIXI.Sprite {
     this.isLooping = loop;
   };
 
+  /**
+   * Used by the framework to update internal state on each frame.
+   */
   public onUpdate(dt: number) {
     if (this.isPlaying && this.texture.valid && this.currentSequence) {
       this.accumulator += dt;
@@ -73,6 +90,11 @@ export class AnimatedSprite extends PIXI.Sprite {
     }
   }
 
+  /**
+   * Sets the callback function to be invoked after the animation ends.
+   * @example Use it to trigger actions on animation end `explode.onComplete = () => this.container.removeChild(explode);`
+   * @remarks This callback will be invoked only if the animated sprite is not looping. 
+   */
   public set onComplete(cb: (seq: AnimationSequence) => void) {
     this.onCompleteCallBack = cb;
   }

@@ -1,5 +1,5 @@
 import { KeyboardAction } from './KeyboardAction';
-import { State } from './SceneManager';
+import { State } from '../core/SceneManager';
 
 /**
  *   Simple keyboard mapper.

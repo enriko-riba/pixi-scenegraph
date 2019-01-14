@@ -1,4 +1,4 @@
-import { LinkedList } from '.';
+import { LinkedList } from '..';
 
 export class LinkedListNode<T> {
   public previous: LinkedListNode<T> | null = null;
