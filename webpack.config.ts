@@ -13,8 +13,8 @@ const config: webpack.Configuration = {
     extensions: ['.ts', '.js'],
   },
 
-  mode: 'production',
-  //devtool: 'source-map',
+  //mode: 'production',
+  devtool: 'source-map',
   externals: [
     // Don't bundle pixi.js and filters.
     {

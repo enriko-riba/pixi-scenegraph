@@ -1,6 +1,6 @@
 {
   "name": "pixi-scenegraph",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "typescript scene engine for pixi.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "doc": "./node_modules/.bin/typedoc --out docs/generated --mode file",
-    "build:p": "node_modules/.bin/webpack",
+    "build:prod": "node_modules/.bin/webpack --mode production",
+    "build:dev": "node_modules/.bin/webpack --mode development",
     "format": "prettier --write \"./**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"

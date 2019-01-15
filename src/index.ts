@@ -19,3 +19,5 @@ export { AnimatedSprite } from './objects/AnimatedSprite';
 export { AnimationSequence } from './objects/AnimationSequence';
 export { Button, OutlineMode } from './objects/Button';
 export { Slider } from './objects/Slider';
+
+export const VERSION = "1.2.1";
