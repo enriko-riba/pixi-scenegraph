@@ -8,7 +8,7 @@
     "dist/**/*"
   ],
   "scripts": {
-    "doc": "./node_modules/.bin/typedoc --out docs/generated --mode modules",
+    "doc": "./node_modules/.bin/typedoc --out docs/generated --mode file",
     "format": "prettier --write \"./**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"

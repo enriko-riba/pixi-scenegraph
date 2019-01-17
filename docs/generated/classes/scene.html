@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Parallax | pixi-scenegraph</title>
+	<title>Scene | pixi-scenegraph</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_objects_parallax_.html">&quot;objects/Parallax&quot;</a>
-				</li>
-				<li>
-					<a href="_objects_parallax_.parallax.html">Parallax</a>
+					<a href="scene.html">Scene</a>
 				</li>
 			</ul>
-			<h1>Class Parallax</h1>
+			<h1>Class Scene</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +69,8 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>  Represents a parallax background with textures that tile inside the viewport.</p>
+						<p>  Represents a scene instance.
+						Only one scene at a time is rendered.</p>
 					</div>
 				</div>
 			</section>
@@ -83,7 +81,7 @@
 						<span class="tsd-signature-type">Container</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">Parallax</span>
+								<span class="target">Scene</span>
 							</li>
 						</ul>
 					</li>
@@ -103,133 +101,135 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_objects_parallax_.parallax.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="scene.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_bounds" class="tsd-kind-icon">_bounds</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_boundsid" class="tsd-kind-icon">_boundsID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_boundsrect" class="tsd-kind-icon">_bounds<wbr>Rect</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_cacheasbitmap" class="tsd-kind-icon">_cache<wbr>AsBitmap</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_cachedata" class="tsd-kind-icon">_cache<wbr>Data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_destroyed" class="tsd-kind-icon">_destroyed</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_enabledfilters" class="tsd-kind-icon">_enabled<wbr>Filters</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_filters" class="tsd-kind-icon">_filters</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_lastboundsid" class="tsd-kind-icon">_last<wbr>BoundsID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_localboundsrect" class="tsd-kind-icon">_local<wbr>Bounds<wbr>Rect</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_mask" class="tsd-kind-icon">_mask</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#accessible" class="tsd-kind-icon">accessible</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#accessiblehint" class="tsd-kind-icon">accessible<wbr>Hint</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#accessibletitle" class="tsd-kind-icon">accessible<wbr>Title</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#alpha" class="tsd-kind-icon">alpha</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#buttonmode" class="tsd-kind-icon">button<wbr>Mode</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#cacheasbitmap" class="tsd-kind-icon">cache<wbr>AsBitmap</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#children" class="tsd-kind-icon">children</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#cursor" class="tsd-kind-icon">cursor</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#defaultcursor" class="tsd-kind-icon">default<wbr>Cursor</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#filterarea" class="tsd-kind-icon">filter<wbr>Area</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#filters" class="tsd-kind-icon">filters</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#height" class="tsd-kind-icon">height</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#hitarea" class="tsd-kind-icon">hit<wbr>Area</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#interactive" class="tsd-kind-icon">interactive</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#interactivechildren" class="tsd-kind-icon">interactive<wbr>Children</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#mask" class="tsd-kind-icon">mask</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#onchildrenchange" class="tsd-kind-icon">on<wbr>Children<wbr>Change</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_parallax_.parallax.html#parallaxfactor" class="tsd-kind-icon">parallax<wbr>Factor</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#parent" class="tsd-kind-icon">parent</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#pivot" class="tsd-kind-icon">pivot</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#position" class="tsd-kind-icon">position</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#renderable" class="tsd-kind-icon">renderable</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#rotation" class="tsd-kind-icon">rotation</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#scale" class="tsd-kind-icon">scale</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#skew" class="tsd-kind-icon">skew</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_parallax_.parallax.html#spritebuffer" class="tsd-kind-icon">sprite<wbr>Buffer</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_parallax_.parallax.html#spriteorderlist" class="tsd-kind-icon">sprite<wbr>Order<wbr>List</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#tabindex" class="tsd-kind-icon">tab<wbr>Index</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_parallax_.parallax.html#texturescale" class="tsd-kind-icon">texture<wbr>Scale</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_parallax_.parallax.html#totalwidth" class="tsd-kind-icon">total<wbr>Width</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#trackedpointers" class="tsd-kind-icon">tracked<wbr>Pointers</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#transform" class="tsd-kind-icon">transform</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_parallax_.parallax.html#viewportsize" class="tsd-kind-icon">view<wbr>Port<wbr>Size</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#visible" class="tsd-kind-icon">visible</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#width" class="tsd-kind-icon">width</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#worldalpha" class="tsd-kind-icon">world<wbr>Alpha</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_parallax_.parallax.html#worldposition" class="tsd-kind-icon">world<wbr>Position</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#worldtransform" class="tsd-kind-icon">world<wbr>Transform</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#worldvisible" class="tsd-kind-icon">world<wbr>Visible</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#x" class="tsd-kind-icon">x</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#y" class="tsd-kind-icon">y</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_objects_parallax_.parallax.html#eventemitter" class="tsd-kind-icon">Event<wbr>Emitter</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_objects_parallax_.parallax.html#prefixed-1" class="tsd-kind-icon">prefixed</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="scene.html#name" class="tsd-kind-icon">Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_bounds" class="tsd-kind-icon">_bounds</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_boundsid" class="tsd-kind-icon">_boundsID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_boundsrect" class="tsd-kind-icon">_bounds<wbr>Rect</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_cacheasbitmap" class="tsd-kind-icon">_cache<wbr>AsBitmap</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_cachedata" class="tsd-kind-icon">_cache<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_destroyed" class="tsd-kind-icon">_destroyed</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_enabledfilters" class="tsd-kind-icon">_enabled<wbr>Filters</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_filters" class="tsd-kind-icon">_filters</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_lastboundsid" class="tsd-kind-icon">_last<wbr>BoundsID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_localboundsrect" class="tsd-kind-icon">_local<wbr>Bounds<wbr>Rect</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_mask" class="tsd-kind-icon">_mask</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#accessible" class="tsd-kind-icon">accessible</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#accessiblehint" class="tsd-kind-icon">accessible<wbr>Hint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#accessibletitle" class="tsd-kind-icon">accessible<wbr>Title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#alpha" class="tsd-kind-icon">alpha</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="scene.html#backgroundcolor" class="tsd-kind-icon">background<wbr>Color</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#buttonmode" class="tsd-kind-icon">button<wbr>Mode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#cacheasbitmap" class="tsd-kind-icon">cache<wbr>AsBitmap</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#children" class="tsd-kind-icon">children</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="scene.html#clearvalue" class="tsd-kind-icon">clear<wbr>Value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#cursor" class="tsd-kind-icon">cursor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#defaultcursor" class="tsd-kind-icon">default<wbr>Cursor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#filterarea" class="tsd-kind-icon">filter<wbr>Area</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#filters" class="tsd-kind-icon">filters</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#height" class="tsd-kind-icon">height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#hitarea" class="tsd-kind-icon">hit<wbr>Area</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="scene.html#hudscene" class="tsd-kind-icon">hud<wbr>Scene</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#interactive" class="tsd-kind-icon">interactive</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#interactivechildren" class="tsd-kind-icon">interactive<wbr>Children</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#mask" class="tsd-kind-icon">mask</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#name-1" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#onchildrenchange" class="tsd-kind-icon">on<wbr>Children<wbr>Change</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#parent" class="tsd-kind-icon">parent</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="scene.html#paused" class="tsd-kind-icon">paused</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#pivot" class="tsd-kind-icon">pivot</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#position" class="tsd-kind-icon">position</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#renderable" class="tsd-kind-icon">renderable</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#rotation" class="tsd-kind-icon">rotation</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#scale" class="tsd-kind-icon">scale</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="scene.html#scenemanager" class="tsd-kind-icon">scene<wbr>Manager</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#skew" class="tsd-kind-icon">skew</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#tabindex" class="tsd-kind-icon">tab<wbr>Index</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#trackedpointers" class="tsd-kind-icon">tracked<wbr>Pointers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#transform" class="tsd-kind-icon">transform</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#visible" class="tsd-kind-icon">visible</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#width" class="tsd-kind-icon">width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#worldalpha" class="tsd-kind-icon">world<wbr>Alpha</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#worldtransform" class="tsd-kind-icon">world<wbr>Transform</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#worldvisible" class="tsd-kind-icon">world<wbr>Visible</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#x" class="tsd-kind-icon">x</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#y" class="tsd-kind-icon">y</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="scene.html#eventemitter" class="tsd-kind-icon">Event<wbr>Emitter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="scene.html#prefixed-1" class="tsd-kind-icon">prefixed</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_objects_parallax_.parallax.html#parallaxfactor-1" class="tsd-kind-icon">Parallax<wbr>Factor</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_objects_parallax_.parallax.html#viewportsize-1" class="tsd-kind-icon">View<wbr>Port<wbr>Size</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_objects_parallax_.parallax.html#worldposition-1" class="tsd-kind-icon">World<wbr>Position</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="scene.html#backgroundcolor-1" class="tsd-kind-icon">Back<wbr>Ground<wbr>Color</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="scene.html#hudoverlay" class="tsd-kind-icon">Hud<wbr>Overlay</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="scene.html#clear" class="tsd-kind-icon">clear</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_objects_parallax_.parallax.html#setviewportx" class="tsd-kind-icon">Set<wbr>View<wbr>PortX</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_cacheasbitmapdestroy" class="tsd-kind-icon">_cache<wbr>AsBitmap<wbr>Destroy</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_calculatebounds" class="tsd-kind-icon">_calculate<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_calculatecachedbounds" class="tsd-kind-icon">_calculate<wbr>Cached<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_destroycacheddisplayobject" class="tsd-kind-icon">_destroy<wbr>Cached<wbr>Display<wbr>Object</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_getcachedlocalbounds" class="tsd-kind-icon">_get<wbr>Cached<wbr>Local<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_initcacheddisplayobject" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_initcacheddisplayobjectcanvas" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object<wbr>Canvas</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_recursivepostupdatetransform" class="tsd-kind-icon">_recursive<wbr>Post<wbr>Update<wbr>Transform</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_rendercachedcanvas" class="tsd-kind-icon">_render<wbr>Cached<wbr>Canvas</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_rendercachedwebgl" class="tsd-kind-icon">_render<wbr>Cached<wbr>WebGL</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_rendercanvas" class="tsd-kind-icon">_render<wbr>Canvas</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#_renderwebgl" class="tsd-kind-icon">_render<wbr>WebGL</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_parallax_.parallax.html#addchild" class="tsd-kind-icon">add<wbr>Child</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_parallax_.parallax.html#addchildat" class="tsd-kind-icon">add<wbr>Child<wbr>At</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_parallax_.parallax.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#containerupdatetransform" class="tsd-kind-icon">container<wbr>Update<wbr>Transform</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_parallax_.parallax.html#destroy" class="tsd-kind-icon">destroy</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_parallax_.parallax.html#displayobjectupdatetransform" class="tsd-kind-icon">display<wbr>Object<wbr>Update<wbr>Transform</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#emit" class="tsd-kind-icon">emit</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#getbounds" class="tsd-kind-icon">get<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_parallax_.parallax.html#getchildat" class="tsd-kind-icon">get<wbr>Child<wbr>At</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_parallax_.parallax.html#getchildbyname" class="tsd-kind-icon">get<wbr>Child<wbr>ByName</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#getchildindex" class="tsd-kind-icon">get<wbr>Child<wbr>Index</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#getglobalposition" class="tsd-kind-icon">get<wbr>Global<wbr>Position</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#getlocalbounds" class="tsd-kind-icon">get<wbr>Local<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_objects_parallax_.parallax.html#gettexture" class="tsd-kind-icon">get<wbr>Texture</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#listeners" class="tsd-kind-icon">listeners</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_parallax_.parallax.html#off" class="tsd-kind-icon">off</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_parallax_.parallax.html#on" class="tsd-kind-icon">on</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_parallax_.parallax.html#once" class="tsd-kind-icon">once</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_objects_parallax_.parallax.html#recalculateposition" class="tsd-kind-icon">recalculate<wbr>Position</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_parallax_.parallax.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_parallax_.parallax.html#removechild" class="tsd-kind-icon">remove<wbr>Child</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_parallax_.parallax.html#removechildat" class="tsd-kind-icon">remove<wbr>Child<wbr>At</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_parallax_.parallax.html#removechildren" class="tsd-kind-icon">remove<wbr>Children</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_parallax_.parallax.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#renderadvancedwebgl" class="tsd-kind-icon">render<wbr>Advanced<wbr>WebGL</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_parallax_.parallax.html#rendercanvas" class="tsd-kind-icon">render<wbr>Canvas</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_parallax_.parallax.html#renderwebgl" class="tsd-kind-icon">render<wbr>WebGL</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#setchildindex" class="tsd-kind-icon">set<wbr>Child<wbr>Index</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#setparent" class="tsd-kind-icon">set<wbr>Parent</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_objects_parallax_.parallax.html#settextures" class="tsd-kind-icon">set<wbr>Textures</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#settransform" class="tsd-kind-icon">set<wbr>Transform</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_parallax_.parallax.html#swapchildren" class="tsd-kind-icon">swap<wbr>Children</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_parallax_.parallax.html#toglobal" class="tsd-kind-icon">to<wbr>Global</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_parallax_.parallax.html#tolocal" class="tsd-kind-icon">to<wbr>Local</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_objects_parallax_.parallax.html#updatepositions" class="tsd-kind-icon">update<wbr>Positions</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_parallax_.parallax.html#updatetransform" class="tsd-kind-icon">update<wbr>Transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_cacheasbitmapdestroy" class="tsd-kind-icon">_cache<wbr>AsBitmap<wbr>Destroy</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_calculatebounds" class="tsd-kind-icon">_calculate<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_calculatecachedbounds" class="tsd-kind-icon">_calculate<wbr>Cached<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_destroycacheddisplayobject" class="tsd-kind-icon">_destroy<wbr>Cached<wbr>Display<wbr>Object</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_getcachedlocalbounds" class="tsd-kind-icon">_get<wbr>Cached<wbr>Local<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_initcacheddisplayobject" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_initcacheddisplayobjectcanvas" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object<wbr>Canvas</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_recursivepostupdatetransform" class="tsd-kind-icon">_recursive<wbr>Post<wbr>Update<wbr>Transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_rendercachedcanvas" class="tsd-kind-icon">_render<wbr>Cached<wbr>Canvas</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_rendercachedwebgl" class="tsd-kind-icon">_render<wbr>Cached<wbr>WebGL</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_rendercanvas" class="tsd-kind-icon">_render<wbr>Canvas</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_renderwebgl" class="tsd-kind-icon">_render<wbr>WebGL</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="scene.html#addchild" class="tsd-kind-icon">add<wbr>Child</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="scene.html#addchildat" class="tsd-kind-icon">add<wbr>Child<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#containerupdatetransform" class="tsd-kind-icon">container<wbr>Update<wbr>Transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#destroy" class="tsd-kind-icon">destroy</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#displayobjectupdatetransform" class="tsd-kind-icon">display<wbr>Object<wbr>Update<wbr>Transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#emit" class="tsd-kind-icon">emit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#getbounds" class="tsd-kind-icon">get<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="scene.html#getchildat" class="tsd-kind-icon">get<wbr>Child<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="scene.html#getchildbyname" class="tsd-kind-icon">get<wbr>Child<wbr>ByName</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#getchildindex" class="tsd-kind-icon">get<wbr>Child<wbr>Index</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#getglobalposition" class="tsd-kind-icon">get<wbr>Global<wbr>Position</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#getlocalbounds" class="tsd-kind-icon">get<wbr>Local<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scene.html#ispaused" class="tsd-kind-icon">is<wbr>Paused</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#listeners" class="tsd-kind-icon">listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#off" class="tsd-kind-icon">off</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#on" class="tsd-kind-icon">on</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scene.html#onactivate" class="tsd-kind-icon">on<wbr>Activate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scene.html#ondeactivate" class="tsd-kind-icon">on<wbr>Deactivate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scene.html#ondestroy" class="tsd-kind-icon">on<wbr>Destroy</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scene.html#onresize" class="tsd-kind-icon">on<wbr>Resize</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scene.html#onupdate" class="tsd-kind-icon">on<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#once" class="tsd-kind-icon">once</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scene.html#pause" class="tsd-kind-icon">pause</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="scene.html#removechild" class="tsd-kind-icon">remove<wbr>Child</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="scene.html#removechildat" class="tsd-kind-icon">remove<wbr>Child<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="scene.html#removechildren" class="tsd-kind-icon">remove<wbr>Children</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#renderadvancedwebgl" class="tsd-kind-icon">render<wbr>Advanced<wbr>WebGL</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#rendercanvas" class="tsd-kind-icon">render<wbr>Canvas</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#renderwebgl" class="tsd-kind-icon">render<wbr>WebGL</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scene.html#resume" class="tsd-kind-icon">resume</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#setchildindex" class="tsd-kind-icon">set<wbr>Child<wbr>Index</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#setparent" class="tsd-kind-icon">set<wbr>Parent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#settransform" class="tsd-kind-icon">set<wbr>Transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#swapchildren" class="tsd-kind-icon">swap<wbr>Children</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="scene.html#toglobal" class="tsd-kind-icon">to<wbr>Global</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="scene.html#tolocal" class="tsd-kind-icon">to<wbr>Local</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#updatetransform" class="tsd-kind-icon">update<wbr>Transform</a></li>
 							</ul>
 						</section>
 					</div>
@@ -241,43 +241,48 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Parallax<span class="tsd-signature-symbol">(</span>size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span>, parallaxFactor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, textures<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Texture</span><span class="tsd-signature-symbol">&gt;</span>, textureScale<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_objects_parallax_.parallax.html" class="tsd-signature-type">Parallax</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Scene<span class="tsd-signature-symbol">(</span>scm<span class="tsd-signature-symbol">: </span><a href="scenemanager.html" class="tsd-signature-type">SceneManager</a>, name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="scene.html" class="tsd-signature-type">Scene</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides EventEmitter.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L17">objects/Parallax.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L15">core/Scene.ts:15</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>  Creates a new ParalaxSprite instance.</p>
+									<p>  Creates a new scene instance.
+									@param name the scene name.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>size: <span class="tsd-signature-type">Point</span></h5>
+									<h5>scm: <a href="scenemanager.html" class="tsd-signature-type">SceneManager</a></h5>
 								</li>
 								<li>
-									<h5>parallaxFactor: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>textures: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Texture</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> textureScale: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_objects_parallax_.parallax.html" class="tsd-signature-type">Parallax</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="scene.html" class="tsd-signature-type">Scene</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L10">core/Scene.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="_bounds" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _bounds</h3>
@@ -443,6 +448,16 @@
 						</ul>
 					</aside>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="backgroundcolor" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> background<wbr>Color</h3>
+					<div class="tsd-signature tsd-kind-icon">background<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L14">core/Scene.ts:14</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="buttonmode" class="tsd-anchor"></a>
 					<h3>button<wbr>Mode</h3>
@@ -473,6 +488,16 @@
 						<p>Inherited from Container.children</p>
 						<ul>
 							<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:287</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="clearvalue" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> clear<wbr>Value</h3>
+					<div class="tsd-signature tsd-kind-icon">clear<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L15">core/Scene.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -542,6 +567,16 @@
 						</ul>
 					</aside>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="hudscene" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> hud<wbr>Scene</h3>
+					<div class="tsd-signature tsd-kind-icon">hud<wbr>Scene<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Container</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L13">core/Scene.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="interactive" class="tsd-anchor"></a>
 					<h3>interactive</h3>
@@ -587,7 +622,7 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="name" class="tsd-anchor"></a>
+					<a name="name-1" class="tsd-anchor"></a>
 					<h3>name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
@@ -629,16 +664,6 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="parallaxfactor" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> parallax<wbr>Factor</h3>
-					<div class="tsd-signature tsd-kind-icon">parallax<wbr>Factor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L9">objects/Parallax.ts:9</a></li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="parent" class="tsd-anchor"></a>
 					<h3>parent</h3>
@@ -647,6 +672,16 @@
 						<p>Inherited from DisplayObject.parent</p>
 						<ul>
 							<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:394</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="paused" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> paused</h3>
+					<div class="tsd-signature tsd-kind-icon">paused<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L12">core/Scene.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -705,6 +740,16 @@
 						</ul>
 					</aside>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="scenemanager" class="tsd-anchor"></a>
+					<h3>scene<wbr>Manager</h3>
+					<div class="tsd-signature tsd-kind-icon">scene<wbr>Manager<span class="tsd-signature-symbol">:</span> <a href="scenemanager.html" class="tsd-signature-type">SceneManager</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L9">core/Scene.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="skew" class="tsd-anchor"></a>
 					<h3>skew</h3>
@@ -713,26 +758,6 @@
 						<p>Inherited from DisplayObject.skew</p>
 						<ul>
 							<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:413</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="spritebuffer" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> sprite<wbr>Buffer</h3>
-					<div class="tsd-signature tsd-kind-icon">sprite<wbr>Buffer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Sprite</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L11">objects/Parallax.ts:11</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="spriteorderlist" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> sprite<wbr>Order<wbr>List</h3>
-					<div class="tsd-signature tsd-kind-icon">sprite<wbr>Order<wbr>List<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L12">objects/Parallax.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -746,31 +771,6 @@
 							<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:370</li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="texturescale" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagOptional">Optional</span> texture<wbr>Scale</h3>
-					<div class="tsd-signature tsd-kind-icon">texture<wbr>Scale<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L26">objects/Parallax.ts:26</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="totalwidth" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> total<wbr>Width</h3>
-					<div class="tsd-signature tsd-kind-icon">total<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L17">objects/Parallax.ts:17</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>total width of all textures</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="trackedpointers" class="tsd-anchor"></a>
@@ -799,16 +799,6 @@
 						<p>Inherited from DisplayObject.transform</p>
 						<ul>
 							<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:390</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="viewportsize" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> view<wbr>Port<wbr>Size</h3>
-					<div class="tsd-signature tsd-kind-icon">view<wbr>Port<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Point</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L7">objects/Parallax.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -842,16 +832,6 @@
 						<p>Inherited from DisplayObject.worldAlpha</p>
 						<ul>
 							<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:395</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="worldposition" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> world<wbr>Position</h3>
-					<div class="tsd-signature tsd-kind-icon">world<wbr>Position<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L8">objects/Parallax.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -948,31 +928,41 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
 				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="parallaxfactor-1" class="tsd-anchor"></a>
-					<h3>Parallax<wbr>Factor</h3>
+					<a name="backgroundcolor-1" class="tsd-anchor"></a>
+					<h3>Back<wbr>Ground<wbr>Color</h3>
 					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> ParallaxFactor<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> ParallaxFactor<span class="tsd-signature-symbol">(</span>factor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> BackGroundColor<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> BackGroundColor<span class="tsd-signature-symbol">(</span>color<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L53">objects/Parallax.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L67">core/Scene.ts:67</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the scene background color.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L56">objects/Parallax.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L73">core/Scene.ts:73</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the scene background color.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>factor: <span class="tsd-signature-type">number</span></h5>
+									<h5>color: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -980,80 +970,95 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="viewportsize-1" class="tsd-anchor"></a>
-					<h3>View<wbr>Port<wbr>Size</h3>
+					<a name="hudoverlay" class="tsd-anchor"></a>
+					<h3>Hud<wbr>Overlay</h3>
 					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> ViewPortSize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> ViewPortSize<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Point</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> HudOverlay<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Container</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> HudOverlay<span class="tsd-signature-symbol">(</span>hud<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Container</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L47">objects/Parallax.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L80">core/Scene.ts:80</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Point</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the scene hud overlay container.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Container</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">null</span>
+							</h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L50">objects/Parallax.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L86">core/Scene.ts:86</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the scene hud overlay container.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>point: <span class="tsd-signature-type">Point</span></h5>
+									<h5>hud: <span class="tsd-signature-type">Container</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
-					<a name="worldposition-1" class="tsd-anchor"></a>
-					<h3>World<wbr>Position</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> WorldPosition<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="clear" class="tsd-anchor"></a>
+					<h3>clear</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> clear<span class="tsd-signature-symbol">(</span>clearFlag<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L37">objects/Parallax.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L146">core/Scene.ts:146</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the clear flag used by the PIXI renderer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L153">core/Scene.ts:153</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the clear flag used by the PIXI renderer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>clearFlag: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="setviewportx" class="tsd-anchor"></a>
-					<h3>Set<wbr>View<wbr>PortX</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Set<wbr>View<wbr>PortX<span class="tsd-signature-symbol">(</span>newPositionX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L41">objects/Parallax.ts:41</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>newPositionX: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="_cacheasbitmapdestroy" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _cache<wbr>AsBitmap<wbr>Destroy</h3>
@@ -1312,50 +1317,25 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
 					<a name="addchild" class="tsd-anchor"></a>
 					<h3>add<wbr>Child</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Child&lt;T&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>children<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Child&lt;T&gt;<span class="tsd-signature-symbol">(</span>child<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from Container.addChild</p>
+								<p>Overrides Container.addChild</p>
 								<ul>
-									<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:292</li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L102">core/Scene.ts:102</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-type-parameters-title">Type parameters</h4>
-							<ul class="tsd-type-parameters">
-								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DisplayObject</span></h4>
-								</li>
-							</ul>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>children: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-					<a name="addchildat" class="tsd-anchor"></a>
-					<h3>add<wbr>Child<wbr>At</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Child<wbr>At&lt;T&gt;<span class="tsd-signature-symbol">(</span>child<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from Container.addChildAt</p>
-								<ul>
-									<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:293</li>
-								</ul>
-							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a child object to the scene.</p>
+								</div>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -1366,9 +1346,53 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>child: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>PIXI.DisplayObject</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+					<a name="addchildat" class="tsd-anchor"></a>
+					<h3>add<wbr>Child<wbr>At</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Child<wbr>At&lt;T&gt;<span class="tsd-signature-symbol">(</span>child<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides Container.addChildAt</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L116">core/Scene.ts:116</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a child object to the scene.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DisplayObject</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>child: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>PIXI.DisplayObject</p>
+									</div>
 								</li>
 								<li>
 									<h5>index: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>position in the display object list where the child is inserted</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
@@ -1727,29 +1751,25 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="gettexture" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> get<wbr>Texture</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Texture<span class="tsd-signature-symbol">(</span>textures<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Texture</span><span class="tsd-signature-symbol">&gt;</span>, textureIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Texture</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ispaused" class="tsd-anchor"></a>
+					<h3>is<wbr>Paused</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Paused<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L96">objects/Parallax.ts:96</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L140">core/Scene.ts:140</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>textures: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Texture</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-								<li>
-									<h5>textureIndex: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Texture</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if the scene is paused.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1919,6 +1939,142 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="onactivate" class="tsd-anchor"></a>
+					<h3>on<wbr>Activate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Activate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L32">core/Scene.ts:32</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fired every time the scene is to be activated.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd><p>If a new scene is activated, <code>currentScene.onDeactivate()</code> is fired first followed by <code>newScene.onActivate()</code></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ondeactivate" class="tsd-anchor"></a>
+					<h3>on<wbr>Deactivate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Deactivate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L39">core/Scene.ts:39</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fired every time the scene is deactivated.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ondestroy" class="tsd-anchor"></a>
+					<h3>on<wbr>Destroy</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Destroy<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">DestroyOptions</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L60">core/Scene.ts:60</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">DestroyOptions</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="onresize" class="tsd-anchor"></a>
+					<h3>on<wbr>Resize</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Resize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L47">core/Scene.ts:47</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fired every time the window resizes, the scene is about to be activated (before <code>onActivate()</code>) and after a MasterHudOverlay is set.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>remarks</dt>
+									<dd><p>Note that this function is fired only for the current (active) scene!</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="onupdate" class="tsd-anchor"></a>
+					<h3>on<wbr>Update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Update<span class="tsd-signature-symbol">(</span>dt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, timestamp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L56">core/Scene.ts:56</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fired on each animation frame</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dt: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>ellapsed time delta</p>
+									</div>
+								</li>
+								<li>
+									<h5>timestamp: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>total time, usefull for TWEEN.update and other libs depending on total time</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="once" class="tsd-anchor"></a>
 					<h3>once</h3>
@@ -1991,25 +2147,24 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="recalculateposition" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> recalculate<wbr>Position</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">recalculate<wbr>Position<span class="tsd-signature-symbol">(</span>newPositionX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="pause" class="tsd-anchor"></a>
+					<h3>pause</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">pause<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L106">objects/Parallax.ts:106</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L128">core/Scene.ts:128</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>newPositionX: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Pauses the scene. A paused scene is not rendered and its <code>onUpdate()</code> events are not fired.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -2237,6 +2392,28 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="resume" class="tsd-anchor"></a>
+					<h3>resume</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">resume<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/core/Scene.ts#L134">core/Scene.ts:134</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Resumes the scene.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="setchildindex" class="tsd-anchor"></a>
 					<h3>set<wbr>Child<wbr>Index</h3>
@@ -2312,29 +2489,6 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Container</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="settextures" class="tsd-anchor"></a>
-					<h3>set<wbr>Textures</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Textures<span class="tsd-signature-symbol">(</span>textures<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Texture</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L60">objects/Parallax.ts:60</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>textures: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Texture</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -2523,29 +2677,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="updatepositions" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> update<wbr>Positions</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Positions<span class="tsd-signature-symbol">(</span>delta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/Parallax.ts#L132">objects/Parallax.ts:132</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>delta: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="updatetransform" class="tsd-anchor"></a>
 					<h3>update<wbr>Transform</h3>
@@ -2573,403 +2704,421 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_core_defaultscreensizecalculator_.html">"core/<wbr>Default<wbr>Screen<wbr>Size<wbr>Calculator"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_core_iscreensizecalculator_.html">"core/IScreen<wbr>Size<wbr>Calculator"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_core_scene_.html">"core/<wbr>Scene"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_core_scenemanager_.html">"core/<wbr>Scene<wbr>Manager"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_core_textureloader_.html">"core/<wbr>Texture<wbr>Loader"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_objects_animatedsprite_.html">"objects/<wbr>Animated<wbr>Sprite"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_objects_animationsequence_.html">"objects/<wbr>Animation<wbr>Sequence"</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_objects_parallax_.html">"objects/<wbr>Parallax"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_objects_slider_.html">"objects/<wbr>Slider"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_objects_spritebutton_.html">"objects/<wbr>Sprite<wbr>Button"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utility_dictionary_.html">"utility/<wbr>Dictionary"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utility_keyboardaction_.html">"utility/<wbr>Keyboard<wbr>Action"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utility_keyboardmapper_.html">"utility/<wbr>Keyboard<wbr>Mapper"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utility_linkedlist_.html">"utility/<wbr>Linked<wbr>List"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utility_linkedlistnode_.html">"utility/<wbr>Linked<wbr>List<wbr>Node"</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="../enums/state.html" class="tsd-kind-icon">State</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="animatedsprite.html" class="tsd-kind-icon">Animated<wbr>Sprite</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="animationsequence.html" class="tsd-kind-icon">Animation<wbr>Sequence</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="defaultscreensizecalculator.html" class="tsd-kind-icon">Default<wbr>Screen<wbr>Size<wbr>Calculator</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="dictionary.html" class="tsd-kind-icon">Dictionary</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="keyboardaction.html" class="tsd-kind-icon">Keyboard<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="keyboardmapper.html" class="tsd-kind-icon">Keyboard<wbr>Mapper</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="linkedlist.html" class="tsd-kind-icon">Linked<wbr>List</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="linkedlistnode.html" class="tsd-kind-icon">Linked<wbr>List<wbr>Node</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="parallax.html" class="tsd-kind-icon">Parallax</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_objects_parallax_.parallax.html" class="tsd-kind-icon">Parallax</a>
+					<li class="current tsd-kind-class">
+						<a href="scene.html" class="tsd-kind-icon">Scene</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="_objects_parallax_.parallax.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="scene.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="scene.html#name" class="tsd-kind-icon">Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_bounds" class="tsd-kind-icon">_bounds</a>
+								<a href="scene.html#_bounds" class="tsd-kind-icon">_bounds</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_boundsid" class="tsd-kind-icon">_boundsID</a>
+								<a href="scene.html#_boundsid" class="tsd-kind-icon">_boundsID</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_boundsrect" class="tsd-kind-icon">_bounds<wbr>Rect</a>
+								<a href="scene.html#_boundsrect" class="tsd-kind-icon">_bounds<wbr>Rect</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_cacheasbitmap" class="tsd-kind-icon">_cache<wbr>AsBitmap</a>
+								<a href="scene.html#_cacheasbitmap" class="tsd-kind-icon">_cache<wbr>AsBitmap</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_cachedata" class="tsd-kind-icon">_cache<wbr>Data</a>
+								<a href="scene.html#_cachedata" class="tsd-kind-icon">_cache<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_destroyed" class="tsd-kind-icon">_destroyed</a>
+								<a href="scene.html#_destroyed" class="tsd-kind-icon">_destroyed</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_enabledfilters" class="tsd-kind-icon">_enabled<wbr>Filters</a>
+								<a href="scene.html#_enabledfilters" class="tsd-kind-icon">_enabled<wbr>Filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_filters" class="tsd-kind-icon">_filters</a>
+								<a href="scene.html#_filters" class="tsd-kind-icon">_filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_lastboundsid" class="tsd-kind-icon">_last<wbr>BoundsID</a>
+								<a href="scene.html#_lastboundsid" class="tsd-kind-icon">_last<wbr>BoundsID</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_localboundsrect" class="tsd-kind-icon">_local<wbr>Bounds<wbr>Rect</a>
+								<a href="scene.html#_localboundsrect" class="tsd-kind-icon">_local<wbr>Bounds<wbr>Rect</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_mask" class="tsd-kind-icon">_mask</a>
+								<a href="scene.html#_mask" class="tsd-kind-icon">_mask</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#accessible" class="tsd-kind-icon">accessible</a>
+								<a href="scene.html#accessible" class="tsd-kind-icon">accessible</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#accessiblehint" class="tsd-kind-icon">accessible<wbr>Hint</a>
+								<a href="scene.html#accessiblehint" class="tsd-kind-icon">accessible<wbr>Hint</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#accessibletitle" class="tsd-kind-icon">accessible<wbr>Title</a>
+								<a href="scene.html#accessibletitle" class="tsd-kind-icon">accessible<wbr>Title</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#alpha" class="tsd-kind-icon">alpha</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#buttonmode" class="tsd-kind-icon">button<wbr>Mode</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#cacheasbitmap" class="tsd-kind-icon">cache<wbr>AsBitmap</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#children" class="tsd-kind-icon">children</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#cursor" class="tsd-kind-icon">cursor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#defaultcursor" class="tsd-kind-icon">default<wbr>Cursor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#filterarea" class="tsd-kind-icon">filter<wbr>Area</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#filters" class="tsd-kind-icon">filters</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#height" class="tsd-kind-icon">height</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#hitarea" class="tsd-kind-icon">hit<wbr>Area</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#interactive" class="tsd-kind-icon">interactive</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#interactivechildren" class="tsd-kind-icon">interactive<wbr>Children</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#mask" class="tsd-kind-icon">mask</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#name" class="tsd-kind-icon">name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#onchildrenchange" class="tsd-kind-icon">on<wbr>Children<wbr>Change</a>
+								<a href="scene.html#alpha" class="tsd-kind-icon">alpha</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_parallax_.parallax.html#parallaxfactor" class="tsd-kind-icon">parallax<wbr>Factor</a>
+								<a href="scene.html#backgroundcolor" class="tsd-kind-icon">background<wbr>Color</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#parent" class="tsd-kind-icon">parent</a>
+								<a href="scene.html#buttonmode" class="tsd-kind-icon">button<wbr>Mode</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#pivot" class="tsd-kind-icon">pivot</a>
+								<a href="scene.html#cacheasbitmap" class="tsd-kind-icon">cache<wbr>AsBitmap</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#position" class="tsd-kind-icon">position</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#renderable" class="tsd-kind-icon">renderable</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#rotation" class="tsd-kind-icon">rotation</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#scale" class="tsd-kind-icon">scale</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#skew" class="tsd-kind-icon">skew</a>
+								<a href="scene.html#children" class="tsd-kind-icon">children</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_parallax_.parallax.html#spritebuffer" class="tsd-kind-icon">sprite<wbr>Buffer</a>
+								<a href="scene.html#clearvalue" class="tsd-kind-icon">clear<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#cursor" class="tsd-kind-icon">cursor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#defaultcursor" class="tsd-kind-icon">default<wbr>Cursor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#filterarea" class="tsd-kind-icon">filter<wbr>Area</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#filters" class="tsd-kind-icon">filters</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#height" class="tsd-kind-icon">height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#hitarea" class="tsd-kind-icon">hit<wbr>Area</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_parallax_.parallax.html#spriteorderlist" class="tsd-kind-icon">sprite<wbr>Order<wbr>List</a>
+								<a href="scene.html#hudscene" class="tsd-kind-icon">hud<wbr>Scene</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#tabindex" class="tsd-kind-icon">tab<wbr>Index</a>
+								<a href="scene.html#interactive" class="tsd-kind-icon">interactive</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#interactivechildren" class="tsd-kind-icon">interactive<wbr>Children</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#mask" class="tsd-kind-icon">mask</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#name-1" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#onchildrenchange" class="tsd-kind-icon">on<wbr>Children<wbr>Change</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#parent" class="tsd-kind-icon">parent</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_parallax_.parallax.html#texturescale" class="tsd-kind-icon">texture<wbr>Scale</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_parallax_.parallax.html#totalwidth" class="tsd-kind-icon">total<wbr>Width</a>
+								<a href="scene.html#paused" class="tsd-kind-icon">paused</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#trackedpointers" class="tsd-kind-icon">tracked<wbr>Pointers</a>
+								<a href="scene.html#pivot" class="tsd-kind-icon">pivot</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#transform" class="tsd-kind-icon">transform</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_parallax_.parallax.html#viewportsize" class="tsd-kind-icon">view<wbr>Port<wbr>Size</a>
+								<a href="scene.html#position" class="tsd-kind-icon">position</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#visible" class="tsd-kind-icon">visible</a>
+								<a href="scene.html#renderable" class="tsd-kind-icon">renderable</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#width" class="tsd-kind-icon">width</a>
+								<a href="scene.html#rotation" class="tsd-kind-icon">rotation</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#worldalpha" class="tsd-kind-icon">world<wbr>Alpha</a>
+								<a href="scene.html#scale" class="tsd-kind-icon">scale</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_parallax_.parallax.html#worldposition" class="tsd-kind-icon">world<wbr>Position</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#worldtransform" class="tsd-kind-icon">world<wbr>Transform</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="scene.html#scenemanager" class="tsd-kind-icon">scene<wbr>Manager</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#worldvisible" class="tsd-kind-icon">world<wbr>Visible</a>
+								<a href="scene.html#skew" class="tsd-kind-icon">skew</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#x" class="tsd-kind-icon">x</a>
+								<a href="scene.html#tabindex" class="tsd-kind-icon">tab<wbr>Index</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#y" class="tsd-kind-icon">y</a>
+								<a href="scene.html#trackedpointers" class="tsd-kind-icon">tracked<wbr>Pointers</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#transform" class="tsd-kind-icon">transform</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#visible" class="tsd-kind-icon">visible</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#width" class="tsd-kind-icon">width</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#worldalpha" class="tsd-kind-icon">world<wbr>Alpha</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#worldtransform" class="tsd-kind-icon">world<wbr>Transform</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#worldvisible" class="tsd-kind-icon">world<wbr>Visible</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#x" class="tsd-kind-icon">x</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#y" class="tsd-kind-icon">y</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="_objects_parallax_.parallax.html#eventemitter" class="tsd-kind-icon">Event<wbr>Emitter</a>
+								<a href="scene.html#eventemitter" class="tsd-kind-icon">Event<wbr>Emitter</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="_objects_parallax_.parallax.html#prefixed-1" class="tsd-kind-icon">prefixed</a>
+								<a href="scene.html#prefixed-1" class="tsd-kind-icon">prefixed</a>
 							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="_objects_parallax_.parallax.html#parallaxfactor-1" class="tsd-kind-icon">Parallax<wbr>Factor</a>
+								<a href="scene.html#backgroundcolor-1" class="tsd-kind-icon">Back<wbr>Ground<wbr>Color</a>
 							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="_objects_parallax_.parallax.html#viewportsize-1" class="tsd-kind-icon">View<wbr>Port<wbr>Size</a>
+								<a href="scene.html#hudoverlay" class="tsd-kind-icon">Hud<wbr>Overlay</a>
 							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
-								<a href="_objects_parallax_.parallax.html#worldposition-1" class="tsd-kind-icon">World<wbr>Position</a>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class">
+								<a href="scene.html#clear" class="tsd-kind-icon">clear</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_cacheasbitmapdestroy" class="tsd-kind-icon">_cache<wbr>AsBitmap<wbr>Destroy</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_calculatebounds" class="tsd-kind-icon">_calculate<wbr>Bounds</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_calculatecachedbounds" class="tsd-kind-icon">_calculate<wbr>Cached<wbr>Bounds</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_destroycacheddisplayobject" class="tsd-kind-icon">_destroy<wbr>Cached<wbr>Display<wbr>Object</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_getcachedlocalbounds" class="tsd-kind-icon">_get<wbr>Cached<wbr>Local<wbr>Bounds</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_initcacheddisplayobject" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_initcacheddisplayobjectcanvas" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object<wbr>Canvas</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_recursivepostupdatetransform" class="tsd-kind-icon">_recursive<wbr>Post<wbr>Update<wbr>Transform</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_rendercachedcanvas" class="tsd-kind-icon">_render<wbr>Cached<wbr>Canvas</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_rendercachedwebgl" class="tsd-kind-icon">_render<wbr>Cached<wbr>WebGL</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_rendercanvas" class="tsd-kind-icon">_render<wbr>Canvas</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#_renderwebgl" class="tsd-kind-icon">_render<wbr>WebGL</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+								<a href="scene.html#addchild" class="tsd-kind-icon">add<wbr>Child</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+								<a href="scene.html#addchildat" class="tsd-kind-icon">add<wbr>Child<wbr>At</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="scene.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#containerupdatetransform" class="tsd-kind-icon">container<wbr>Update<wbr>Transform</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="scene.html#destroy" class="tsd-kind-icon">destroy</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="scene.html#displayobjectupdatetransform" class="tsd-kind-icon">display<wbr>Object<wbr>Update<wbr>Transform</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#emit" class="tsd-kind-icon">emit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#getbounds" class="tsd-kind-icon">get<wbr>Bounds</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="scene.html#getchildat" class="tsd-kind-icon">get<wbr>Child<wbr>At</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="scene.html#getchildbyname" class="tsd-kind-icon">get<wbr>Child<wbr>ByName</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#getchildindex" class="tsd-kind-icon">get<wbr>Child<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#getglobalposition" class="tsd-kind-icon">get<wbr>Global<wbr>Position</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#getlocalbounds" class="tsd-kind-icon">get<wbr>Local<wbr>Bounds</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_objects_parallax_.parallax.html#setviewportx" class="tsd-kind-icon">Set<wbr>View<wbr>PortX</a>
+								<a href="scene.html#ispaused" class="tsd-kind-icon">is<wbr>Paused</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_cacheasbitmapdestroy" class="tsd-kind-icon">_cache<wbr>AsBitmap<wbr>Destroy</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_calculatebounds" class="tsd-kind-icon">_calculate<wbr>Bounds</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_calculatecachedbounds" class="tsd-kind-icon">_calculate<wbr>Cached<wbr>Bounds</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_destroycacheddisplayobject" class="tsd-kind-icon">_destroy<wbr>Cached<wbr>Display<wbr>Object</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_getcachedlocalbounds" class="tsd-kind-icon">_get<wbr>Cached<wbr>Local<wbr>Bounds</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_initcacheddisplayobject" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_initcacheddisplayobjectcanvas" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object<wbr>Canvas</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_recursivepostupdatetransform" class="tsd-kind-icon">_recursive<wbr>Post<wbr>Update<wbr>Transform</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_rendercachedcanvas" class="tsd-kind-icon">_render<wbr>Cached<wbr>Canvas</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_rendercachedwebgl" class="tsd-kind-icon">_render<wbr>Cached<wbr>WebGL</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_rendercanvas" class="tsd-kind-icon">_render<wbr>Canvas</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#_renderwebgl" class="tsd-kind-icon">_render<wbr>WebGL</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#addchild" class="tsd-kind-icon">add<wbr>Child</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#addchildat" class="tsd-kind-icon">add<wbr>Child<wbr>At</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#listeners" class="tsd-kind-icon">listeners</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#containerupdatetransform" class="tsd-kind-icon">container<wbr>Update<wbr>Transform</a>
+								<a href="scene.html#off" class="tsd-kind-icon">off</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#destroy" class="tsd-kind-icon">destroy</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_parallax_.parallax.html#displayobjectupdatetransform" class="tsd-kind-icon">display<wbr>Object<wbr>Update<wbr>Transform</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#emit" class="tsd-kind-icon">emit</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#getbounds" class="tsd-kind-icon">get<wbr>Bounds</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#getchildat" class="tsd-kind-icon">get<wbr>Child<wbr>At</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#getchildbyname" class="tsd-kind-icon">get<wbr>Child<wbr>ByName</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#getchildindex" class="tsd-kind-icon">get<wbr>Child<wbr>Index</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#getglobalposition" class="tsd-kind-icon">get<wbr>Global<wbr>Position</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#getlocalbounds" class="tsd-kind-icon">get<wbr>Local<wbr>Bounds</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_parallax_.parallax.html#gettexture" class="tsd-kind-icon">get<wbr>Texture</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#listeners" class="tsd-kind-icon">listeners</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#off" class="tsd-kind-icon">off</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#on" class="tsd-kind-icon">on</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#once" class="tsd-kind-icon">once</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_parallax_.parallax.html#recalculateposition" class="tsd-kind-icon">recalculate<wbr>Position</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#removechild" class="tsd-kind-icon">remove<wbr>Child</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#removechildat" class="tsd-kind-icon">remove<wbr>Child<wbr>At</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#removechildren" class="tsd-kind-icon">remove<wbr>Children</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#renderadvancedwebgl" class="tsd-kind-icon">render<wbr>Advanced<wbr>WebGL</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#rendercanvas" class="tsd-kind-icon">render<wbr>Canvas</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#renderwebgl" class="tsd-kind-icon">render<wbr>WebGL</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#setchildindex" class="tsd-kind-icon">set<wbr>Child<wbr>Index</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#setparent" class="tsd-kind-icon">set<wbr>Parent</a>
+								<a href="scene.html#on" class="tsd-kind-icon">on</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_objects_parallax_.parallax.html#settextures" class="tsd-kind-icon">set<wbr>Textures</a>
+								<a href="scene.html#onactivate" class="tsd-kind-icon">on<wbr>Activate</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#settransform" class="tsd-kind-icon">set<wbr>Transform</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="scene.html#ondeactivate" class="tsd-kind-icon">on<wbr>Deactivate</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#swapchildren" class="tsd-kind-icon">swap<wbr>Children</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="scene.html#ondestroy" class="tsd-kind-icon">on<wbr>Destroy</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#toglobal" class="tsd-kind-icon">to<wbr>Global</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="scene.html#onresize" class="tsd-kind-icon">on<wbr>Resize</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#tolocal" class="tsd-kind-icon">to<wbr>Local</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_parallax_.parallax.html#updatepositions" class="tsd-kind-icon">update<wbr>Positions</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="scene.html#onupdate" class="tsd-kind-icon">on<wbr>Update</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_parallax_.parallax.html#updatetransform" class="tsd-kind-icon">update<wbr>Transform</a>
+								<a href="scene.html#once" class="tsd-kind-icon">once</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="scene.html#pause" class="tsd-kind-icon">pause</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="scene.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="scene.html#removechild" class="tsd-kind-icon">remove<wbr>Child</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="scene.html#removechildat" class="tsd-kind-icon">remove<wbr>Child<wbr>At</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="scene.html#removechildren" class="tsd-kind-icon">remove<wbr>Children</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="scene.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#renderadvancedwebgl" class="tsd-kind-icon">render<wbr>Advanced<wbr>WebGL</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="scene.html#rendercanvas" class="tsd-kind-icon">render<wbr>Canvas</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="scene.html#renderwebgl" class="tsd-kind-icon">render<wbr>WebGL</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="scene.html#resume" class="tsd-kind-icon">resume</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#setchildindex" class="tsd-kind-icon">set<wbr>Child<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#setparent" class="tsd-kind-icon">set<wbr>Parent</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#settransform" class="tsd-kind-icon">set<wbr>Transform</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="scene.html#swapchildren" class="tsd-kind-icon">swap<wbr>Children</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="scene.html#toglobal" class="tsd-kind-icon">to<wbr>Global</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="scene.html#tolocal" class="tsd-kind-icon">to<wbr>Local</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="scene.html#updatetransform" class="tsd-kind-icon">update<wbr>Transform</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class">
+						<a href="scenemanager.html" class="tsd-kind-icon">Scene<wbr>Manager</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="slider.html" class="tsd-kind-icon">Slider</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="spritebutton.html" class="tsd-kind-icon">Sprite<wbr>Button</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="textureloader.html" class="tsd-kind-icon">Texture<wbr>Loader</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iscreensizecalculator.html" class="tsd-kind-icon">IScreen<wbr>Size<wbr>Calculator</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/isize.html" class="tsd-kind-icon">ISize</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#keyboardactioncallback" class="tsd-kind-icon">Keyboard<wbr>Action<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../globals.html#valuegetter" class="tsd-kind-icon">value<wbr>Getter</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="../globals.html#column_padding" class="tsd-kind-icon">COLUMN_<wbr>PADDING</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#version" class="tsd-kind-icon">VERSION</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

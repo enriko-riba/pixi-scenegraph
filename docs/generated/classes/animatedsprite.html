@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SpriteButton | pixi-scenegraph</title>
+	<title>AnimatedSprite | pixi-scenegraph</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_objects_spritebutton_.html">&quot;objects/SpriteButton&quot;</a>
-				</li>
-				<li>
-					<a href="_objects_spritebutton_.spritebutton.html">SpriteButton</a>
+					<a href="animatedsprite.html">AnimatedSprite</a>
 				</li>
 			</ul>
-			<h1>Class SpriteButton</h1>
+			<h1>Class AnimatedSprite</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Basic Sprite based button. Uses different textures for pointerout, pointerover, pointerdown. Povides an <code>onClick</code> function</p>
+						<p>Animated sprite display object. Holds a collection of <code>AnimationSequence</code> objects that can be started and stopped on demand.</p>
 					</div>
 				</div>
 			</section>
@@ -83,7 +80,7 @@
 						<span class="tsd-signature-type">Sprite</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">SpriteButton</span>
+								<span class="target">AnimatedSprite</span>
 							</li>
 						</ul>
 					</li>
@@ -103,171 +100,162 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_objects_spritebutton_.spritebutton.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="animatedsprite.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_anchor" class="tsd-kind-icon">_anchor</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_bounds" class="tsd-kind-icon">_bounds</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_boundsid" class="tsd-kind-icon">_boundsID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_boundsrect" class="tsd-kind-icon">_bounds<wbr>Rect</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_cacheasbitmap" class="tsd-kind-icon">_cache<wbr>AsBitmap</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_cachedata" class="tsd-kind-icon">_cache<wbr>Data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_destroyed" class="tsd-kind-icon">_destroyed</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_enabledfilters" class="tsd-kind-icon">_enabled<wbr>Filters</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_filters" class="tsd-kind-icon">_filters</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_height" class="tsd-kind-icon">_height</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_lastboundsid" class="tsd-kind-icon">_last<wbr>BoundsID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_localboundsrect" class="tsd-kind-icon">_local<wbr>Bounds<wbr>Rect</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_mask" class="tsd-kind-icon">_mask</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_texture" class="tsd-kind-icon">_texture</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_textureid" class="tsd-kind-icon">_textureID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_texturetrimmedid" class="tsd-kind-icon">_texture<wbr>TrimmedID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_tint" class="tsd-kind-icon">_tint</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_tintrgb" class="tsd-kind-icon">_tintRGB</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_transformid" class="tsd-kind-icon">_transformID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_transformtrimmedid" class="tsd-kind-icon">_transform<wbr>TrimmedID</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_width" class="tsd-kind-icon">_width</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#accessible" class="tsd-kind-icon">accessible</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#accessiblehint" class="tsd-kind-icon">accessible<wbr>Hint</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#accessibletitle" class="tsd-kind-icon">accessible<wbr>Title</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#alpha" class="tsd-kind-icon">alpha</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#anchor" class="tsd-kind-icon">anchor</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#blendmode" class="tsd-kind-icon">blend<wbr>Mode</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#buttonmode" class="tsd-kind-icon">button<wbr>Mode</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#cacheasbitmap" class="tsd-kind-icon">cache<wbr>AsBitmap</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#cachedtint" class="tsd-kind-icon">cached<wbr>Tint</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#children" class="tsd-kind-icon">children</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#cursor" class="tsd-kind-icon">cursor</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#defaultcursor" class="tsd-kind-icon">default<wbr>Cursor</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#filterarea" class="tsd-kind-icon">filter<wbr>Area</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#filters" class="tsd-kind-icon">filters</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#height" class="tsd-kind-icon">height</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#hitarea" class="tsd-kind-icon">hit<wbr>Area</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#interactive" class="tsd-kind-icon">interactive</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#interactivechildren" class="tsd-kind-icon">interactive<wbr>Children</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#isclickstartedvalue" class="tsd-kind-icon">is<wbr>Click<wbr>Started<wbr>Value</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#isdisabledvalue" class="tsd-kind-icon">is<wbr>Disabled<wbr>Value</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#ishighlightedvalue" class="tsd-kind-icon">is<wbr>Highlighted<wbr>Value</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#ispressedvalue" class="tsd-kind-icon">is<wbr>Pressed<wbr>Value</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#mask" class="tsd-kind-icon">mask</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_objects_spritebutton_.spritebutton.html#mouseout" class="tsd-kind-icon">mouseout</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_objects_spritebutton_.spritebutton.html#mouseover" class="tsd-kind-icon">mouseover</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#onchildrenchange" class="tsd-kind-icon">on<wbr>Children<wbr>Change</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_objects_spritebutton_.spritebutton.html#onclick" class="tsd-kind-icon">on<wbr>Click</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#parent" class="tsd-kind-icon">parent</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#pivot" class="tsd-kind-icon">pivot</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#pluginname" class="tsd-kind-icon">plugin<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#position" class="tsd-kind-icon">position</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#renderable" class="tsd-kind-icon">renderable</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#requestedheight" class="tsd-kind-icon">requested<wbr>Height</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#requestedwidth" class="tsd-kind-icon">requested<wbr>Width</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#rotation" class="tsd-kind-icon">rotation</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#scale" class="tsd-kind-icon">scale</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#skew" class="tsd-kind-icon">skew</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#tabindex" class="tsd-kind-icon">tab<wbr>Index</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#textvalue" class="tsd-kind-icon">text<wbr>Value</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#texture" class="tsd-kind-icon">texture</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#texturedirty" class="tsd-kind-icon">texture<wbr>Dirty</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#texturedown" class="tsd-kind-icon">texture<wbr>Down</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#texturehighlight" class="tsd-kind-icon">texture<wbr>Highlight</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#textureup" class="tsd-kind-icon">texture<wbr>Up</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#tint" class="tsd-kind-icon">tint</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#trackedpointers" class="tsd-kind-icon">tracked<wbr>Pointers</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#transform" class="tsd-kind-icon">transform</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#vertexdata" class="tsd-kind-icon">vertex<wbr>Data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#vertextrimmeddata" class="tsd-kind-icon">vertex<wbr>Trimmed<wbr>Data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#visible" class="tsd-kind-icon">visible</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#width" class="tsd-kind-icon">width</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#worldalpha" class="tsd-kind-icon">world<wbr>Alpha</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#worldtransform" class="tsd-kind-icon">world<wbr>Transform</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#worldvisible" class="tsd-kind-icon">world<wbr>Visible</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#x" class="tsd-kind-icon">x</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#y" class="tsd-kind-icon">y</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_objects_spritebutton_.spritebutton.html#eventemitter" class="tsd-kind-icon">Event<wbr>Emitter</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_objects_spritebutton_.spritebutton.html#prefixed-1" class="tsd-kind-icon">prefixed</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_anchor" class="tsd-kind-icon">_anchor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_bounds" class="tsd-kind-icon">_bounds</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_boundsid" class="tsd-kind-icon">_boundsID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_boundsrect" class="tsd-kind-icon">_bounds<wbr>Rect</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_cacheasbitmap" class="tsd-kind-icon">_cache<wbr>AsBitmap</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_cachedata" class="tsd-kind-icon">_cache<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_destroyed" class="tsd-kind-icon">_destroyed</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_enabledfilters" class="tsd-kind-icon">_enabled<wbr>Filters</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_filters" class="tsd-kind-icon">_filters</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_height" class="tsd-kind-icon">_height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_lastboundsid" class="tsd-kind-icon">_last<wbr>BoundsID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_localboundsrect" class="tsd-kind-icon">_local<wbr>Bounds<wbr>Rect</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_mask" class="tsd-kind-icon">_mask</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_texture" class="tsd-kind-icon">_texture</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_textureid" class="tsd-kind-icon">_textureID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_texturetrimmedid" class="tsd-kind-icon">_texture<wbr>TrimmedID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_tint" class="tsd-kind-icon">_tint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_tintrgb" class="tsd-kind-icon">_tintRGB</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_transformid" class="tsd-kind-icon">_transformID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_transformtrimmedid" class="tsd-kind-icon">_transform<wbr>TrimmedID</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_width" class="tsd-kind-icon">_width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#accessible" class="tsd-kind-icon">accessible</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#accessiblehint" class="tsd-kind-icon">accessible<wbr>Hint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#accessibletitle" class="tsd-kind-icon">accessible<wbr>Title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="animatedsprite.html#accumulator" class="tsd-kind-icon">accumulator</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#alpha" class="tsd-kind-icon">alpha</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#anchor" class="tsd-kind-icon">anchor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="animatedsprite.html#animations" class="tsd-kind-icon">animations</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#blendmode" class="tsd-kind-icon">blend<wbr>Mode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#buttonmode" class="tsd-kind-icon">button<wbr>Mode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#cacheasbitmap" class="tsd-kind-icon">cache<wbr>AsBitmap</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#cachedtint" class="tsd-kind-icon">cached<wbr>Tint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#children" class="tsd-kind-icon">children</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="animatedsprite.html#currentfps" class="tsd-kind-icon">current<wbr>Fps</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="animatedsprite.html#currentsequence" class="tsd-kind-icon">current<wbr>Sequence</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#cursor" class="tsd-kind-icon">cursor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#defaultcursor" class="tsd-kind-icon">default<wbr>Cursor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#filterarea" class="tsd-kind-icon">filter<wbr>Area</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#filters" class="tsd-kind-icon">filters</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="animatedsprite.html#frameindex" class="tsd-kind-icon">frame<wbr>Index</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#height" class="tsd-kind-icon">height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#hitarea" class="tsd-kind-icon">hit<wbr>Area</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#interactive" class="tsd-kind-icon">interactive</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#interactivechildren" class="tsd-kind-icon">interactive<wbr>Children</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="animatedsprite.html#islooping" class="tsd-kind-icon">is<wbr>Looping</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="animatedsprite.html#isplaying" class="tsd-kind-icon">is<wbr>Playing</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#mask" class="tsd-kind-icon">mask</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#onchildrenchange" class="tsd-kind-icon">on<wbr>Children<wbr>Change</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="animatedsprite.html#oncompletecallback" class="tsd-kind-icon">on<wbr>Complete<wbr>Call<wbr>Back</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#parent" class="tsd-kind-icon">parent</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#pivot" class="tsd-kind-icon">pivot</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#pluginname" class="tsd-kind-icon">plugin<wbr>Name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#position" class="tsd-kind-icon">position</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#renderable" class="tsd-kind-icon">renderable</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#rotation" class="tsd-kind-icon">rotation</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#scale" class="tsd-kind-icon">scale</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#skew" class="tsd-kind-icon">skew</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#tabindex" class="tsd-kind-icon">tab<wbr>Index</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#texture" class="tsd-kind-icon">texture</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#texturedirty" class="tsd-kind-icon">texture<wbr>Dirty</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#tint" class="tsd-kind-icon">tint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#trackedpointers" class="tsd-kind-icon">tracked<wbr>Pointers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#transform" class="tsd-kind-icon">transform</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#vertexdata" class="tsd-kind-icon">vertex<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#vertextrimmeddata" class="tsd-kind-icon">vertex<wbr>Trimmed<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#visible" class="tsd-kind-icon">visible</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#width" class="tsd-kind-icon">width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#worldalpha" class="tsd-kind-icon">world<wbr>Alpha</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#worldtransform" class="tsd-kind-icon">world<wbr>Transform</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#worldvisible" class="tsd-kind-icon">world<wbr>Visible</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#x" class="tsd-kind-icon">x</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#y" class="tsd-kind-icon">y</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="animatedsprite.html#eventemitter" class="tsd-kind-icon">Event<wbr>Emitter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="animatedsprite.html#prefixed-1" class="tsd-kind-icon">prefixed</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_objects_spritebutton_.spritebutton.html#disabled" class="tsd-kind-icon">disabled</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_objects_spritebutton_.spritebutton.html#ishighlighted" class="tsd-kind-icon">is<wbr>Highlighted</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_objects_spritebutton_.spritebutton.html#ispressed" class="tsd-kind-icon">is<wbr>Pressed</a></li>
-								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="_objects_spritebutton_.spritebutton.html#text" class="tsd-kind-icon">text</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="animatedsprite.html#fps" class="tsd-kind-icon">fps</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="animatedsprite.html#loop" class="tsd-kind-icon">loop</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="animatedsprite.html#oncomplete" class="tsd-kind-icon">on<wbr>Complete</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_cacheasbitmapdestroy" class="tsd-kind-icon">_cache<wbr>AsBitmap<wbr>Destroy</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_calculatebounds" class="tsd-kind-icon">_calculate<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_calculatecachedbounds" class="tsd-kind-icon">_calculate<wbr>Cached<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_destroycacheddisplayobject" class="tsd-kind-icon">_destroy<wbr>Cached<wbr>Display<wbr>Object</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_getcachedlocalbounds" class="tsd-kind-icon">_get<wbr>Cached<wbr>Local<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_initcacheddisplayobject" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_initcacheddisplayobjectcanvas" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object<wbr>Canvas</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_ontextureupdate" class="tsd-kind-icon">_on<wbr>Texture<wbr>Update</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_recursivepostupdatetransform" class="tsd-kind-icon">_recursive<wbr>Post<wbr>Update<wbr>Transform</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_rendercachedcanvas" class="tsd-kind-icon">_render<wbr>Cached<wbr>Canvas</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_rendercachedwebgl" class="tsd-kind-icon">_render<wbr>Cached<wbr>WebGL</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_rendercanvas" class="tsd-kind-icon">_render<wbr>Canvas</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#_renderwebgl" class="tsd-kind-icon">_render<wbr>WebGL</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#addchild" class="tsd-kind-icon">add<wbr>Child</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#addchildat" class="tsd-kind-icon">add<wbr>Child<wbr>At</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#applytexture" class="tsd-kind-icon">apply<wbr>Texture</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#calculatetrimmedvertices" class="tsd-kind-icon">calculate<wbr>Trimmed<wbr>Vertices</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#calculatevertices" class="tsd-kind-icon">calculate<wbr>Vertices</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#containerupdatetransform" class="tsd-kind-icon">container<wbr>Update<wbr>Transform</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#containspoint" class="tsd-kind-icon">contains<wbr>Point</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#destroy" class="tsd-kind-icon">destroy</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#displayobjectupdatetransform" class="tsd-kind-icon">display<wbr>Object<wbr>Update<wbr>Transform</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#emit" class="tsd-kind-icon">emit</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#getbounds" class="tsd-kind-icon">get<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#getchildat" class="tsd-kind-icon">get<wbr>Child<wbr>At</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#getchildbyname" class="tsd-kind-icon">get<wbr>Child<wbr>ByName</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#getchildindex" class="tsd-kind-icon">get<wbr>Child<wbr>Index</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#getglobalposition" class="tsd-kind-icon">get<wbr>Global<wbr>Position</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#getlocalbounds" class="tsd-kind-icon">get<wbr>Local<wbr>Bounds</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#listeners" class="tsd-kind-icon">listeners</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#off" class="tsd-kind-icon">off</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#on" class="tsd-kind-icon">on</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="_objects_spritebutton_.spritebutton.html#onanchorupdate" class="tsd-kind-icon">on<wbr>Anchor<wbr>Update</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#onbuttondown" class="tsd-kind-icon">on<wbr>Button<wbr>Down</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#onbuttonout" class="tsd-kind-icon">on<wbr>Button<wbr>Out</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#onbuttonover" class="tsd-kind-icon">on<wbr>Button<wbr>Over</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#onbuttonup" class="tsd-kind-icon">on<wbr>Button<wbr>Up</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#onbuttonupoutside" class="tsd-kind-icon">on<wbr>Button<wbr>UpOutside</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_objects_spritebutton_.spritebutton.html#onclickhandler" class="tsd-kind-icon">on<wbr>Click<wbr>Handler</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#once" class="tsd-kind-icon">once</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_objects_spritebutton_.spritebutton.html#performclick" class="tsd-kind-icon">perform<wbr>Click</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#removechild" class="tsd-kind-icon">remove<wbr>Child</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#removechildat" class="tsd-kind-icon">remove<wbr>Child<wbr>At</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#removechildren" class="tsd-kind-icon">remove<wbr>Children</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#renderadvancedwebgl" class="tsd-kind-icon">render<wbr>Advanced<wbr>WebGL</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#rendercanvas" class="tsd-kind-icon">render<wbr>Canvas</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#renderwebgl" class="tsd-kind-icon">render<wbr>WebGL</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#setchildindex" class="tsd-kind-icon">set<wbr>Child<wbr>Index</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#setparent" class="tsd-kind-icon">set<wbr>Parent</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_objects_spritebutton_.spritebutton.html#settexture" class="tsd-kind-icon">set<wbr>Texture</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#settransform" class="tsd-kind-icon">set<wbr>Transform</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#swapchildren" class="tsd-kind-icon">swap<wbr>Children</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#toglobal" class="tsd-kind-icon">to<wbr>Global</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#tolocal" class="tsd-kind-icon">to<wbr>Local</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="_objects_spritebutton_.spritebutton.html#updatetransform" class="tsd-kind-icon">update<wbr>Transform</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_objects_spritebutton_.spritebutton.html#from" class="tsd-kind-icon">from</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_objects_spritebutton_.spritebutton.html#fromframe" class="tsd-kind-icon">from<wbr>Frame</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_objects_spritebutton_.spritebutton.html#fromimage" class="tsd-kind-icon">from<wbr>Image</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_cacheasbitmapdestroy" class="tsd-kind-icon">_cache<wbr>AsBitmap<wbr>Destroy</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_calculatebounds" class="tsd-kind-icon">_calculate<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_calculatecachedbounds" class="tsd-kind-icon">_calculate<wbr>Cached<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_destroycacheddisplayobject" class="tsd-kind-icon">_destroy<wbr>Cached<wbr>Display<wbr>Object</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_getcachedlocalbounds" class="tsd-kind-icon">_get<wbr>Cached<wbr>Local<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_initcacheddisplayobject" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_initcacheddisplayobjectcanvas" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object<wbr>Canvas</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_ontextureupdate" class="tsd-kind-icon">_on<wbr>Texture<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_recursivepostupdatetransform" class="tsd-kind-icon">_recursive<wbr>Post<wbr>Update<wbr>Transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_rendercachedcanvas" class="tsd-kind-icon">_render<wbr>Cached<wbr>Canvas</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_rendercachedwebgl" class="tsd-kind-icon">_render<wbr>Cached<wbr>WebGL</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_rendercanvas" class="tsd-kind-icon">_render<wbr>Canvas</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#_renderwebgl" class="tsd-kind-icon">_render<wbr>WebGL</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="animatedsprite.html#addanimations" class="tsd-kind-icon">add<wbr>Animations</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="animatedsprite.html#addchild" class="tsd-kind-icon">add<wbr>Child</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="animatedsprite.html#addchildat" class="tsd-kind-icon">add<wbr>Child<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#calculatetrimmedvertices" class="tsd-kind-icon">calculate<wbr>Trimmed<wbr>Vertices</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#calculatevertices" class="tsd-kind-icon">calculate<wbr>Vertices</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="animatedsprite.html#clearanimations" class="tsd-kind-icon">clear<wbr>Animations</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#containerupdatetransform" class="tsd-kind-icon">container<wbr>Update<wbr>Transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#containspoint" class="tsd-kind-icon">contains<wbr>Point</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#destroy" class="tsd-kind-icon">destroy</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#displayobjectupdatetransform" class="tsd-kind-icon">display<wbr>Object<wbr>Update<wbr>Transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#emit" class="tsd-kind-icon">emit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#getbounds" class="tsd-kind-icon">get<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="animatedsprite.html#getchildat" class="tsd-kind-icon">get<wbr>Child<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="animatedsprite.html#getchildbyname" class="tsd-kind-icon">get<wbr>Child<wbr>ByName</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#getchildindex" class="tsd-kind-icon">get<wbr>Child<wbr>Index</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#getglobalposition" class="tsd-kind-icon">get<wbr>Global<wbr>Position</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#getlocalbounds" class="tsd-kind-icon">get<wbr>Local<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#listeners" class="tsd-kind-icon">listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#off" class="tsd-kind-icon">off</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#on" class="tsd-kind-icon">on</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="animatedsprite.html#onanchorupdate" class="tsd-kind-icon">on<wbr>Anchor<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="animatedsprite.html#onupdate" class="tsd-kind-icon">on<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#once" class="tsd-kind-icon">once</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="animatedsprite.html#play" class="tsd-kind-icon">play</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="animatedsprite.html#removechild" class="tsd-kind-icon">remove<wbr>Child</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="animatedsprite.html#removechildat" class="tsd-kind-icon">remove<wbr>Child<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="animatedsprite.html#removechildren" class="tsd-kind-icon">remove<wbr>Children</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#renderadvancedwebgl" class="tsd-kind-icon">render<wbr>Advanced<wbr>WebGL</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#rendercanvas" class="tsd-kind-icon">render<wbr>Canvas</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#renderwebgl" class="tsd-kind-icon">render<wbr>WebGL</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="animatedsprite.html#resetanimation" class="tsd-kind-icon">reset<wbr>Animation</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#setchildindex" class="tsd-kind-icon">set<wbr>Child<wbr>Index</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#setparent" class="tsd-kind-icon">set<wbr>Parent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#settransform" class="tsd-kind-icon">set<wbr>Transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="animatedsprite.html#stop" class="tsd-kind-icon">stop</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="animatedsprite.html#swapchildren" class="tsd-kind-icon">swap<wbr>Children</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="animatedsprite.html#toglobal" class="tsd-kind-icon">to<wbr>Global</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="animatedsprite.html#tolocal" class="tsd-kind-icon">to<wbr>Local</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="animatedsprite.html#updatetransform" class="tsd-kind-icon">update<wbr>Transform</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="animatedsprite.html#from" class="tsd-kind-icon">from</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="animatedsprite.html#fromframe" class="tsd-kind-icon">from<wbr>Frame</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="animatedsprite.html#fromimage" class="tsd-kind-icon">from<wbr>Image</a></li>
 							</ul>
 						</section>
 					</div>
@@ -279,35 +267,17 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Sprite<wbr>Button<span class="tsd-signature-symbol">(</span>texturePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, x<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, width<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_objects_spritebutton_.spritebutton.html" class="tsd-signature-type">SpriteButton</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Animated<wbr>Sprite<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="animatedsprite.html" class="tsd-signature-type">AnimatedSprite</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Sprite.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L33">objects/SpriteButton.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L15">objects/AnimatedSprite.ts:15</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>texturePath: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> x: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> y: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> width: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;128</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> height: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;32</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_objects_spritebutton_.spritebutton.html" class="tsd-signature-type">SpriteButton</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="animatedsprite.html" class="tsd-signature-type">AnimatedSprite</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -578,6 +548,16 @@
 						</ul>
 					</aside>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="accumulator" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> accumulator</h3>
+					<div class="tsd-signature tsd-kind-icon">accumulator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L9">objects/AnimatedSprite.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="alpha" class="tsd-anchor"></a>
 					<h3>alpha</h3>
@@ -597,6 +577,16 @@
 						<p>Inherited from Sprite.anchor</p>
 						<ul>
 							<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:1647</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="animations" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> animations</h3>
+					<div class="tsd-signature tsd-kind-icon">animations<span class="tsd-signature-symbol">:</span> <a href="dictionary.html" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new Dictionary&lt;AnimationSequence&gt;()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L15">objects/AnimatedSprite.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -655,6 +645,26 @@
 						</ul>
 					</aside>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="currentfps" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> current<wbr>Fps</h3>
+					<div class="tsd-signature tsd-kind-icon">current<wbr>Fps<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;8</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L13">objects/AnimatedSprite.ts:13</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="currentsequence" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> current<wbr>Sequence</h3>
+					<div class="tsd-signature tsd-kind-icon">current<wbr>Sequence<span class="tsd-signature-symbol">:</span> <a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L7">objects/AnimatedSprite.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="cursor" class="tsd-anchor"></a>
 					<h3>cursor</h3>
@@ -696,6 +706,16 @@
 						<p>Inherited from DisplayObject.filters</p>
 						<ul>
 							<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:417</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="frameindex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> frame<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">frame<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L12">objects/AnimatedSprite.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -745,42 +765,22 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="isclickstartedvalue" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Click<wbr>Started<wbr>Value</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Click<wbr>Started<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+					<a name="islooping" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Looping</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Looping<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L30">objects/SpriteButton.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L11">objects/AnimatedSprite.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="isdisabledvalue" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Disabled<wbr>Value</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Disabled<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
+					<a name="isplaying" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Playing</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Playing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L29">objects/SpriteButton.ts:29</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="ishighlightedvalue" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Highlighted<wbr>Value</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Highlighted<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L27">objects/SpriteButton.ts:27</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="ispressedvalue" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Pressed<wbr>Value</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Pressed<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L28">objects/SpriteButton.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L10">objects/AnimatedSprite.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -805,68 +805,6 @@
 							<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:416</li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="mouseout" class="tsd-anchor"></a>
-					<h3>mouseout</h3>
-					<div class="tsd-signature tsd-kind-icon">mouseout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L22">objects/SpriteButton.ts:22</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>event: <span class="tsd-signature-type">any</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="mouseover" class="tsd-anchor"></a>
-					<h3>mouseover</h3>
-					<div class="tsd-signature tsd-kind-icon">mouseover<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L21">objects/SpriteButton.ts:21</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>event: <span class="tsd-signature-type">any</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="name" class="tsd-anchor"></a>
@@ -911,13 +849,13 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="onclick" class="tsd-anchor"></a>
-					<h3>on<wbr>Click</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Click<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="oncompletecallback" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> on<wbr>Complete<wbr>Call<wbr>Back</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Complete<wbr>Call<wbr>Back<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L20">objects/SpriteButton.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L14">objects/AnimatedSprite.ts:14</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -925,14 +863,14 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-siganture">
 								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>seq<span class="tsd-signature-symbol">: </span><a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
-												<h5>event: <span class="tsd-signature-type">any</span></h5>
+												<h5>seq: <a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a></h5>
 											</li>
 										</ul>
 										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -997,26 +935,6 @@
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="requestedheight" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> requested<wbr>Height</h3>
-					<div class="tsd-signature tsd-kind-icon">requested<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L33">objects/SpriteButton.ts:33</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="requestedwidth" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> requested<wbr>Width</h3>
-					<div class="tsd-signature tsd-kind-icon">requested<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L32">objects/SpriteButton.ts:32</a></li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="rotation" class="tsd-anchor"></a>
 					<h3>rotation</h3>
@@ -1061,16 +979,6 @@
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="textvalue" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> text<wbr>Value</h3>
-					<div class="tsd-signature tsd-kind-icon">text<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Text</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L31">objects/SpriteButton.ts:31</a></li>
-						</ul>
-					</aside>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="texture" class="tsd-anchor"></a>
 					<h3>texture</h3>
@@ -1090,36 +998,6 @@
 						<p>Inherited from Sprite.textureDirty</p>
 						<ul>
 							<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:1660</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="texturedown" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> texture<wbr>Down</h3>
-					<div class="tsd-signature tsd-kind-icon">texture<wbr>Down<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Texture</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L26">objects/SpriteButton.ts:26</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="texturehighlight" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> texture<wbr>Highlight</h3>
-					<div class="tsd-signature tsd-kind-icon">texture<wbr>Highlight<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Texture</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L25">objects/SpriteButton.ts:25</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="textureup" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> texture<wbr>Up</h3>
-					<div class="tsd-signature tsd-kind-icon">texture<wbr>Up<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Texture</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L24">objects/SpriteButton.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1313,31 +1191,31 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
 				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="disabled" class="tsd-anchor"></a>
-					<h3>disabled</h3>
+					<a name="fps" class="tsd-anchor"></a>
+					<h3>fps</h3>
 					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> disabled<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> disabled<span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> fps<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> fps<span class="tsd-signature-symbol">(</span>fps<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L79">objects/SpriteButton.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L108">objects/AnimatedSprite.ts:108</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L82">objects/SpriteButton.ts:82</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L111">objects/AnimatedSprite.ts:111</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>state: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>fps: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1345,17 +1223,17 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="ishighlighted" class="tsd-anchor"></a>
-					<h3>is<wbr>Highlighted</h3>
+					<a name="loop" class="tsd-anchor"></a>
+					<h3>loop</h3>
 					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isHighlighted<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> isHighlighted<span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> loop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> loop<span class="tsd-signature-symbol">(</span>isLooping<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L96">objects/SpriteButton.ts:96</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L117">objects/AnimatedSprite.ts:117</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -1363,13 +1241,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L99">objects/SpriteButton.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L114">objects/AnimatedSprite.ts:114</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>state: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>isLooping: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1377,63 +1255,85 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="ispressed" class="tsd-anchor"></a>
-					<h3>is<wbr>Pressed</h3>
+					<a name="oncomplete" class="tsd-anchor"></a>
+					<h3>on<wbr>Complete</h3>
 					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isPressed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> isPressed<span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> onComplete<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> onComplete<span class="tsd-signature-symbol">(</span>cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L88">objects/SpriteButton.ts:88</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L101">objects/AnimatedSprite.ts:101</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L91">objects/SpriteButton.ts:91</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the callback function to be invoked after the animation ends.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
 							<ul class="tsd-parameters">
-								<li>
-									<h5>state: <span class="tsd-signature-type">boolean</span></h5>
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>seq<span class="tsd-signature-symbol">: </span><a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5>seq: <a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+										</li>
+									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
-					<a name="text" class="tsd-anchor"></a>
-					<h3>text</h3>
-					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> text<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Text</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> text<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Text</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L104">objects/SpriteButton.ts:104</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Text</span></h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L107">objects/SpriteButton.ts:107</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L98">objects/AnimatedSprite.ts:98</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the callback function to be invoked after the animation ends.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><p>Use it to trigger actions on animation end <code>explode.onComplete = () =&gt; this.container.removeChild(explode);</code></p>
+									</dd>
+									<dt>remarks</dt>
+									<dd><p>This callback will be invoked only if the animated sprite is not looping.</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>text: <span class="tsd-signature-type">Text</span></h5>
+									<h5>cb: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>seq<span class="tsd-signature-symbol">: </span><a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>seq: <a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1722,6 +1622,41 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addanimations" class="tsd-anchor"></a>
+					<h3>add<wbr>Animations</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Animations<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>sequences<span class="tsd-signature-symbol">: </span><a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L31">objects/AnimatedSprite.ts:31</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds one or multiple animation sequences.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code>explode.addAnimations(new AnimationSequence(<span class="hljs-string">"exp"</span>, <span class="hljs-string">"assets/atlas.json@big_bang.png"</span>, [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], <span class="hljs-number">32</span>, <span class="hljs-number">32</span>));</code></pre></dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>sequences: <a href="animationsequence.html" class="tsd-signature-type">AnimationSequence</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>animation sequence instances to be added. All animation sequences added to an <code>AnimatedSprite</code> <strong>must</strong> have unique names.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
 					<a name="addchild" class="tsd-anchor"></a>
 					<h3>add<wbr>Child</h3>
@@ -1834,23 +1769,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="applytexture" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> apply<wbr>Texture</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">apply<wbr>Texture<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L207">objects/SpriteButton.ts:207</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="calculatebounds" class="tsd-anchor"></a>
 					<h3>calculate<wbr>Bounds</h3>
@@ -1899,6 +1817,23 @@
 								<p>Inherited from Sprite.calculateVertices</p>
 								<ul>
 									<li>Defined in D:/VS_Projects/SF/pixi-scenegraph/node_modules/@types/pixi.js/index.d.ts:1669</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clearanimations" class="tsd-anchor"></a>
+					<h3>clear<wbr>Animations</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Animations<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L43">objects/AnimatedSprite.ts:43</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2393,126 +2328,28 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="onbuttondown" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> on<wbr>Button<wbr>Down</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Button<wbr>Down<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="onupdate" class="tsd-anchor"></a>
+					<h3>on<wbr>Update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Update<span class="tsd-signature-symbol">(</span>dt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L159">objects/SpriteButton.ts:159</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L71">objects/AnimatedSprite.ts:71</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="onbuttonout" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> on<wbr>Button<wbr>Out</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Button<wbr>Out<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L196">objects/SpriteButton.ts:196</a></li>
-								</ul>
-							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Used by the framework to update internal state on each frame.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>event: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="onbuttonover" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> on<wbr>Button<wbr>Over</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Button<wbr>Over<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L186">objects/SpriteButton.ts:186</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>event: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="onbuttonup" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> on<wbr>Button<wbr>Up</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Button<wbr>Up<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L167">objects/SpriteButton.ts:167</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>event: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="onbuttonupoutside" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> on<wbr>Button<wbr>UpOutside</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Button<wbr>UpOutside<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L178">objects/SpriteButton.ts:178</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="onclickhandler" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> on<wbr>Click<wbr>Handler</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Click<wbr>Handler<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L151">objects/SpriteButton.ts:151</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>event: <span class="tsd-signature-type">any</span></h5>
+									<h5>dt: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2592,22 +2429,48 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="performclick" class="tsd-anchor"></a>
-					<h3>perform<wbr>Click</h3>
+					<a name="play" class="tsd-anchor"></a>
+					<h3>play</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">perform<wbr>Click<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">play<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fps<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, loop<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L121">objects/SpriteButton.ts:121</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L56">objects/AnimatedSprite.ts:56</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Plays the animation sequence by name.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>event: <span class="tsd-signature-type">any</span></h5>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>animation sequence to be played</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fps: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>animation speed in frames per second</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> loop: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>if true the animation keeps looping else the animation stops once last frame is reached</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2837,6 +2700,23 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="resetanimation" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> reset<wbr>Animation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">reset<wbr>Animation<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L121">objects/AnimatedSprite.ts:121</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="setchildindex" class="tsd-anchor"></a>
 					<h3>set<wbr>Child<wbr>Index</h3>
@@ -2915,29 +2795,6 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="settexture" class="tsd-anchor"></a>
-					<h3>set<wbr>Texture</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Texture<span class="tsd-signature-symbol">(</span>textureAtlasName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/5b2bcdf/src/objects/SpriteButton.ts#L125">objects/SpriteButton.ts:125</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>textureAtlasName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="settransform" class="tsd-anchor"></a>
 					<h3>set<wbr>Transform</h3>
@@ -2983,6 +2840,23 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">DisplayObject</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="stop" class="tsd-anchor"></a>
+					<h3>stop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">stop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/c8cb0eb/src/objects/AnimatedSprite.ts#L105">objects/AnimatedSprite.ts:105</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -3228,517 +3102,502 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_core_defaultscreensizecalculator_.html">"core/<wbr>Default<wbr>Screen<wbr>Size<wbr>Calculator"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_core_iscreensizecalculator_.html">"core/IScreen<wbr>Size<wbr>Calculator"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_core_scene_.html">"core/<wbr>Scene"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_core_scenemanager_.html">"core/<wbr>Scene<wbr>Manager"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_core_textureloader_.html">"core/<wbr>Texture<wbr>Loader"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_objects_animatedsprite_.html">"objects/<wbr>Animated<wbr>Sprite"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_objects_animationsequence_.html">"objects/<wbr>Animation<wbr>Sequence"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_objects_parallax_.html">"objects/<wbr>Parallax"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_objects_slider_.html">"objects/<wbr>Slider"</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_objects_spritebutton_.html">"objects/<wbr>Sprite<wbr>Button"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utility_dictionary_.html">"utility/<wbr>Dictionary"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utility_keyboardaction_.html">"utility/<wbr>Keyboard<wbr>Action"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utility_keyboardmapper_.html">"utility/<wbr>Keyboard<wbr>Mapper"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utility_linkedlist_.html">"utility/<wbr>Linked<wbr>List"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_utility_linkedlistnode_.html">"utility/<wbr>Linked<wbr>List<wbr>Node"</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="../enums/state.html" class="tsd-kind-icon">State</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_objects_spritebutton_.spritebutton.html" class="tsd-kind-icon">Sprite<wbr>Button</a>
+					<li class="current tsd-kind-class">
+						<a href="animatedsprite.html" class="tsd-kind-icon">Animated<wbr>Sprite</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="_objects_spritebutton_.spritebutton.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="animatedsprite.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_anchor" class="tsd-kind-icon">_anchor</a>
+								<a href="animatedsprite.html#_anchor" class="tsd-kind-icon">_anchor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_bounds" class="tsd-kind-icon">_bounds</a>
+								<a href="animatedsprite.html#_bounds" class="tsd-kind-icon">_bounds</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_boundsid" class="tsd-kind-icon">_boundsID</a>
+								<a href="animatedsprite.html#_boundsid" class="tsd-kind-icon">_boundsID</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_boundsrect" class="tsd-kind-icon">_bounds<wbr>Rect</a>
+								<a href="animatedsprite.html#_boundsrect" class="tsd-kind-icon">_bounds<wbr>Rect</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_cacheasbitmap" class="tsd-kind-icon">_cache<wbr>AsBitmap</a>
+								<a href="animatedsprite.html#_cacheasbitmap" class="tsd-kind-icon">_cache<wbr>AsBitmap</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_cachedata" class="tsd-kind-icon">_cache<wbr>Data</a>
+								<a href="animatedsprite.html#_cachedata" class="tsd-kind-icon">_cache<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_destroyed" class="tsd-kind-icon">_destroyed</a>
+								<a href="animatedsprite.html#_destroyed" class="tsd-kind-icon">_destroyed</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_enabledfilters" class="tsd-kind-icon">_enabled<wbr>Filters</a>
+								<a href="animatedsprite.html#_enabledfilters" class="tsd-kind-icon">_enabled<wbr>Filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_filters" class="tsd-kind-icon">_filters</a>
+								<a href="animatedsprite.html#_filters" class="tsd-kind-icon">_filters</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_height" class="tsd-kind-icon">_height</a>
+								<a href="animatedsprite.html#_height" class="tsd-kind-icon">_height</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_lastboundsid" class="tsd-kind-icon">_last<wbr>BoundsID</a>
+								<a href="animatedsprite.html#_lastboundsid" class="tsd-kind-icon">_last<wbr>BoundsID</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_localboundsrect" class="tsd-kind-icon">_local<wbr>Bounds<wbr>Rect</a>
+								<a href="animatedsprite.html#_localboundsrect" class="tsd-kind-icon">_local<wbr>Bounds<wbr>Rect</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_mask" class="tsd-kind-icon">_mask</a>
+								<a href="animatedsprite.html#_mask" class="tsd-kind-icon">_mask</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_texture" class="tsd-kind-icon">_texture</a>
+								<a href="animatedsprite.html#_texture" class="tsd-kind-icon">_texture</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_textureid" class="tsd-kind-icon">_textureID</a>
+								<a href="animatedsprite.html#_textureid" class="tsd-kind-icon">_textureID</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_texturetrimmedid" class="tsd-kind-icon">_texture<wbr>TrimmedID</a>
+								<a href="animatedsprite.html#_texturetrimmedid" class="tsd-kind-icon">_texture<wbr>TrimmedID</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_tint" class="tsd-kind-icon">_tint</a>
+								<a href="animatedsprite.html#_tint" class="tsd-kind-icon">_tint</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_tintrgb" class="tsd-kind-icon">_tintRGB</a>
+								<a href="animatedsprite.html#_tintrgb" class="tsd-kind-icon">_tintRGB</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_transformid" class="tsd-kind-icon">_transformID</a>
+								<a href="animatedsprite.html#_transformid" class="tsd-kind-icon">_transformID</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_transformtrimmedid" class="tsd-kind-icon">_transform<wbr>TrimmedID</a>
+								<a href="animatedsprite.html#_transformtrimmedid" class="tsd-kind-icon">_transform<wbr>TrimmedID</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_width" class="tsd-kind-icon">_width</a>
+								<a href="animatedsprite.html#_width" class="tsd-kind-icon">_width</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#accessible" class="tsd-kind-icon">accessible</a>
+								<a href="animatedsprite.html#accessible" class="tsd-kind-icon">accessible</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#accessiblehint" class="tsd-kind-icon">accessible<wbr>Hint</a>
+								<a href="animatedsprite.html#accessiblehint" class="tsd-kind-icon">accessible<wbr>Hint</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#accessibletitle" class="tsd-kind-icon">accessible<wbr>Title</a>
+								<a href="animatedsprite.html#accessibletitle" class="tsd-kind-icon">accessible<wbr>Title</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="animatedsprite.html#accumulator" class="tsd-kind-icon">accumulator</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#alpha" class="tsd-kind-icon">alpha</a>
+								<a href="animatedsprite.html#alpha" class="tsd-kind-icon">alpha</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#anchor" class="tsd-kind-icon">anchor</a>
+								<a href="animatedsprite.html#anchor" class="tsd-kind-icon">anchor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="animatedsprite.html#animations" class="tsd-kind-icon">animations</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#blendmode" class="tsd-kind-icon">blend<wbr>Mode</a>
+								<a href="animatedsprite.html#blendmode" class="tsd-kind-icon">blend<wbr>Mode</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#buttonmode" class="tsd-kind-icon">button<wbr>Mode</a>
+								<a href="animatedsprite.html#buttonmode" class="tsd-kind-icon">button<wbr>Mode</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#cacheasbitmap" class="tsd-kind-icon">cache<wbr>AsBitmap</a>
+								<a href="animatedsprite.html#cacheasbitmap" class="tsd-kind-icon">cache<wbr>AsBitmap</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#cachedtint" class="tsd-kind-icon">cached<wbr>Tint</a>
+								<a href="animatedsprite.html#cachedtint" class="tsd-kind-icon">cached<wbr>Tint</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#children" class="tsd-kind-icon">children</a>
+								<a href="animatedsprite.html#children" class="tsd-kind-icon">children</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="animatedsprite.html#currentfps" class="tsd-kind-icon">current<wbr>Fps</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="animatedsprite.html#currentsequence" class="tsd-kind-icon">current<wbr>Sequence</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#cursor" class="tsd-kind-icon">cursor</a>
+								<a href="animatedsprite.html#cursor" class="tsd-kind-icon">cursor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#defaultcursor" class="tsd-kind-icon">default<wbr>Cursor</a>
+								<a href="animatedsprite.html#defaultcursor" class="tsd-kind-icon">default<wbr>Cursor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#filterarea" class="tsd-kind-icon">filter<wbr>Area</a>
+								<a href="animatedsprite.html#filterarea" class="tsd-kind-icon">filter<wbr>Area</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#filters" class="tsd-kind-icon">filters</a>
+								<a href="animatedsprite.html#filters" class="tsd-kind-icon">filters</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="animatedsprite.html#frameindex" class="tsd-kind-icon">frame<wbr>Index</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#height" class="tsd-kind-icon">height</a>
+								<a href="animatedsprite.html#height" class="tsd-kind-icon">height</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#hitarea" class="tsd-kind-icon">hit<wbr>Area</a>
+								<a href="animatedsprite.html#hitarea" class="tsd-kind-icon">hit<wbr>Area</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#interactive" class="tsd-kind-icon">interactive</a>
+								<a href="animatedsprite.html#interactive" class="tsd-kind-icon">interactive</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#interactivechildren" class="tsd-kind-icon">interactive<wbr>Children</a>
+								<a href="animatedsprite.html#interactivechildren" class="tsd-kind-icon">interactive<wbr>Children</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#isclickstartedvalue" class="tsd-kind-icon">is<wbr>Click<wbr>Started<wbr>Value</a>
+								<a href="animatedsprite.html#islooping" class="tsd-kind-icon">is<wbr>Looping</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#isdisabledvalue" class="tsd-kind-icon">is<wbr>Disabled<wbr>Value</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#ishighlightedvalue" class="tsd-kind-icon">is<wbr>Highlighted<wbr>Value</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#ispressedvalue" class="tsd-kind-icon">is<wbr>Pressed<wbr>Value</a>
+								<a href="animatedsprite.html#isplaying" class="tsd-kind-icon">is<wbr>Playing</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a>
+								<a href="animatedsprite.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#mask" class="tsd-kind-icon">mask</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_objects_spritebutton_.spritebutton.html#mouseout" class="tsd-kind-icon">mouseout</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_objects_spritebutton_.spritebutton.html#mouseover" class="tsd-kind-icon">mouseover</a>
+								<a href="animatedsprite.html#mask" class="tsd-kind-icon">mask</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#name" class="tsd-kind-icon">name</a>
+								<a href="animatedsprite.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#onchildrenchange" class="tsd-kind-icon">on<wbr>Children<wbr>Change</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_objects_spritebutton_.spritebutton.html#onclick" class="tsd-kind-icon">on<wbr>Click</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#parent" class="tsd-kind-icon">parent</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#pivot" class="tsd-kind-icon">pivot</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#pluginname" class="tsd-kind-icon">plugin<wbr>Name</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#position" class="tsd-kind-icon">position</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#renderable" class="tsd-kind-icon">renderable</a>
+								<a href="animatedsprite.html#onchildrenchange" class="tsd-kind-icon">on<wbr>Children<wbr>Change</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#requestedheight" class="tsd-kind-icon">requested<wbr>Height</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#requestedwidth" class="tsd-kind-icon">requested<wbr>Width</a>
+								<a href="animatedsprite.html#oncompletecallback" class="tsd-kind-icon">on<wbr>Complete<wbr>Call<wbr>Back</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#rotation" class="tsd-kind-icon">rotation</a>
+								<a href="animatedsprite.html#parent" class="tsd-kind-icon">parent</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#scale" class="tsd-kind-icon">scale</a>
+								<a href="animatedsprite.html#pivot" class="tsd-kind-icon">pivot</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#skew" class="tsd-kind-icon">skew</a>
+								<a href="animatedsprite.html#pluginname" class="tsd-kind-icon">plugin<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#tabindex" class="tsd-kind-icon">tab<wbr>Index</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#textvalue" class="tsd-kind-icon">text<wbr>Value</a>
+								<a href="animatedsprite.html#position" class="tsd-kind-icon">position</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#texture" class="tsd-kind-icon">texture</a>
+								<a href="animatedsprite.html#renderable" class="tsd-kind-icon">renderable</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#rotation" class="tsd-kind-icon">rotation</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#scale" class="tsd-kind-icon">scale</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#skew" class="tsd-kind-icon">skew</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#tabindex" class="tsd-kind-icon">tab<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#texture" class="tsd-kind-icon">texture</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#texturedirty" class="tsd-kind-icon">texture<wbr>Dirty</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#texturedown" class="tsd-kind-icon">texture<wbr>Down</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#texturehighlight" class="tsd-kind-icon">texture<wbr>Highlight</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#textureup" class="tsd-kind-icon">texture<wbr>Up</a>
+								<a href="animatedsprite.html#texturedirty" class="tsd-kind-icon">texture<wbr>Dirty</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#tint" class="tsd-kind-icon">tint</a>
+								<a href="animatedsprite.html#tint" class="tsd-kind-icon">tint</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#trackedpointers" class="tsd-kind-icon">tracked<wbr>Pointers</a>
+								<a href="animatedsprite.html#trackedpointers" class="tsd-kind-icon">tracked<wbr>Pointers</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#transform" class="tsd-kind-icon">transform</a>
+								<a href="animatedsprite.html#transform" class="tsd-kind-icon">transform</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#vertexdata" class="tsd-kind-icon">vertex<wbr>Data</a>
+								<a href="animatedsprite.html#vertexdata" class="tsd-kind-icon">vertex<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#vertextrimmeddata" class="tsd-kind-icon">vertex<wbr>Trimmed<wbr>Data</a>
+								<a href="animatedsprite.html#vertextrimmeddata" class="tsd-kind-icon">vertex<wbr>Trimmed<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#visible" class="tsd-kind-icon">visible</a>
+								<a href="animatedsprite.html#visible" class="tsd-kind-icon">visible</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#width" class="tsd-kind-icon">width</a>
+								<a href="animatedsprite.html#width" class="tsd-kind-icon">width</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#worldalpha" class="tsd-kind-icon">world<wbr>Alpha</a>
+								<a href="animatedsprite.html#worldalpha" class="tsd-kind-icon">world<wbr>Alpha</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#worldtransform" class="tsd-kind-icon">world<wbr>Transform</a>
+								<a href="animatedsprite.html#worldtransform" class="tsd-kind-icon">world<wbr>Transform</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#worldvisible" class="tsd-kind-icon">world<wbr>Visible</a>
+								<a href="animatedsprite.html#worldvisible" class="tsd-kind-icon">world<wbr>Visible</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#x" class="tsd-kind-icon">x</a>
+								<a href="animatedsprite.html#x" class="tsd-kind-icon">x</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#y" class="tsd-kind-icon">y</a>
+								<a href="animatedsprite.html#y" class="tsd-kind-icon">y</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="_objects_spritebutton_.spritebutton.html#eventemitter" class="tsd-kind-icon">Event<wbr>Emitter</a>
+								<a href="animatedsprite.html#eventemitter" class="tsd-kind-icon">Event<wbr>Emitter</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="_objects_spritebutton_.spritebutton.html#prefixed-1" class="tsd-kind-icon">prefixed</a>
+								<a href="animatedsprite.html#prefixed-1" class="tsd-kind-icon">prefixed</a>
 							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="_objects_spritebutton_.spritebutton.html#disabled" class="tsd-kind-icon">disabled</a>
+								<a href="animatedsprite.html#fps" class="tsd-kind-icon">fps</a>
 							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="_objects_spritebutton_.spritebutton.html#ishighlighted" class="tsd-kind-icon">is<wbr>Highlighted</a>
+								<a href="animatedsprite.html#loop" class="tsd-kind-icon">loop</a>
 							</li>
 							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="_objects_spritebutton_.spritebutton.html#ispressed" class="tsd-kind-icon">is<wbr>Pressed</a>
-							</li>
-							<li class=" tsd-kind-accessor tsd-parent-kind-class">
-								<a href="_objects_spritebutton_.spritebutton.html#text" class="tsd-kind-icon">text</a>
+								<a href="animatedsprite.html#oncomplete" class="tsd-kind-icon">on<wbr>Complete</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_cacheasbitmapdestroy" class="tsd-kind-icon">_cache<wbr>AsBitmap<wbr>Destroy</a>
+								<a href="animatedsprite.html#_cacheasbitmapdestroy" class="tsd-kind-icon">_cache<wbr>AsBitmap<wbr>Destroy</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_calculatebounds" class="tsd-kind-icon">_calculate<wbr>Bounds</a>
+								<a href="animatedsprite.html#_calculatebounds" class="tsd-kind-icon">_calculate<wbr>Bounds</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_calculatecachedbounds" class="tsd-kind-icon">_calculate<wbr>Cached<wbr>Bounds</a>
+								<a href="animatedsprite.html#_calculatecachedbounds" class="tsd-kind-icon">_calculate<wbr>Cached<wbr>Bounds</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_destroycacheddisplayobject" class="tsd-kind-icon">_destroy<wbr>Cached<wbr>Display<wbr>Object</a>
+								<a href="animatedsprite.html#_destroycacheddisplayobject" class="tsd-kind-icon">_destroy<wbr>Cached<wbr>Display<wbr>Object</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_getcachedlocalbounds" class="tsd-kind-icon">_get<wbr>Cached<wbr>Local<wbr>Bounds</a>
+								<a href="animatedsprite.html#_getcachedlocalbounds" class="tsd-kind-icon">_get<wbr>Cached<wbr>Local<wbr>Bounds</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_initcacheddisplayobject" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object</a>
+								<a href="animatedsprite.html#_initcacheddisplayobject" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_initcacheddisplayobjectcanvas" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object<wbr>Canvas</a>
+								<a href="animatedsprite.html#_initcacheddisplayobjectcanvas" class="tsd-kind-icon">_init<wbr>Cached<wbr>Display<wbr>Object<wbr>Canvas</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_ontextureupdate" class="tsd-kind-icon">_on<wbr>Texture<wbr>Update</a>
+								<a href="animatedsprite.html#_ontextureupdate" class="tsd-kind-icon">_on<wbr>Texture<wbr>Update</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_recursivepostupdatetransform" class="tsd-kind-icon">_recursive<wbr>Post<wbr>Update<wbr>Transform</a>
+								<a href="animatedsprite.html#_recursivepostupdatetransform" class="tsd-kind-icon">_recursive<wbr>Post<wbr>Update<wbr>Transform</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_rendercachedcanvas" class="tsd-kind-icon">_render<wbr>Cached<wbr>Canvas</a>
+								<a href="animatedsprite.html#_rendercachedcanvas" class="tsd-kind-icon">_render<wbr>Cached<wbr>Canvas</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_rendercachedwebgl" class="tsd-kind-icon">_render<wbr>Cached<wbr>WebGL</a>
+								<a href="animatedsprite.html#_rendercachedwebgl" class="tsd-kind-icon">_render<wbr>Cached<wbr>WebGL</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_rendercanvas" class="tsd-kind-icon">_render<wbr>Canvas</a>
+								<a href="animatedsprite.html#_rendercanvas" class="tsd-kind-icon">_render<wbr>Canvas</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#_renderwebgl" class="tsd-kind-icon">_render<wbr>WebGL</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#addchild" class="tsd-kind-icon">add<wbr>Child</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#addchildat" class="tsd-kind-icon">add<wbr>Child<wbr>At</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#applytexture" class="tsd-kind-icon">apply<wbr>Texture</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#calculatetrimmedvertices" class="tsd-kind-icon">calculate<wbr>Trimmed<wbr>Vertices</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#calculatevertices" class="tsd-kind-icon">calculate<wbr>Vertices</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#containerupdatetransform" class="tsd-kind-icon">container<wbr>Update<wbr>Transform</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#containspoint" class="tsd-kind-icon">contains<wbr>Point</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#destroy" class="tsd-kind-icon">destroy</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#displayobjectupdatetransform" class="tsd-kind-icon">display<wbr>Object<wbr>Update<wbr>Transform</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#emit" class="tsd-kind-icon">emit</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#getbounds" class="tsd-kind-icon">get<wbr>Bounds</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#getchildat" class="tsd-kind-icon">get<wbr>Child<wbr>At</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#getchildbyname" class="tsd-kind-icon">get<wbr>Child<wbr>ByName</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#getchildindex" class="tsd-kind-icon">get<wbr>Child<wbr>Index</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#getglobalposition" class="tsd-kind-icon">get<wbr>Global<wbr>Position</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#getlocalbounds" class="tsd-kind-icon">get<wbr>Local<wbr>Bounds</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#listeners" class="tsd-kind-icon">listeners</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#off" class="tsd-kind-icon">off</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#on" class="tsd-kind-icon">on</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="_objects_spritebutton_.spritebutton.html#onanchorupdate" class="tsd-kind-icon">on<wbr>Anchor<wbr>Update</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#onbuttondown" class="tsd-kind-icon">on<wbr>Button<wbr>Down</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#onbuttonout" class="tsd-kind-icon">on<wbr>Button<wbr>Out</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#onbuttonover" class="tsd-kind-icon">on<wbr>Button<wbr>Over</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#onbuttonup" class="tsd-kind-icon">on<wbr>Button<wbr>Up</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#onbuttonupoutside" class="tsd-kind-icon">on<wbr>Button<wbr>UpOutside</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="_objects_spritebutton_.spritebutton.html#onclickhandler" class="tsd-kind-icon">on<wbr>Click<wbr>Handler</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#once" class="tsd-kind-icon">once</a>
+								<a href="animatedsprite.html#_renderwebgl" class="tsd-kind-icon">_render<wbr>WebGL</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_objects_spritebutton_.spritebutton.html#performclick" class="tsd-kind-icon">perform<wbr>Click</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a>
+								<a href="animatedsprite.html#addanimations" class="tsd-kind-icon">add<wbr>Animations</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#removechild" class="tsd-kind-icon">remove<wbr>Child</a>
+								<a href="animatedsprite.html#addchild" class="tsd-kind-icon">add<wbr>Child</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#removechildat" class="tsd-kind-icon">remove<wbr>Child<wbr>At</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#removechildren" class="tsd-kind-icon">remove<wbr>Children</a>
+								<a href="animatedsprite.html#addchildat" class="tsd-kind-icon">add<wbr>Child<wbr>At</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a>
+								<a href="animatedsprite.html#addlistener" class="tsd-kind-icon">add<wbr>Listener</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#renderadvancedwebgl" class="tsd-kind-icon">render<wbr>Advanced<wbr>WebGL</a>
+								<a href="animatedsprite.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#rendercanvas" class="tsd-kind-icon">render<wbr>Canvas</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#renderwebgl" class="tsd-kind-icon">render<wbr>WebGL</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="animatedsprite.html#calculatetrimmedvertices" class="tsd-kind-icon">calculate<wbr>Trimmed<wbr>Vertices</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#setchildindex" class="tsd-kind-icon">set<wbr>Child<wbr>Index</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#setparent" class="tsd-kind-icon">set<wbr>Parent</a>
+								<a href="animatedsprite.html#calculatevertices" class="tsd-kind-icon">calculate<wbr>Vertices</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_objects_spritebutton_.spritebutton.html#settexture" class="tsd-kind-icon">set<wbr>Texture</a>
+								<a href="animatedsprite.html#clearanimations" class="tsd-kind-icon">clear<wbr>Animations</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="animatedsprite.html#containerupdatetransform" class="tsd-kind-icon">container<wbr>Update<wbr>Transform</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#settransform" class="tsd-kind-icon">set<wbr>Transform</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#swapchildren" class="tsd-kind-icon">swap<wbr>Children</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#toglobal" class="tsd-kind-icon">to<wbr>Global</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#tolocal" class="tsd-kind-icon">to<wbr>Local</a>
+								<a href="animatedsprite.html#containspoint" class="tsd-kind-icon">contains<wbr>Point</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="_objects_spritebutton_.spritebutton.html#updatetransform" class="tsd-kind-icon">update<wbr>Transform</a>
+								<a href="animatedsprite.html#destroy" class="tsd-kind-icon">destroy</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="animatedsprite.html#displayobjectupdatetransform" class="tsd-kind-icon">display<wbr>Object<wbr>Update<wbr>Transform</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#emit" class="tsd-kind-icon">emit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#getbounds" class="tsd-kind-icon">get<wbr>Bounds</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="animatedsprite.html#getchildat" class="tsd-kind-icon">get<wbr>Child<wbr>At</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="animatedsprite.html#getchildbyname" class="tsd-kind-icon">get<wbr>Child<wbr>ByName</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#getchildindex" class="tsd-kind-icon">get<wbr>Child<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#getglobalposition" class="tsd-kind-icon">get<wbr>Global<wbr>Position</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="animatedsprite.html#getlocalbounds" class="tsd-kind-icon">get<wbr>Local<wbr>Bounds</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#listeners" class="tsd-kind-icon">listeners</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="animatedsprite.html#off" class="tsd-kind-icon">off</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="animatedsprite.html#on" class="tsd-kind-icon">on</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="animatedsprite.html#onanchorupdate" class="tsd-kind-icon">on<wbr>Anchor<wbr>Update</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="animatedsprite.html#onupdate" class="tsd-kind-icon">on<wbr>Update</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="animatedsprite.html#once" class="tsd-kind-icon">once</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="animatedsprite.html#play" class="tsd-kind-icon">play</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="animatedsprite.html#removealllisteners" class="tsd-kind-icon">remove<wbr>All<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="animatedsprite.html#removechild" class="tsd-kind-icon">remove<wbr>Child</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="animatedsprite.html#removechildat" class="tsd-kind-icon">remove<wbr>Child<wbr>At</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="animatedsprite.html#removechildren" class="tsd-kind-icon">remove<wbr>Children</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="animatedsprite.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#renderadvancedwebgl" class="tsd-kind-icon">render<wbr>Advanced<wbr>WebGL</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="animatedsprite.html#rendercanvas" class="tsd-kind-icon">render<wbr>Canvas</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="animatedsprite.html#renderwebgl" class="tsd-kind-icon">render<wbr>WebGL</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="animatedsprite.html#resetanimation" class="tsd-kind-icon">reset<wbr>Animation</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#setchildindex" class="tsd-kind-icon">set<wbr>Child<wbr>Index</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#setmaxlisteners" class="tsd-kind-icon">set<wbr>Max<wbr>Listeners</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#setparent" class="tsd-kind-icon">set<wbr>Parent</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#settransform" class="tsd-kind-icon">set<wbr>Transform</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="animatedsprite.html#stop" class="tsd-kind-icon">stop</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="animatedsprite.html#swapchildren" class="tsd-kind-icon">swap<wbr>Children</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="animatedsprite.html#toglobal" class="tsd-kind-icon">to<wbr>Global</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="animatedsprite.html#tolocal" class="tsd-kind-icon">to<wbr>Local</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="animatedsprite.html#updatetransform" class="tsd-kind-icon">update<wbr>Transform</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="_objects_spritebutton_.spritebutton.html#from" class="tsd-kind-icon">from</a>
+								<a href="animatedsprite.html#from" class="tsd-kind-icon">from</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="_objects_spritebutton_.spritebutton.html#fromframe" class="tsd-kind-icon">from<wbr>Frame</a>
+								<a href="animatedsprite.html#fromframe" class="tsd-kind-icon">from<wbr>Frame</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="_objects_spritebutton_.spritebutton.html#fromimage" class="tsd-kind-icon">from<wbr>Image</a>
+								<a href="animatedsprite.html#fromimage" class="tsd-kind-icon">from<wbr>Image</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class">
+						<a href="animationsequence.html" class="tsd-kind-icon">Animation<wbr>Sequence</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="defaultscreensizecalculator.html" class="tsd-kind-icon">Default<wbr>Screen<wbr>Size<wbr>Calculator</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="dictionary.html" class="tsd-kind-icon">Dictionary</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="keyboardaction.html" class="tsd-kind-icon">Keyboard<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="keyboardmapper.html" class="tsd-kind-icon">Keyboard<wbr>Mapper</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="linkedlist.html" class="tsd-kind-icon">Linked<wbr>List</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="linkedlistnode.html" class="tsd-kind-icon">Linked<wbr>List<wbr>Node</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="parallax.html" class="tsd-kind-icon">Parallax</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="scene.html" class="tsd-kind-icon">Scene</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="scenemanager.html" class="tsd-kind-icon">Scene<wbr>Manager</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="slider.html" class="tsd-kind-icon">Slider</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="spritebutton.html" class="tsd-kind-icon">Sprite<wbr>Button</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="textureloader.html" class="tsd-kind-icon">Texture<wbr>Loader</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iscreensizecalculator.html" class="tsd-kind-icon">IScreen<wbr>Size<wbr>Calculator</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/isize.html" class="tsd-kind-icon">ISize</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#keyboardactioncallback" class="tsd-kind-icon">Keyboard<wbr>Action<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="../globals.html#valuegetter" class="tsd-kind-icon">value<wbr>Getter</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="../globals.html#column_padding" class="tsd-kind-icon">COLUMN_<wbr>PADDING</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="../globals.html#version" class="tsd-kind-icon">VERSION</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
