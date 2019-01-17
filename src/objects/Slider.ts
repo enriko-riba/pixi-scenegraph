@@ -1,6 +1,4 @@
-﻿import * as PIXI from 'pixi.js';
-import { OutlineFilter } from '@pixi/filter-outline';
-import { TextureLoader } from '..';
+﻿import { TextureLoader } from '..';
 
 const COLUMN_PADDING = 1;
 
@@ -109,7 +107,8 @@ export class Slider extends PIXI.Container {
   }
   public set outlineColor(value: number) {
     this.outlineColorValue = value;
-    this.control.filters = [new OutlineFilter(1, this.outlineColorValue, 0.5)];
+    //  TODO: check how to outline without pixi-filters
+    // this.control.filters = [new OutlineFilter(1, this.outlineColorValue, 0.5)];
   }
 
   public get IsPressed() {

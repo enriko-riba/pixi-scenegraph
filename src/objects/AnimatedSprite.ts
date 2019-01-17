@@ -1,5 +1,4 @@
-﻿import * as PIXI from 'pixi.js';
-import { AnimationSequence, Dictionary } from '..';
+﻿import { AnimationSequence, Dictionary } from '..';
 
 /**
  * Animated sprite display object. Holds a collection of `AnimationSequence` objects that can be started and stopped on demand.

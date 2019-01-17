@@ -1,19 +1,17 @@
-﻿import * as PIXI from 'pixi.js';
-import { OutlineFilter } from '@pixi/filter-outline';
-import { TextureLoader } from '..';
+﻿import { TextureLoader } from '..';
 
-export enum OutlineMode {
-  /**
-   * The outline is backed in the buttons texture.
-   * This looks excelent if the button's size matches the texture.
-   */
-  Texture,
-  /**
-   * The outline is created with the OutlineFilter.
-   * Best to be used with small uniform textures (so scaling will not affect the texture).
-   */
-  Filter,
-}
+// export enum OutlineMode {
+//   /**
+//    * The outline is backed in the buttons texture.
+//    * This looks excelent if the button's size matches the texture.
+//    */
+//   Texture,
+//   /**
+//    * The outline is created with the OutlineFilter.
+//    * Best to be used with small uniform textures (so scaling will not affect the texture).
+//    */
+//   Filter,
+// }
 
 /**
  * Sprite based button.
@@ -26,8 +24,8 @@ export class Button extends PIXI.Sprite {
   private textureUp: PIXI.Texture;
   private textureHighlight: PIXI.Texture;
   private textureDown: PIXI.Texture;
-  private outlineModeValue: OutlineMode = OutlineMode.Filter;
-  private outlineColorValue: number;
+ // private outlineModeValue: OutlineMode = OutlineMode.Filter;
+ // private outlineColorValue: number;
   private isHighlightedValue: boolean = false;
   private isPressedValue: boolean = false;
   private isDisabledValue: boolean = false;
@@ -59,23 +57,23 @@ export class Button extends PIXI.Sprite {
     this.isPressed = false;
   }
 
-  public get outlineMode() {
-    return this.outlineModeValue;
-  }
-  public set outlineMode(state: OutlineMode) {
-    this.outlineModeValue = state;
-    this.filters =
-      this.outlineModeValue === OutlineMode.Filter ? [new OutlineFilter(1, this.outlineColorValue, 0.5)] : null;
-  }
+  // public get outlineMode() {
+  //   return this.outlineModeValue;
+  // }
+  // public set outlineMode(state: OutlineMode) {
+  //   this.outlineModeValue = state;
+  //   this.filters =
+  //     this.outlineModeValue === OutlineMode.Filter ? [new OutlineFilter(1, this.outlineColorValue, 0.5)] : null;
+  // }
 
-  public get outlineColor() {
-    return this.outlineColorValue;
-  }
-  public set outlineColor(value: number) {
-    this.outlineColorValue = value;
-    this.filters =
-      this.outlineModeValue === OutlineMode.Filter ? [new OutlineFilter(1, this.outlineColorValue, 0.5)] : null;
-  }
+  // public get outlineColor() {
+  //   return this.outlineColorValue;
+  // }
+  // public set outlineColor(value: number) {
+  //   this.outlineColorValue = value;
+  //   this.filters =
+  //     this.outlineModeValue === OutlineMode.Filter ? [new OutlineFilter(1, this.outlineColorValue, 0.5)] : null;
+  // }
 
   public get disabled() {
     return this.isDisabledValue;
@@ -124,7 +122,7 @@ export class Button extends PIXI.Sprite {
   }
 
   public setTexture(textureAtlasName: string) {
-    const spriteSheet: PIXI.Texture = TextureLoader.Get(textureAtlasName)!;
+    const spriteSheet: PIXI.Texture = TextureLoader.Get(textureAtlasName, true, PIXI.SCALE_MODES.NEAREST)!;
     spriteSheet.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
     const btnHeight = spriteSheet.height / 3;
     const btnWidth = spriteSheet.width;

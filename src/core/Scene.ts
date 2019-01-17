@@ -1,4 +1,4 @@
-﻿import * as PIXI from 'pixi.js';
+﻿import * as PIXI from "pixi.js";
 import { SceneManager } from './SceneManager';
 
 /**
@@ -29,27 +29,37 @@ export abstract class Scene extends PIXI.Container {
    * Fired every time the scene is to be activated.
    * @remarks If a new scene is activated, `currentScene.onDeactivate()` is fired first followed by `newScene.onActivate()`
    */
-  public onActivate(): void { }
+  public onActivate(): void {
+    // tslint ignore
+   }
 
   /**
    * Fired every time the scene is deactivated.
    */
-  public onDeactivate(): void { }
+  public onDeactivate(): void { 
+    // tslint ignore
+  }
 
   /**
    * Fired every time the window resizes, the scene is about to be activated (before `onActivate`) and after a MasterHudOverlay is set.
    * @remarks Note that this function is fired only for the current (active) scene! 
    */
-  public onResize(): void { }
+  public onResize(): void {
+    // tslint ignore
+   }
 
   /**
    * Fired on each animation frame
    * @param dt - ellapsed time delta
    * @param timestamp - total time, usefull for TWEEN.update and other libs depending on total time
    */
-  public onUpdate(dt: number, timestamp: number): void { }
+  public onUpdate(dt: number, timestamp: number): void { 
+    // tslint ignore
+  }
 
-  public onDestroy(options?: PIXI.DestroyOptions | boolean): void { }
+  public onDestroy(options?: PIXI.DestroyOptions | boolean): void { 
+    // tslint ignore
+  }
 
   /**
    * Gets the scene background color.

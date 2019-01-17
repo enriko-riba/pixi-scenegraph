@@ -1,5 +1,3 @@
-import * as PIXI from 'pixi.js';
-
 /**
  * Utility for loading single textures or atlas textures from PIXI.loader.resources.
  */
@@ -8,16 +6,22 @@ export class TextureLoader {
     return texture.frame.width !== texture.baseTexture.width || texture.frame.height !== texture.baseTexture.height;
   }
 
-  public static Get = (fullName: string, mipmap: boolean = false): PIXI.Texture | null => {
+  public static Get = (fullName: string, mipmap: boolean = false, scaleMode :number = PIXI.SCALE_MODES.LINEAR): PIXI.Texture | null => {
     const idx = fullName.indexOf('.json@');
     const textureName = idx > 0 ? fullName.substr(idx + 6) : fullName;
     const resourceName = idx > 0 ? fullName.substr(0, idx + 5) : fullName;
-    if (!TextureLoader.resourceCache[resourceName]) {
+    let res = TextureLoader.resourceCache[resourceName];
+
+    if (!res) {
+      //  try to get resource from loader
       TextureLoader.resourceCache[resourceName] = PIXI.loader.resources[resourceName];
-      TextureLoader.resourceCache[resourceName].spritesheet.baseTexture.mipmap = mipmap;
-      TextureLoader.resourceCache[resourceName].spritesheet.baseTexture.scaleMode = PIXI.SCALE_MODES.LINEAR;
+      res = TextureLoader.resourceCache[resourceName];
+
+      //  get base texture & set params
+      const baseTexture = (res.loadType === 1) ? res.spritesheet.baseTexture : res.texture.baseTexture;
+      baseTexture.mipmap = mipmap;
+      baseTexture.scaleMode = scaleMode;
     }
-    const res = TextureLoader.resourceCache[resourceName];
 
     if (!res) {
       console.error(`Resource:'${fullName}' not found!`);

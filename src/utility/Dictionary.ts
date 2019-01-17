@@ -1,3 +1,5 @@
+export  type valueGetter<T> = ()=> T;
+
 export class Dictionary<T> {
   private dictValues: { [key: string]: T } = {};
   private dictKeys: string[] = [];
@@ -31,7 +33,7 @@ export class Dictionary<T> {
     return this.dictValues;
   }
 
-  public getSet(key: string, valueOrvalueGetter: T | { (): T }): T {
+  public getSet(key: string, valueOrvalueGetter: T | valueGetter<T>): T {
     if (!this.contains(key)) {
       this.set(key, typeof valueOrvalueGetter === 'function' ? (valueOrvalueGetter as any)() : valueOrvalueGetter);
     }

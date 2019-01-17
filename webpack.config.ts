@@ -14,7 +14,7 @@ const config: webpack.Configuration = {
   },
 
   //mode: 'production',
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   externals: [
     // Don't bundle pixi.js and filters.
     {
