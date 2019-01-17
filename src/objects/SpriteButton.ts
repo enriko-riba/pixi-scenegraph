@@ -14,9 +14,9 @@
 // }
 
 /**
- * Sprite based button.
+ * Basic Sprite based button. Uses different textures for pointerout, pointerover, pointerdown. Povides an `onClick` function
  */
-export class Button extends PIXI.Sprite {
+export class SpriteButton extends PIXI.Sprite {
   public onClick: (event: any) => void;
   public mouseover: (event: any) => void;
   public mouseout: (event: any) => void;
@@ -24,8 +24,6 @@ export class Button extends PIXI.Sprite {
   private textureUp: PIXI.Texture;
   private textureHighlight: PIXI.Texture;
   private textureDown: PIXI.Texture;
- // private outlineModeValue: OutlineMode = OutlineMode.Filter;
- // private outlineColorValue: number;
   private isHighlightedValue: boolean = false;
   private isPressedValue: boolean = false;
   private isDisabledValue: boolean = false;
@@ -33,6 +31,9 @@ export class Button extends PIXI.Sprite {
   private textValue: PIXI.Text;
   private requestedWidth: number = 0;
   private requestedHeight: number = 0;
+  
+  // private outlineModeValue: OutlineMode = OutlineMode.Filter;
+  // private outlineColorValue: number;
 
   constructor(texturePath: string, x: number = 0, y: number = 0, width: number = 128, height: number = 32) {
     super();
