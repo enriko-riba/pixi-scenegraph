@@ -51,7 +51,7 @@ export class AnimatedSprite extends PIXI.Sprite {
    * @param name - animation sequence to be played
    * @param fps - animation speed in frames per second
    * @param loop - if true the animation keeps looping else the animation stops once last frame is reached
-   * @remarks The `onComplete` callback will be invoked only if the `loop` parameter is false 
+   * @remarks The `onComplete` callback will be invoked only if the `loop` parameter is false
    */
   public play = (name: string, fps?: number, loop = true): void => {
     if (!this.currentSequence || this.currentSequence.sequenceName !== name) {
@@ -93,7 +93,7 @@ export class AnimatedSprite extends PIXI.Sprite {
   /**
    * Sets the callback function to be invoked after the animation ends.
    * @example Use it to trigger actions on animation end `explode.onComplete = () => this.container.removeChild(explode);`
-   * @remarks This callback will be invoked only if the animated sprite is not looping. 
+   * @remarks This callback will be invoked only if the animated sprite is not looping.
    */
   public set onComplete(cb: (seq: AnimationSequence) => void) {
     this.onCompleteCallBack = cb;

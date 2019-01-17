@@ -17,7 +17,7 @@ export { Scene } from './core/Scene';
 export { Parallax } from './objects/Parallax';
 export { AnimatedSprite } from './objects/AnimatedSprite';
 export { AnimationSequence } from './objects/AnimationSequence';
-export { SpriteButton} from './objects/SpriteButton';
+export { SpriteButton } from './objects/SpriteButton';
 export { Slider } from './objects/Slider';
 
-export const VERSION = "1.3.1";
+export const VERSION = '1.3.1';

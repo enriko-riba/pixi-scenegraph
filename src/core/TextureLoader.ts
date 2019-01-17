@@ -6,7 +6,11 @@ export class TextureLoader {
     return texture.frame.width !== texture.baseTexture.width || texture.frame.height !== texture.baseTexture.height;
   }
 
-  public static Get = (fullName: string, mipmap: boolean = false, scaleMode :number = PIXI.SCALE_MODES.LINEAR): PIXI.Texture | null => {
+  public static Get = (
+    fullName: string,
+    mipmap: boolean = false,
+    scaleMode: number = PIXI.SCALE_MODES.LINEAR,
+  ): PIXI.Texture | null => {
     const idx = fullName.indexOf('.json@');
     const textureName = idx > 0 ? fullName.substr(idx + 6) : fullName;
     const resourceName = idx > 0 ? fullName.substr(0, idx + 5) : fullName;
@@ -18,7 +22,7 @@ export class TextureLoader {
       res = TextureLoader.resourceCache[resourceName];
 
       //  get base texture & set params
-      const baseTexture = (res.loadType === 1) ? res.spritesheet.baseTexture : res.texture.baseTexture;
+      const baseTexture = res.loadType === 1 ? res.spritesheet.baseTexture : res.texture.baseTexture;
       baseTexture.mipmap = mipmap;
       baseTexture.scaleMode = scaleMode;
     }

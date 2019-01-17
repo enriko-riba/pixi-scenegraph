@@ -1,5 +1,4 @@
 import { KeyboardAction } from './KeyboardAction';
-import { State } from '../core/SceneManager';
 
 /**
  *   Simple keyboard mapper.
@@ -33,8 +32,10 @@ export class KeyboardMapper {
     document.addEventListener('keyup', this.keyup.bind(this), false);
   }
 
-  /*
-   *   Invokes needed action handlers based on the pressed keys.
+  /**
+   * Invokes needed action handlers based on the pressed keys.
+   * @remarks Only handlers assigned to the given state are processed
+   * @param currentState - the state for which hanlders are processed
    */
   public update(currentState: State) {
     //  state specific handler
@@ -46,6 +47,10 @@ export class KeyboardMapper {
     this.findHandlerAndInvoke(actions);
   }
 
+  /**
+   * Adds an action handler scoped to the given state.
+   * @remarks The handler is invoked only if the `state` is active (current)
+   */
   public addKeyboardActionHandler = (action: KeyboardAction, state: State) => {
     if (!this.stateActions[state]) {
       this.stateActions[state] = [];
@@ -53,6 +58,7 @@ export class KeyboardMapper {
     this.stateActions[state].push(action);
   };
 
+  /** Checks if a key is pressed */
   public isKeyDown(keyCode: number) {
     return this.keyboard[keyCode];
   }
@@ -90,4 +96,15 @@ export class KeyboardMapper {
   private keyup(e: KeyboardEvent) {
     this.keyboard[e.which] = false;
   }
+}
+
+export enum State {
+  GLOBAL,
+  MENU,
+  IN_GAME,
+  CUSTOM1,
+  CUSTOM2,
+  CUSTOM3,
+  CUSTOM4,
+  CUSTOM5,
 }

@@ -12,7 +12,7 @@ export class AnimationSequence {
    * Creates a new AnimationSequence instance.
    * @param sequenceName - the unique name of this animation
    * @param spriteSheetName - the texture name holding all animation frames or atlas/image name
-   * @param frames - sequential list of frame indices defining the frame animation order. 
+   * @param frames - sequential list of frame indices defining the frame animation order.
    * @param frameWidth - width of a single frame in pixels
    * @param frameHeight - height of a single frame in pixels
    */

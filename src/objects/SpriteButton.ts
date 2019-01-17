@@ -31,7 +31,7 @@ export class SpriteButton extends PIXI.Sprite {
   private textValue: PIXI.Text;
   private requestedWidth: number = 0;
   private requestedHeight: number = 0;
-  
+
   // private outlineModeValue: OutlineMode = OutlineMode.Filter;
   // private outlineColorValue: number;
 

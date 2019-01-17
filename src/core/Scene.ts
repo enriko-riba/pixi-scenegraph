@@ -1,4 +1,4 @@
-﻿import * as PIXI from "pixi.js";
+﻿import * as PIXI from 'pixi.js';
 import { SceneManager } from './SceneManager';
 
 /**
@@ -31,33 +31,33 @@ export abstract class Scene extends PIXI.Container {
    */
   public onActivate(): void {
     // tslint ignore
-   }
+  }
 
   /**
    * Fired every time the scene is deactivated.
    */
-  public onDeactivate(): void { 
+  public onDeactivate(): void {
     // tslint ignore
   }
 
   /**
-   * Fired every time the window resizes, the scene is about to be activated (before `onActivate`) and after a MasterHudOverlay is set.
-   * @remarks Note that this function is fired only for the current (active) scene! 
+   * Fired every time the window resizes, the scene is about to be activated (before `onActivate()`) and after a MasterHudOverlay is set.
+   * @remarks Note that this function is fired only for the current (active) scene!
    */
   public onResize(): void {
     // tslint ignore
-   }
+  }
 
   /**
    * Fired on each animation frame
    * @param dt - ellapsed time delta
    * @param timestamp - total time, usefull for TWEEN.update and other libs depending on total time
    */
-  public onUpdate(dt: number, timestamp: number): void { 
+  public onUpdate(dt: number, timestamp: number): void {
     // tslint ignore
   }
 
-  public onDestroy(options?: PIXI.DestroyOptions | boolean): void { 
+  public onDestroy(options?: PIXI.DestroyOptions | boolean): void {
     // tslint ignore
   }
 
@@ -110,8 +110,8 @@ export abstract class Scene extends PIXI.Container {
 
   /**
    * Adds a child object to the scene.
-   * @param child PIXI.DisplayObject 
-   * @param index position in the display object list where the child is inserted 
+   * @param child PIXI.DisplayObject
+   * @param index position in the display object list where the child is inserted
    */
   public addChildAt<T extends PIXI.DisplayObject>(child: T, index: number): T {
     const dispObj = super.addChildAt(child, index);
@@ -123,7 +123,7 @@ export abstract class Scene extends PIXI.Container {
   }
 
   /**
-   * Pauses the scene. A paused scene is not rendered and its onUpdate events are not fired.
+   * Pauses the scene. A paused scene is not rendered and its `onUpdate()` events are not fired.
    */
   public pause(): void {
     this.paused = true;
@@ -146,7 +146,7 @@ export abstract class Scene extends PIXI.Container {
   public get clear() {
     return this.clearValue;
   }
-  
+
   /**
    * Sets the clear flag used by the PIXI renderer.
    */

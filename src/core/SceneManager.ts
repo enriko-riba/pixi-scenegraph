@@ -1,30 +1,16 @@
-﻿import * as PIXI from "pixi.js";
+﻿import * as PIXI from 'pixi.js';
 import { IScreenSizeCalculator, DefaultScreenSizeCalculator, Scene } from '..';
-
-export enum State {
-  GLOBAL,
-  MENU,
-  IN_GAME,
-  CUSTOM1,
-  CUSTOM2,
-  CUSTOM3,
-  CUSTOM4,
-  CUSTOM5,
-}
-
-// declare var stats: Stats;
 
 /**
  *   Handles multiple scenes, scene activation, rendering and updates.
  */
 export class SceneManager {
-  private masterHudOverlay: PIXI.Container;
-
   /**
-   * This object is only to support rendering masterHudOverlay together with the current scene!!!
+   * This object is only to support rendering masterHudOverlay together with the current scene!
    */
   private masterContainer: PIXI.Container;
 
+  private masterHudOverlay: PIXI.Container;
   private currentScene: Scene | null = null;
   private lastScene: Scene;
   private scenes: Scene[] = [];
@@ -45,10 +31,16 @@ export class SceneManager {
    * @param screenSizeCalculator - custom screen size calculator implementation, if undefined the default is used
    * @remarks The DefaultScreenSizeCalculator returns screen dimensions that horizontaly fit in the real screen and preserve the aspect ratio of the given width and height values.
    */
-  constructor(width: number, height: number, options?: PIXI.RendererOptions, screenSizeCalculator?: IScreenSizeCalculator) {
+  constructor(
+    width: number,
+    height: number,
+    options?: PIXI.RendererOptions,
+    screenSizeCalculator?: IScreenSizeCalculator,
+  ) {
     this.designWidth = width;
     this.designHeight = height;
-    this.screenSizeCalculator = screenSizeCalculator || new DefaultScreenSizeCalculator(this.designWidth, this.designHeight);
+    this.screenSizeCalculator =
+      screenSizeCalculator || new DefaultScreenSizeCalculator(this.designWidth, this.designHeight);
     this.masterContainer = new PIXI.Container();
 
     if (!options) {
@@ -177,7 +169,7 @@ export class SceneManager {
     PIXI.settings.RESOLUTION = window.devicePixelRatio;
   }
 
-  /** 
+  /**
    * Activates the previous scene.
    */
   public ActivatePreviousScene() {
@@ -207,8 +199,7 @@ export class SceneManager {
   }
 
   /**
-   *  Renders the current scene in a rendertexture.
-   *  @returns The `PIXI.RenderTexture` containing the current scene.
+   * Renders the current scene in a rendertexture.
    */
   public CaptureScene(): PIXI.RenderTexture {
     console.log(`Capturing scene, width: ${this.renderer.width}, height: ${this.renderer.height}`);

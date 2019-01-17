@@ -1,4 +1,4 @@
-export  type valueGetter<T> = ()=> T;
+export type valueGetter<T> = () => T;
 
 export class Dictionary<T> {
   private dictValues: { [key: string]: T } = {};
