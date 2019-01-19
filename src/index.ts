@@ -20,4 +20,4 @@ export { AnimationSequence } from './objects/AnimationSequence';
 export { SpriteButton } from './objects/SpriteButton';
 export { Slider } from './objects/Slider';
 
-export const VERSION = '1.3.1';
+export {version as VERSION} from '../package.json';
