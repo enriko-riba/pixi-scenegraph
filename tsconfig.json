@@ -22,8 +22,7 @@
   },
   "exclude": [
     "node_modules",
-    "dist",
-    "./webpack.config.ts"
+    "dist"
   ]   ,
   "include":[
     "src"
