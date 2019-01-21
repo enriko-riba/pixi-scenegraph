@@ -263,7 +263,7 @@ export class SceneManager {
             const fmt_txt = 'color:#fa1;background:#000;padding:5px 0;';
             const fmt_hearts = 'color:#f55;background:#ffc3dc;padding:5px 0;';
             const args = [
-                ` %c  %c pixi-scenegraph: ${VERSION} ✰   %c  %c https://github.com/enriko-riba/pixi-scenegraph#readme ❤❤❤\t`,
+                ` %c  %c pixi-scenegraph: ${VERSION} ✰  %c  %c https://github.com/enriko-riba/pixi-scenegraph#readme ❤❤❤\t`,
                 fmt_purp,
                 fmt_txt,
                 fmt_purp,
