@@ -11,7 +11,7 @@
     "doc": "./node_modules/.bin/typedoc --out docs/generated --mode file",
     "format": "prettier --write \"./**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prePublish": "npm run _version && prettier --write \"./**/*.ts\" && rimraf dist/* && rollup -c",
+    "prePublish": "npm run _version && npm run format && npm run build && npm run doc",
     "build": "npm run _clear && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
