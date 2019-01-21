@@ -5,14 +5,18 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+
   "scripts": {
     "_clear": "rimraf dist/*",
+    "_version": "node version.js",
     "doc": "./node_modules/.bin/typedoc --out docs/generated --mode file",
     "format": "prettier --write \"./**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
+    "prePublish": "npm run _version && prettier --write \"./**/*.ts\" && rimraf dist/* && rollup -c",
     "build": "npm run _clear && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
   "keywords": [
     "pixi",
     "scenegraph",
@@ -31,7 +35,6 @@
     "prettier": "^1.15.3",
     "rimraf": "^2.6.3",
     "rollup": "^1.1.0",
-    "rollup-plugin-json": "^3.1.0",
     "rollup-plugin-typescript2": "^0.19.2",
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.17.0",
