@@ -14,32 +14,32 @@
  * ```
  */
 export interface IScreenSizeCalculator {
-  /**
-   * Returns the available or desired screen size. This value is passed to the `CalculateSize()` and `CalculateScale` functions.
-   */
-  GetAvailableSize: () => ISize;
+    /**
+     * Returns the available or desired screen size. This value is passed to the `CalculateSize()` and `CalculateScale` functions.
+     */
+    GetAvailableSize: () => ISize;
 
-  /**
-   * Returns the desired aspect ratio. This value is passed to the `CalculateSize()` function.
-   */
-  GetAspectRatio: () => number;
+    /**
+     * Returns the desired aspect ratio. This value is passed to the `CalculateSize()` function.
+     */
+    GetAspectRatio: () => number;
 
-  /**
-   * Returns the screen size the renderer will actually use.
-   *
-   * @param availableSize - the available screen dimensions.
-   * @param aspect - the required aspect ratio
-   */
-  CalculateSize(availableSize: ISize, aspect: number): ISize;
+    /**
+     * Returns the screen size the renderer will actually use.
+     *
+     * @param availableSize - the available screen dimensions.
+     * @param aspect - the required aspect ratio
+     */
+    CalculateSize(availableSize: ISize, aspect: number): ISize;
 
-  /**
-   * Returns the scale to be applied to all scenes.
-   * @param availableScreenSize
-   */
-  CalculateScale(availableScreenSize: ISize): ISize;
+    /**
+     * Returns the scale to be applied to all scenes.
+     * @param availableScreenSize
+     */
+    CalculateScale(availableScreenSize: ISize): ISize;
 }
 
 export interface ISize {
-  x: number;
-  y: number;
+    x: number;
+    y: number;
 }
