@@ -1,11 +1,10 @@
 {
   "name": "pixi-scenegraph",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "typescript scene engine for pixi.js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
-
   "scripts": {
     "_clear": "rimraf dist/*",
     "_version": "node version.js",
@@ -16,7 +15,6 @@
     "build": "npm run _clear && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "keywords": [
     "pixi",
     "scenegraph",
