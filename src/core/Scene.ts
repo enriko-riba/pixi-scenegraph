@@ -16,7 +16,12 @@ export abstract class Scene extends PIXI.Container {
 
   /**
    *   Creates a new scene instance.
-   *   @param name the scene name.
+   *   @param name - the scene name.
+   */
+  /**
+   * Creates a new scene instance.
+   * @param scm - the `SceneManager` instance.
+   * @param name - the scene name.
    */
   constructor(scm: SceneManager, name: string) {
     super();
