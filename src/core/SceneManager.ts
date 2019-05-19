@@ -255,7 +255,7 @@ export class SceneManager {
         if (!this.startTime) {
             this.startTime = Date.now();
         }
-        
+
         this.timeStamp = Date.now();
         let dt = this.timeStamp - this.startTime;
         if (dt > 50) {
