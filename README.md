@@ -47,5 +47,5 @@ inside the MenuScene class:
 
     btnStart.onClick = () => this.sceneManager.ActivateScene("scene_1");
 
-### Documentation
+## Documentation
 [API documentation](https://enriko-riba.github.io/pixi-scenegraph/generated/index.html)
