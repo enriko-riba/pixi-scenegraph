@@ -3,18 +3,17 @@
 Link to [API documentation](https://enriko-riba.github.io/pixi-scenegraph/generated/index.html)
 
 ## What is pixi-scenegraph?
-**pixi-scenegraph** is a library providing scene management features and several common prefab display objects.
-It is written in typescript and aimed for typescript users but not limited to typescript only projects.
->*.ts -> import {SceneManager} from "pixi-scenegraph";
-
->*.js -> var sg = require("pixi-scenegraph"); let scm = new sg.SceneManager();
-
-### Show me da stuff
+**pixi-scenegraph** is a package providing scene management features for PIXI v5.
+It allows defining scenes and switching between them e.g. MainMenuScene, GameScene, OptionsScene etc.
 
 The following image represents the object hierarchy:
 
 ![Hierarchy](https://enriko-riba.github.io/pixi-scenegraph/img/Hierarchy.png "Object hierarchy")
 
+**pixi-scenegraph** is written in typescript and aimed for typescript users but not limited to typescript only projects.
+>*.ts -> import {SceneManager} from "pixi-scenegraph";
+
+>*.js -> var sg = require("pixi-scenegraph"); let scm = new sg.SceneManager();
 
 ### What is a Scene
 A Scene is like a PIXI stage, a container holding all objects we want to display. Think of scenes as game state containers e.g: loading scene, menu scene, options scene, in-game scene etc. 
@@ -30,15 +29,15 @@ Z-Index
 ![z ordering](https://enriko-riba.github.io/pixi-scenegraph/img/zindex.png "Z Ordering")
 
 ### Show me a 'Hello World' example
-    const scm = new SceneManager(SCENE_WIDTH, SCENE_HEIGHT, renderOptions);
-    const myScene = new MyScene(scm);
+    const scm = new SceneManager(renderOptions);
+    const myScene = new MyScene();
     scm.AddScene(myScene);
-    scm.ActivateScene(myScene);
+    scm.ActivateScene(myScene); // or by name scm.ActivateScene('scene_name')
 
 ### How do I switch scenes?
-    const myScene1 = new MyScene1(scm);     //  name id 'scene_1'
-    const myScene2 = new MyScene2(scm);     //  name id 'scene_2'
-    const menuScene = new MenuScene(scm);   //  name id 'menu'
+    const myScene1 = new MyScene1();     //  name id 'scene_1'
+    const myScene2 = new MyScene2();     //  name id 'scene_2'
+    const menuScene = new MenuScene();   //  name id 'menu'
     scm.AddScene(myScene1);
     scm.AddScene(myScene2);
     scm.AddScene(menuScene);

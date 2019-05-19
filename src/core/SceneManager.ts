@@ -1,5 +1,9 @@
 ﻿import * as PIXI from 'pixi.js';
-import { IScreenSizeCalculator, DefaultScreenSizeCalculator, Scene, VERSION } from '..';
+import { VERSION } from '../_version';
+import { IScreenSizeCalculator } from './IScreenSizeCalculator';
+import { DefaultScreenSizeCalculator } from './DefaultScreenSizeCalculator';
+import { Scene } from './Scene';
+import { IRendererOptions } from './RendererOptions';
 
 /**
  *   Handles multiple scenes, scene activation, rendering and updates.
@@ -14,7 +18,8 @@ export class SceneManager {
     private currentScene: Scene | null = null;
     private lastScene: Scene;
     private scenes: Scene[] = [];
-    private renderer: PIXI.WebGLRenderer | PIXI.CanvasRenderer;
+
+    private app: PIXI.Application;
 
     private designWidth: number;
     private designHeight: number;
@@ -26,39 +31,40 @@ export class SceneManager {
     /**
      * Creates a new SceneManager instance.
      *
-     * @param width - the width of the scene
-     * @param height - the height of the scene
+     * @param options - the PIXI RendererOptions
      * @param screenSizeCalculator - custom screen size calculator implementation, if undefined the default is used
-     * @remarks The DefaultScreenSizeCalculator returns screen dimensions that horizontaly fit in the real screen and preserve the aspect ratio of the given width and height values.
+     * @remarks The DefaultScreenSizeCalculator returns screen dimensions that horizontaly fit in available screen
+     * space but preserve the aspect ratio of the given width and height values.
      */
-    constructor(width: number, height: number, options?: PIXI.RendererOptions, screenSizeCalculator?: IScreenSizeCalculator) {
+    constructor(options: IRendererOptions, screenSizeCalculator?: IScreenSizeCalculator) {
         SceneManager.logVersion();
-        this.designWidth = width;
-        this.designHeight = height;
-        this.screenSizeCalculator = screenSizeCalculator || new DefaultScreenSizeCalculator(this.designWidth, this.designHeight);
+
         this.masterContainer = new PIXI.Container();
 
-        if (!options) {
-            options = { antialias: false, roundPixels: true, backgroundColor: 0x012135, transparent: true };
-        }
-        this.renderer = PIXI.autoDetectRenderer(width, height, options);
-        this.renderer.autoResize = true;
+        this.app = new PIXI.Application(options);
+        this.app.ticker.add(this.onRender, this);
+        this.app.stage = this.masterContainer;
 
-        //  textureGC is only used for web GL renderer
-        if ((this.render as any).textureGC) {
-            (this.render as any).textureGC.mode = PIXI.GC_MODES.AUTO;
-        }
+        this.designWidth = options.width || window.innerWidth;
+        this.designHeight = options.height || window.innerHeight;
+        this.screenSizeCalculator = screenSizeCalculator || new DefaultScreenSizeCalculator(this.designWidth, this.designHeight);
 
         window.removeEventListener('resize', this.resizeHandler);
         window.addEventListener('resize', this.resizeHandler, true);
-        this.render(0);
     }
 
     /**
-     *   Returns the renderer instance.
+     *   Returns the PIXI.Renderer instance.
      */
-    public get Renderer(): PIXI.WebGLRenderer | PIXI.CanvasRenderer {
-        return this.renderer;
+    public get Renderer(): PIXI.Renderer {
+        return this.app.renderer;
+    }
+
+    /**
+     *   Returns the PIXI.Application instance.
+     */
+    public get Application(): PIXI.Application {
+        return this.app;
     }
 
     /**
@@ -73,7 +79,6 @@ export class SceneManager {
      */
     public AddScene(scene: Scene): void {
         this.scenes.push(scene);
-        scene.sceneManager = this;
     }
 
     /**
@@ -81,8 +86,8 @@ export class SceneManager {
      */
     public RemoveAllScenes(): void {
         this.scenes.forEach((scene: Scene) => {
-            (scene.sceneManager as any) = undefined;
-            scene.onDestroy(true);
+            scene.onDestroy();
+            scene.destroy({ children: true, texture: true, baseTexture: true });
         });
         this.scenes = [];
         this.currentScene = null;
@@ -95,7 +100,8 @@ export class SceneManager {
         this.scenes = this.scenes.filter((item: Scene, index: number, arr) => {
             return item !== scene;
         });
-        (scene.sceneManager as any) = undefined;
+        scene.onDestroy();
+        scene.destroy({ children: true, texture: true, baseTexture: true });
     }
 
     /**
@@ -150,7 +156,7 @@ export class SceneManager {
         this.startTime = 0;
         this.lastScene = (this.currentScene !== scene ? this.currentScene : this.lastScene) as Scene;
         this.currentScene = scene;
-        this.renderer.backgroundColor = scene.BackGroundColor;
+        this.app.renderer.backgroundColor = scene.BackGroundColor;
         this.resizeHandler();
 
         scene.onActivate();
@@ -197,9 +203,9 @@ export class SceneManager {
      * Renders the current scene in a rendertexture.
      */
     public CaptureScene(): PIXI.RenderTexture {
-        console.log(`Capturing scene, width: ${this.renderer.width}, height: ${this.renderer.height}`);
-        const renderTexture = PIXI.RenderTexture.create(this.renderer.width, this.renderer.height);
-        this.renderer.render(this.currentScene as Scene, renderTexture);
+        console.log(`Capturing scene, width: ${this.app.renderer.width}, height: ${this.app.renderer.height}`);
+        const renderTexture = PIXI.RenderTexture.create({ width: this.app.renderer.width, height: this.app.renderer.height });
+        this.app.renderer.render(this.currentScene as Scene, renderTexture);
         return renderTexture;
     }
 
@@ -214,14 +220,18 @@ export class SceneManager {
         this.scenes.forEach((scene: Scene) => {
             this.RemoveScene(scene);
         });
-        this.renderer.destroy(true);
+        this.app.destroy(true, {
+            children: true,
+            texture: true,
+            baseTexture: true,
+        });
     };
 
     private resizeHandler = () => {
         const avlSize = this.screenSizeCalculator.GetAvailableSize();
         const aspect = this.screenSizeCalculator.GetAspectRatio();
         const size = this.screenSizeCalculator.CalculateSize(avlSize, aspect);
-        this.renderer.resize(size.x, size.y);
+        this.app.renderer.resize(size.x, size.y);
 
         const scale = this.screenSizeCalculator.CalculateScale(size);
 
@@ -235,9 +245,7 @@ export class SceneManager {
         }
     };
 
-    private render = (timestamp: number) => {
-        this.animationFrameHandle = requestAnimationFrame(this.render);
-
+    private onRender = (timestamp: number) => {
         //  exit if no scene or paused
         if (!this.currentScene || this.currentScene.isPaused()) {
             return;
@@ -252,26 +260,24 @@ export class SceneManager {
             dt = 50;
         }
         this.currentScene.onUpdate(dt, timestamp);
-
         this.startTime = timestamp;
-        this.renderer.render(this.masterContainer, undefined, this.currentScene.clear);
     };
 
-    public static logVersion() {
+    private static logVersion() {
         if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-            const fmt_purp = 'color:#fa1;background:#ff66a5;padding:5px 0;';
-            const fmt_txt = 'color:#fa1;background:#000;padding:5px 0;';
-            const fmt_hearts = 'color:#f55;background:#ffc3dc;padding:5px 0;';
+            const fmtPurp = 'color:#fa1;background:#ff66a5;padding:5px 0;';
+            const fmtTxt = 'color:#fa1;background:#000;padding:5px 0;';
+            const fmtHearts = 'color:#f55;background:#ffc3dc;padding:5px 0;';
             const args = [
                 ` %c  %c pixi-scenegraph: ${VERSION} ✰  %c  %c https://github.com/enriko-riba/pixi-scenegraph#readme ❤❤❤\t`,
-                fmt_purp,
-                fmt_txt,
-                fmt_purp,
-                fmt_hearts,
+                fmtPurp,
+                fmtTxt,
+                fmtPurp,
+                fmtHearts,
             ];
             console.info.apply(console, args);
         } else if (window.console) {
-            console.info(`pixi-scenegraph: ${VERSION} ✰`);
+            console.info(`pixi-scenegraph: ${VERSION} ✰ https://github.com/enriko-riba/pixi-scenegraph#readme  ❤❤❤`);
         }
     }
 }

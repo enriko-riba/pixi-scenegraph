@@ -1,12 +1,10 @@
 ﻿import * as PIXI from 'pixi.js';
-import { SceneManager } from './SceneManager';
 
 /**
  *   Represents a scene instance.
  *   Only one scene at a time is rendered.
  */
 export abstract class Scene extends PIXI.Container {
-    public sceneManager: SceneManager;
     public Name: string;
 
     private paused: boolean = false;
@@ -18,14 +16,9 @@ export abstract class Scene extends PIXI.Container {
      *   Creates a new scene instance.
      *   @param name - the scene name.
      */
-    /**
-     * Creates a new scene instance.
-     * @param scm - the `SceneManager` instance.
-     * @param name - the scene name.
-     */
-    constructor(scm: SceneManager, name: string) {
+
+    constructor(name: string) {
         super();
-        this.sceneManager = scm;
         this.backgroundColor = 0x0;
         this.Name = name;
     }
@@ -62,7 +55,7 @@ export abstract class Scene extends PIXI.Container {
         // tslint ignore
     }
 
-    public onDestroy(options?: PIXI.DestroyOptions | boolean): void {
+    public onDestroy(): void {
         // tslint ignore
     }
 
@@ -110,7 +103,7 @@ export abstract class Scene extends PIXI.Container {
             const maxIndex = this.children.length - 1;
             this.setChildIndex(this.hudScene, maxIndex);
         }
-        return dispObj;
+        return dispObj as T;
     }
 
     /**
@@ -124,7 +117,7 @@ export abstract class Scene extends PIXI.Container {
             const maxIndex = this.children.length - 1;
             this.setChildIndex(this.hudScene, maxIndex);
         }
-        return dispObj;
+        return dispObj as T;
     }
 
     /**

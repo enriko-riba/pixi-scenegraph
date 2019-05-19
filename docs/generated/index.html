@@ -67,17 +67,17 @@
 				<h1 id="scene-graph-engine-for-pixi">Scene Graph Engine for PIXI</h1>
 				<p>Link to <a href="https://enriko-riba.github.io/pixi-scenegraph/generated/index.html">API documentation</a></p>
 				<h2 id="what-is-pixi-scenegraph-">What is pixi-scenegraph?</h2>
-				<p><strong>pixi-scenegraph</strong> is a library providing scene management features and several common prefab display objects.
-				It is written in typescript and aimed for typescript users but not limited to typescript only projects.</p>
+				<p><strong>pixi-scenegraph</strong> is a package providing scene management features for PIXI v5.
+				It allows defining scenes and switching between them e.g. MainMenuScene, GameScene, OptionsScene etc.</p>
+				<p>The following image represents the object hierarchy:</p>
+				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/Hierarchy.png" alt="Hierarchy" title="Object hierarchy"></p>
+				<p><strong>pixi-scenegraph</strong> is written in typescript and aimed for typescript users but not limited to typescript only projects.</p>
 				<blockquote>
 					<p>*.ts -&gt; import {SceneManager} from &quot;pixi-scenegraph&quot;;</p>
 				</blockquote>
 				<blockquote>
 					<p>*.js -&gt; var sg = require(&quot;pixi-scenegraph&quot;); let scm = new sg.SceneManager();</p>
 				</blockquote>
-				<h3 id="show-me-da-stuff">Show me da stuff</h3>
-				<p>The following image represents the object hierarchy:</p>
-				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/Hierarchy.png" alt="Hierarchy" title="Object hierarchy"></p>
 				<h3 id="what-is-a-scene">What is a Scene</h3>
 				<p>A Scene is like a PIXI stage, a container holding all objects we want to display. Think of scenes as game state containers e.g: loading scene, menu scene, options scene, in-game scene etc. </p>
 				<p>A scene <strong>must have a unique name</strong> and the SceneManager can reference scenes by that name:</p>
@@ -85,17 +85,17 @@
 				<p>Z-Index</p>
 				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/zindex.png" alt="z ordering" title="Z Ordering"></p>
 				<h3 id="show-me-a-hello-world-example">Show me a &#39;Hello World&#39; example</h3>
-				<pre><code>const <span class="hljs-keyword">scm </span>= new <span class="hljs-keyword">SceneManager(SCENE_WIDTH, </span><span class="hljs-keyword">SCENE_HEIGHT, </span>renderOptions)<span class="hljs-comment">;</span>
-const myScene = new MyScene(<span class="hljs-keyword">scm);
-</span><span class="hljs-keyword">scm.AddScene(myScene);
-</span><span class="hljs-keyword">scm.ActivateScene(myScene);</span></code></pre><h3 id="how-do-i-switch-scenes-">How do I switch scenes?</h3>
-				<pre><code>const myScene1 = <span class="hljs-function"><span class="hljs-keyword">new</span> <span class="hljs-title">MyScene1</span>(scm);     <span class="hljs-comment">//  name id 'scene_1'</span>
-<span class="hljs-title">const</span> <span class="hljs-title">myScene2</span> = <span class="hljs-title">new</span> <span class="hljs-title">MyScene2</span>(scm);     <span class="hljs-comment">//  name id 'scene_2'</span>
-<span class="hljs-title">const</span> <span class="hljs-title">menuScene</span> = <span class="hljs-title">new</span> <span class="hljs-title">MenuScene</span>(scm);   <span class="hljs-comment">//  name id 'menu'</span>
-<span class="hljs-title">scm</span>.<span class="hljs-title">AddScene</span>(myScene1);
-<span class="hljs-title">scm</span>.<span class="hljs-title">AddScene</span>(myScene2);
-<span class="hljs-title">scm</span>.<span class="hljs-title">AddScene</span>(menuScene);
-<span class="hljs-title">scm</span>.<span class="hljs-title">ActivateScene</span>(menuScene);</span></code></pre><p>inside the MenuScene class:</p>
+				<pre><code>const scm = <span class="hljs-keyword">new</span> <span class="hljs-constructor">SceneManager(<span class="hljs-params">renderOptions</span>)</span>;
+const myScene = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene()</span>;
+scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene</span>)</span>;
+scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">myScene</span>)</span>; <span class="hljs-comment">// or by name scm.ActivateScene('scene_name')</span></code></pre><h3 id="how-do-i-switch-scenes-">How do I switch scenes?</h3>
+				<pre><code>const myScene1 = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene1()</span>;     <span class="hljs-comment">//  name id 'scene_1'</span>
+const myScene2 = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene2()</span>;     <span class="hljs-comment">//  name id 'scene_2'</span>
+const menuScene = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MenuScene()</span>;   <span class="hljs-comment">//  name id 'menu'</span>
+scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene1</span>)</span>;
+scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene2</span>)</span>;
+scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">menuScene</span>)</span>;
+scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">menuScene</span>)</span>;</code></pre><p>inside the MenuScene class:</p>
 				<pre><code>btnStart.onClick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.sceneManager.ActivateScene(<span class="hljs-string">"scene_1"</span>);</code></pre><h3 id="documentation">Documentation</h3>
 				<p><a href="https://enriko-riba.github.io/pixi-scenegraph/generated/index.html">API documentation</a></p>
 			</div>
@@ -110,35 +110,8 @@ const myScene = new MyScene(<span class="hljs-keyword">scm);
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum">
-						<a href="enums/state.html" class="tsd-kind-icon">State</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/animatedsprite.html" class="tsd-kind-icon">Animated<wbr>Sprite</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/animationsequence.html" class="tsd-kind-icon">Animation<wbr>Sequence</a>
-					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/defaultscreensizecalculator.html" class="tsd-kind-icon">Default<wbr>Screen<wbr>Size<wbr>Calculator</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/dictionary.html" class="tsd-kind-icon">Dictionary</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/keyboardaction.html" class="tsd-kind-icon">Keyboard<wbr>Action</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/keyboardmapper.html" class="tsd-kind-icon">Keyboard<wbr>Mapper</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/linkedlist.html" class="tsd-kind-icon">Linked<wbr>List</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/linkedlistnode.html" class="tsd-kind-icon">Linked<wbr>List<wbr>Node</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/parallax.html" class="tsd-kind-icon">Parallax</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/scene.html" class="tsd-kind-icon">Scene</a>
@@ -146,29 +119,14 @@ const myScene = new MyScene(<span class="hljs-keyword">scm);
 					<li class=" tsd-kind-class">
 						<a href="classes/scenemanager.html" class="tsd-kind-icon">Scene<wbr>Manager</a>
 					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/slider.html" class="tsd-kind-icon">Slider</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/spritebutton.html" class="tsd-kind-icon">Sprite<wbr>Button</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/textureloader.html" class="tsd-kind-icon">Texture<wbr>Loader</a>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/irendereroptions.html" class="tsd-kind-icon">IRenderer<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/iscreensizecalculator.html" class="tsd-kind-icon">IScreen<wbr>Size<wbr>Calculator</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/isize.html" class="tsd-kind-icon">ISize</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#keyboardactioncallback" class="tsd-kind-icon">Keyboard<wbr>Action<wbr>Callback</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="globals.html#valuegetter" class="tsd-kind-icon">value<wbr>Getter</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-is-not-exported">
-						<a href="globals.html#column_padding" class="tsd-kind-icon">COLUMN_<wbr>PADDING</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#version" class="tsd-kind-icon">VERSION</a>
