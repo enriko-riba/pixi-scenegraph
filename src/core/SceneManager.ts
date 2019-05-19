@@ -26,6 +26,7 @@ export class SceneManager {
     private screenSizeCalculator: IScreenSizeCalculator;
 
     private startTime: number;
+    private timeStamp: number;
     private animationFrameHandle: number = -1;
 
     /**
@@ -245,22 +246,23 @@ export class SceneManager {
         }
     };
 
-    private onRender = (timestamp: number) => {
+    private onRender = (time: number) => {
         //  exit if no scene or paused
         if (!this.currentScene || this.currentScene.isPaused()) {
             return;
         }
 
         if (!this.startTime) {
-            this.startTime = timestamp;
+            this.startTime = Date.now();
+            this.timeStamp = Date.now();
         }
 
-        let dt = timestamp - this.startTime;
+        let dt = this.timeStamp - this.startTime;
         if (dt > 50) {
             dt = 50;
         }
-        this.currentScene.onUpdate(dt, timestamp);
-        this.startTime = timestamp;
+        this.currentScene.onUpdate(dt, this.timeStamp);
+        this.startTime = this.timeStamp;
     };
 
     private static logVersion() {
