@@ -3,7 +3,8 @@ import { VERSION } from '../_version';
 import { IScreenSizeCalculator } from './IScreenSizeCalculator';
 import { DefaultScreenSizeCalculator } from './DefaultScreenSizeCalculator';
 import { Scene } from './Scene';
-import { IRendererOptions } from './RendererOptions';
+import { IRendererOptions } from './IRendererOptions';
+import { IController } from './IController';
 
 /**
  *   Handles multiple scenes, scene activation, rendering and updates.
@@ -18,7 +19,7 @@ export class SceneManager {
     private currentScene: Scene | null = null;
     private lastScene: Scene;
     private scenes: Scene[] = [];
-
+    private controllers: IController[] =[];
     private app: PIXI.Application;
 
     private designWidth: number;
@@ -66,6 +67,23 @@ export class SceneManager {
      */
     public get Application(): PIXI.Application {
         return this.app;
+    }
+
+    /**
+     * Adds a controller.
+     * @param controller - the controller instance
+     */
+    public AddController(controller: IController){
+        this.controllers.push(controller);
+    }
+
+    /**
+     * Removes a controller.
+     * @param controllerOrId - the controller name or instance to be removed.
+     */
+    public RemoveController(controllerOrId: IController | string){
+        var id = (typeof controllerOrId !== 'string') ? controllerOrId.id : controllerOrId;
+        this.controllers = this.controllers.filter((ctrl)=> ctrl.id != id);
     }
 
     /**
@@ -261,6 +279,13 @@ export class SceneManager {
         if (dt > 50) {
             dt = 50;
         }
+
+        this.controllers.forEach( (ctrl)=>{
+            if(!ctrl.scope || (this.currentScene && this.currentScene.name === ctrl.scope)){
+                ctrl.update(dt, this.currentScene);
+            }
+        });
+        
         this.currentScene.onUpdate(dt, this.timeStamp);
         this.startTime = this.timeStamp;
     };
