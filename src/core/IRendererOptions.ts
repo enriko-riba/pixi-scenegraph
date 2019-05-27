@@ -1,3 +1,6 @@
+/**
+ * Defines PIXI.RenderOptions
+ */
 export interface IRendererOptions {
     width?: number;
     height?: number;

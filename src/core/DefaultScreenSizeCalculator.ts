@@ -1,13 +1,13 @@
 import { IScreenSizeCalculator, ISize } from '..';
 
 /**
- * Calculates screen dimensions that horizontaly fit in the real screen and preserve the aspect ratio for the designed size.
+ * Calculates viewport that horizontaly fits in the device and still preserves the aspect ratio.
  */
 export class DefaultScreenSizeCalculator implements IScreenSizeCalculator {
     constructor(protected designedWidth: number, protected designedHeight: number) {}
 
     /**
-     * Returns the available screen size.
+     * Returns the available window size.
      */
     public GetAvailableSize(): ISize {
         return { x: window.innerWidth, y: window.innerHeight };
@@ -22,7 +22,7 @@ export class DefaultScreenSizeCalculator implements IScreenSizeCalculator {
     /**
      * Returns the largest size that fits in the `availableSize` and preserves the aspect ratio.
      * @param availableSize - the screen size that can be used
-     * @param aspect - the aspect ratio that must be preserved
+     * @param aspect - the aspect ratio
      */
     public CalculateSize(availableSize: ISize, aspect: number): ISize {
         const maxWidth = Math.floor(aspect * availableSize.y);
@@ -32,7 +32,7 @@ export class DefaultScreenSizeCalculator implements IScreenSizeCalculator {
 
     /**
      * Returns a scale applied to scenes so that they fit inside the calculated size.
-     * @param calculatedSize - the maximum allowed screen size, usually returned by `CalculateSize()`
+     * @param calculatedSize - the maximum available screen size, usually returned by `CalculateSize()`
      */
     public CalculateScale(calculatedSize: ISize): ISize {
         return {
