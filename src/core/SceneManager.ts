@@ -265,11 +265,6 @@ export class SceneManager {
     };
 
     private onRender = (time: number) => {
-        //  exit if no scene or paused
-        if (!this.currentScene || this.currentScene.isPaused()) {
-            return;
-        }
-
         if (!this.startTime) {
             this.startTime = Date.now();
         }
@@ -285,6 +280,11 @@ export class SceneManager {
                 ctrl.update(dt, this.currentScene);
             }
         });
+
+        //  exit if no scene or paused
+        if (!this.currentScene || this.currentScene.isPaused()) {
+            return;
+        }
 
         this.currentScene.onUpdate(dt, this.timeStamp);
         this.startTime = this.timeStamp;
