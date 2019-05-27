@@ -19,7 +19,7 @@ export class SceneManager {
     private currentScene: Scene | null = null;
     private lastScene: Scene;
     private scenes: Scene[] = [];
-    private controllers: IController[] =[];
+    private controllers: IController[] = [];
     private app: PIXI.Application;
 
     private designWidth: number;
@@ -73,7 +73,7 @@ export class SceneManager {
      * Adds a controller.
      * @param controller - the controller instance
      */
-    public AddController(controller: IController){
+    public AddController(controller: IController) {
         this.controllers.push(controller);
     }
 
@@ -81,9 +81,9 @@ export class SceneManager {
      * Removes a controller.
      * @param controllerOrId - the controller name or instance to be removed.
      */
-    public RemoveController(controllerOrId: IController | string){
-        var id = (typeof controllerOrId !== 'string') ? controllerOrId.id : controllerOrId;
-        this.controllers = this.controllers.filter((ctrl)=> ctrl.id != id);
+    public RemoveController(controllerOrId: IController | string) {
+        var id = typeof controllerOrId !== 'string' ? controllerOrId.id : controllerOrId;
+        this.controllers = this.controllers.filter(ctrl => ctrl.id != id);
     }
 
     /**
@@ -280,12 +280,12 @@ export class SceneManager {
             dt = 50;
         }
 
-        this.controllers.forEach( (ctrl)=>{
-            if(!ctrl.scope || (this.currentScene && this.currentScene.name === ctrl.scope)){
+        this.controllers.forEach(ctrl => {
+            if (!ctrl.scope || (this.currentScene && this.currentScene.name === ctrl.scope)) {
                 ctrl.update(dt, this.currentScene);
             }
         });
-        
+
         this.currentScene.onUpdate(dt, this.timeStamp);
         this.startTime = this.timeStamp;
     };

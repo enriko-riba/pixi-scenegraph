@@ -3,17 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>pixi-scenegraph</title>
+	<title>IController | pixi-scenegraph</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">pixi-scenegraph</a>
+					<a href="../index.html" class="title">pixi-scenegraph</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,88 +53,177 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="globals.html">Globals</a>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="icontroller.html">IController</a>
 				</li>
 			</ul>
-			<h1> pixi-scenegraph</h1>
+			<h1>Interface IController</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<h1 id="scene-graph-engine-for-pixi">Scene Graph Engine for PIXI</h1>
-				<p>Link to <a href="https://enriko-riba.github.io/pixi-scenegraph/generated/index.html">API documentation</a></p>
-				<h2 id="what-is-pixi-scenegraph-">What is pixi-scenegraph?</h2>
-				<p><strong>pixi-scenegraph</strong> is a package providing scene management features for <strong>PIXI v5</strong>
-				It allows defining scenes and switching between them e.g. MainMenuScene, GameScene, OptionsScene etc.</p>
-				<p>The following image represents the object hierarchy:</p>
-				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/Hierarchy.png" alt="Hierarchy" title="Object hierarchy"></p>
-				<p><strong>pixi-scenegraph</strong> is written in typescript and aimed for typescript users but not limited to typescript only projects.</p>
-				<blockquote>
-					<p>*.ts -&gt; import {SceneManager} from &quot;pixi-scenegraph&quot;;</p>
-				</blockquote>
-				<blockquote>
-					<p>*.js -&gt; var sg = require(&quot;pixi-scenegraph&quot;); let scm = new sg.SceneManager();</p>
-				</blockquote>
-				<h3 id="what-is-a-scene">What is a Scene</h3>
-				<p>A Scene is like a PIXI stage, a container holding all objects we want to display. Think of scenes as game state containers e.g: loading scene, menu scene, options scene, in-game scene etc. </p>
-				<p>A scene <strong>must have a unique name</strong> and the SceneManager can reference scenes by that name:</p>
-				<pre><code>sceneManager.ActivateScene(<span class="hljs-string">"sceneName"</span>)<span class="hljs-comment">;</span></code></pre><p>Only one scene at a time is active and only the active scene is rendered. A scene can have a HudOverlay which is a container object rendered over the scene. In addition a MasterHudOverlay can be attached to the SceneManager. The MasterHudOverlay is rendered over all other content.</p>
-				<p>Z-Index</p>
-				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/zindex.png" alt="z ordering" title="Z Ordering"></p>
-				<h3 id="show-me-a-hello-world-example">Show me a &#39;Hello World&#39; example</h3>
-				<pre><code>const scm = <span class="hljs-keyword">new</span> <span class="hljs-constructor">SceneManager(<span class="hljs-params">renderOptions</span>)</span>;
-const myScene = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene()</span>;
-scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene</span>)</span>;
-scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">myScene</span>)</span>; <span class="hljs-comment">// or by name scm.ActivateScene('scene_name')</span></code></pre><h3 id="how-do-i-switch-scenes-">How do I switch scenes?</h3>
-				<pre><code>const myScene1 = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene1()</span>;     <span class="hljs-comment">//  name id 'scene_1'</span>
-const myScene2 = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene2()</span>;     <span class="hljs-comment">//  name id 'scene_2'</span>
-const menuScene = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MenuScene()</span>;   <span class="hljs-comment">//  name id 'menu'</span>
-scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene1</span>)</span>;
-scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene2</span>)</span>;
-scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">menuScene</span>)</span>;
-scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">menuScene</span>)</span>;</code></pre><p>inside the MenuScene class:</p>
-				<pre><code>btnStart.onClick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.sceneManager.ActivateScene(<span class="hljs-string">"scene_1"</span>);</code></pre><h3 id="angular-7-based-example">Angular 7 based example</h3>
-				<p><a href="https://github.com/enriko-riba/scenegraph-ng">git repository</a></p>
-				<h2 id="documentation">Documentation</h2>
-				<p><a href="https://enriko-riba.github.io/pixi-scenegraph/generated/index.html">API documentation</a></p>
-			</div>
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Defines a controller. Controllers are non renderable objects are invoked per frame.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IController</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="icontroller.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="icontroller.html#scope" class="tsd-kind-icon">scope</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icontroller.html#update" class="tsd-kind-icon">update</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/72dd3eb/src/core/IController.ts#L10">core/IController.ts:10</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The unique controller id.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="scope" class="tsd-anchor"></a>
+					<h3>scope</h3>
+					<div class="tsd-signature tsd-kind-icon">scope<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/72dd3eb/src/core/IController.ts#L16">core/IController.ts:16</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A scene name, if present activates the controller only while the scene is active.
+							If no scope is defined the controller is active regardless of the active scene.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>dt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, activeScene<span class="tsd-signature-symbol">: </span><a href="../classes/scene.html" class="tsd-signature-type">Scene</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/72dd3eb/src/core/IController.ts#L23">core/IController.ts:23</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Invoked once per frame, depending on scope.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dt: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the ellapsed time in milliseconds</p>
+									</div>
+								</li>
+								<li>
+									<h5>activeScene: <a href="../classes/scene.html" class="tsd-signature-type">Scene</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the current scene</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class">
-						<a href="classes/defaultscreensizecalculator.html" class="tsd-kind-icon">Default<wbr>Screen<wbr>Size<wbr>Calculator</a>
+						<a href="../classes/defaultscreensizecalculator.html" class="tsd-kind-icon">Default<wbr>Screen<wbr>Size<wbr>Calculator</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/scene.html" class="tsd-kind-icon">Scene</a>
+						<a href="../classes/scene.html" class="tsd-kind-icon">Scene</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/scenemanager.html" class="tsd-kind-icon">Scene<wbr>Manager</a>
+						<a href="../classes/scenemanager.html" class="tsd-kind-icon">Scene<wbr>Manager</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
+						<a href="icontroller.html" class="tsd-kind-icon">IController</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="icontroller.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="icontroller.html#scope" class="tsd-kind-icon">scope</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="icontroller.html#update" class="tsd-kind-icon">update</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-interface">
+						<a href="irendereroptions.html" class="tsd-kind-icon">IRenderer<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/icontroller.html" class="tsd-kind-icon">IController</a>
+						<a href="iscreensizecalculator.html" class="tsd-kind-icon">IScreen<wbr>Size<wbr>Calculator</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/irendereroptions.html" class="tsd-kind-icon">IRenderer<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iscreensizecalculator.html" class="tsd-kind-icon">IScreen<wbr>Size<wbr>Calculator</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/isize.html" class="tsd-kind-icon">ISize</a>
+						<a href="isize.html" class="tsd-kind-icon">ISize</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#version" class="tsd-kind-icon">VERSION</a>
+						<a href="../globals.html#version" class="tsd-kind-icon">VERSION</a>
 					</li>
 				</ul>
 			</nav>
@@ -204,7 +293,7 @@ scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">menuS
 	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
