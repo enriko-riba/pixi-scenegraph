@@ -39,6 +39,6 @@
     "typescript": "^3.7.5"
   },
   "peerDependencies": {
-    "pixi.js": ">=5"
+    "pixi.js": ">=5.2"
   }
 }
