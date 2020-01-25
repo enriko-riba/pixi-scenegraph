@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> pixi-scenegraph</h1>
+			<h1>pixi-scenegraph</h1>
 		</div>
 	</div>
 </header>
@@ -64,9 +64,13 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<h1 id="scene-graph-engine-for-pixi">Scene Graph Engine for PIXI</h1>
+				<a href="#scene-graph-engine-for-pixi" id="scene-graph-engine-for-pixi" style="color: inherit; text-decoration: none;">
+					<h1>Scene Graph Engine for PIXI</h1>
+				</a>
 				<p>Link to <a href="https://enriko-riba.github.io/pixi-scenegraph/generated/index.html">API documentation</a></p>
-				<h2 id="what-is-pixi-scenegraph-">What is pixi-scenegraph?</h2>
+				<a href="#what-is-pixi-scenegraph" id="what-is-pixi-scenegraph" style="color: inherit; text-decoration: none;">
+					<h2>What is pixi-scenegraph?</h2>
+				</a>
 				<p><strong>pixi-scenegraph</strong> is a package providing scene management features for <strong>PIXI v5</strong>
 				It allows defining scenes and switching between them e.g. MainMenuScene, GameScene, OptionsScene etc.</p>
 				<p>The following image represents the object hierarchy:</p>
@@ -78,17 +82,24 @@
 				<blockquote>
 					<p>*.js -&gt; var sg = require(&quot;pixi-scenegraph&quot;); let scm = new sg.SceneManager();</p>
 				</blockquote>
-				<h3 id="what-is-a-scene">What is a Scene</h3>
+				<a href="#what-is-a-scene" id="what-is-a-scene" style="color: inherit; text-decoration: none;">
+					<h3>What is a Scene</h3>
+				</a>
 				<p>A Scene is like a PIXI stage, a container holding all objects we want to display. Think of scenes as game state containers e.g: loading scene, menu scene, options scene, in-game scene etc. </p>
 				<p>A scene <strong>must have a unique name</strong> and the SceneManager can reference scenes by that name:</p>
 				<pre><code>sceneManager.ActivateScene(<span class="hljs-string">"sceneName"</span>)<span class="hljs-comment">;</span></code></pre><p>Only one scene at a time is active and only the active scene is rendered. A scene can have a HudOverlay which is a container object rendered over the scene. In addition a MasterHudOverlay can be attached to the SceneManager. The MasterHudOverlay is rendered over all other content.</p>
 				<p>Z-Index</p>
 				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/zindex.png" alt="z ordering" title="Z Ordering"></p>
-				<h3 id="show-me-a-hello-world-example">Show me a &#39;Hello World&#39; example</h3>
+				<a href="#show-me-a-39hello-world39-example" id="show-me-a-39hello-world39-example" style="color: inherit; text-decoration: none;">
+					<h3>Show me a &#39;Hello World&#39; example</h3>
+				</a>
 				<pre><code>const scm = <span class="hljs-keyword">new</span> <span class="hljs-constructor">SceneManager(<span class="hljs-params">renderOptions</span>)</span>;
 const myScene = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene()</span>;
 scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene</span>)</span>;
-scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">myScene</span>)</span>; <span class="hljs-comment">// or by name scm.ActivateScene('scene_name')</span></code></pre><h3 id="how-do-i-switch-scenes-">How do I switch scenes?</h3>
+scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">myScene</span>)</span>; <span class="hljs-comment">// or by name scm.ActivateScene('scene_name')</span></code></pre>
+				<a href="#how-do-i-switch-scenes" id="how-do-i-switch-scenes" style="color: inherit; text-decoration: none;">
+					<h3>How do I switch scenes?</h3>
+				</a>
 				<pre><code>const myScene1 = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene1()</span>;     <span class="hljs-comment">//  name id 'scene_1'</span>
 const myScene2 = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene2()</span>;     <span class="hljs-comment">//  name id 'scene_2'</span>
 const menuScene = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MenuScene()</span>;   <span class="hljs-comment">//  name id 'menu'</span>
@@ -96,9 +107,14 @@ scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene1</
 scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene2</span>)</span>;
 scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">menuScene</span>)</span>;
 scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">menuScene</span>)</span>;</code></pre><p>inside the MenuScene class:</p>
-				<pre><code>btnStart.onClick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.sceneManager.ActivateScene(<span class="hljs-string">"scene_1"</span>);</code></pre><h3 id="angular-7-based-example">Angular 7 based example</h3>
+				<pre><code>btnStart.onClick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.sceneManager.ActivateScene(<span class="hljs-string">"scene_1"</span>);</code></pre>
+				<a href="#angular-7-based-example" id="angular-7-based-example" style="color: inherit; text-decoration: none;">
+					<h3>Angular 7 based example</h3>
+				</a>
 				<p><a href="https://github.com/enriko-riba/scenegraph-ng">git repository</a></p>
-				<h2 id="documentation">Documentation</h2>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h2>Documentation</h2>
+				</a>
 				<p><a href="https://enriko-riba.github.io/pixi-scenegraph/generated/index.html">API documentation</a></p>
 			</div>
 		</div>
@@ -153,6 +169,7 @@ scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">menuS
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -201,7 +218,7 @@ scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">menuS
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>

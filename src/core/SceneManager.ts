@@ -10,6 +10,24 @@ import { IController } from './IController';
  *   Handles multiple scenes, scene activation, rendering and updates.
  */
 export class SceneManager {
+    private static logVersion() {
+        if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+            const fmtPurp = 'color:#fa1;background:#ff66a5;padding:5px 0;';
+            const fmtTxt = 'color:#fa1;background:#000;padding:5px 0;';
+            const fmtHearts = 'color:#f55;background:#ffc3dc;padding:5px 0;';
+            const args = [
+                ` %c  %c pixi-scenegraph: ${VERSION} ✰  %c  %c https://github.com/enriko-riba/pixi-scenegraph#readme ❤❤❤\t`,
+                fmtPurp,
+                fmtTxt,
+                fmtPurp,
+                fmtHearts,
+            ];
+            console.info.apply(console, args);
+        } else if (window.console) {
+            console.info(`pixi-scenegraph: ${VERSION} ✰ https://github.com/enriko-riba/pixi-scenegraph#readme  ❤❤❤`);
+        }
+    }
+
     /**
      * This object is only to support rendering masterHudOverlay together with the current scene!
      */
@@ -82,8 +100,8 @@ export class SceneManager {
      * @param controllerOrId - the controller name or instance to be removed.
      */
     public RemoveController(controllerOrId: IController | string) {
-        var id = typeof controllerOrId !== 'string' ? controllerOrId.id : controllerOrId;
-        this.controllers = this.controllers.filter(ctrl => ctrl.id != id);
+        const id = typeof controllerOrId !== 'string' ? controllerOrId.id : controllerOrId;
+        this.controllers = this.controllers.filter(ctrl => ctrl.id !== id);
     }
 
     /**
@@ -289,22 +307,4 @@ export class SceneManager {
         this.currentScene.onUpdate(dt, this.timeStamp);
         this.startTime = this.timeStamp;
     };
-
-    private static logVersion() {
-        if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
-            const fmtPurp = 'color:#fa1;background:#ff66a5;padding:5px 0;';
-            const fmtTxt = 'color:#fa1;background:#000;padding:5px 0;';
-            const fmtHearts = 'color:#f55;background:#ffc3dc;padding:5px 0;';
-            const args = [
-                ` %c  %c pixi-scenegraph: ${VERSION} ✰  %c  %c https://github.com/enriko-riba/pixi-scenegraph#readme ❤❤❤\t`,
-                fmtPurp,
-                fmtTxt,
-                fmtPurp,
-                fmtHearts,
-            ];
-            console.info.apply(console, args);
-        } else if (window.console) {
-            console.info(`pixi-scenegraph: ${VERSION} ✰ https://github.com/enriko-riba/pixi-scenegraph#readme  ❤❤❤`);
-        }
-    }
 }

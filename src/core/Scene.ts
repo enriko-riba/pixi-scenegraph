@@ -94,16 +94,17 @@ export abstract class Scene extends PIXI.Container {
     }
 
     /**
-     * Adds a child object to the scene.
+     * Adds one or more children to the container.
+     * Multiple items can be added like: `myScene.addChild(childOne, childTwo, childThree)`
      * @param child PIXI.DisplayObject
      */
-    public addChild<T extends PIXI.DisplayObject>(child: T): T {
-        const dispObj = super.addChild(child);
+    public addChild<T extends PIXI.DisplayObject[]>(...child: T): T[0] {
+        const dispObj = super.addChild(...child);
         if (this.hudScene) {
             const maxIndex = this.children.length - 1;
             this.setChildIndex(this.hudScene, maxIndex);
         }
-        return dispObj as T;
+        return dispObj;
     }
 
     /**
