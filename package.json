@@ -1,6 +1,6 @@
 {
   "name": "pixi-scenegraph",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "typescript scene engine for pixi.js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -30,12 +30,12 @@
   "devDependencies": {
     "pixi.js": "^5.2.0",
     "prettier": "^1.19.1",
-    "rimraf": "^2.7.1",
+    "rimraf": "3.0.0",
     "rollup": "^1.29.1",
-    "rollup-plugin-typescript2": "^0.21.2",
-    "tslint": "^5.20.1",
-    "tslint-config-prettier": "^1.17.0",
-    "typedoc": "^0.16.8",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "tslint": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.16.9",
     "typescript": "^3.7.5"
   },
   "peerDependencies": {
