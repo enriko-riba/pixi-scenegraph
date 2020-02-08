@@ -264,7 +264,10 @@ export class SceneManager {
         });
     };
 
-    private resizeHandler = () => {
+    /**
+     * Resize handler, invoked on screen size change. Override to change default implementation.
+     */
+    public onResize(screenSizeCalculator: IScreenSizeCalculator) {
         const avlSize = this.screenSizeCalculator.GetAvailableSize();
         const aspect = this.screenSizeCalculator.GetAspectRatio();
         const size = this.screenSizeCalculator.CalculateSize(avlSize, aspect);
@@ -280,6 +283,13 @@ export class SceneManager {
         if (this.masterHudOverlay) {
             this.masterHudOverlay.scale.set(scale.x, scale.y);
         }
+    }
+
+    /**
+     * DOM event handler, invokes onResize to allow overriding resize logic.
+     */
+    private resizeHandler = () => {
+        this.onResize(this.screenSizeCalculator);
     };
 
     private onRender = (time: number) => {

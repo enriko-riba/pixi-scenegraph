@@ -1,7 +1,7 @@
 import { Scene } from './Scene';
 
 /**
- * Defines a controller. Controllers are non renderable objects are invoked per frame.
+ * Defines a controller. Controllers are non renderable objects whos update() method is invoked once per frame.
  */
 export interface IController {
     /**
