@@ -268,12 +268,12 @@ export class SceneManager {
      * Resize handler, invoked on screen size change. Override to change default implementation.
      */
     public onResize(screenSizeCalculator: IScreenSizeCalculator) {
-        const avlSize = this.screenSizeCalculator.GetAvailableSize();
-        const aspect = this.screenSizeCalculator.GetAspectRatio();
-        const size = this.screenSizeCalculator.CalculateSize(avlSize, aspect);
+        const avlSize = screenSizeCalculator.GetAvailableSize();
+        const aspect = screenSizeCalculator.GetAspectRatio();
+        const size = screenSizeCalculator.CalculateSize(avlSize, aspect);
         this.app.renderer.resize(size.x, size.y);
 
-        const scale = this.screenSizeCalculator.CalculateScale(size);
+        const scale = screenSizeCalculator.CalculateScale(size);
 
         if (this.currentScene) {
             this.currentScene.scale.set(scale.x, scale.y);
