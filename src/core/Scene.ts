@@ -9,6 +9,7 @@ export abstract class Scene extends PIXI.Container {
 
     private paused: boolean = false;
     private hudScene: PIXI.Container | null = null;
+    private modalDialog: PIXI.Container | null = null;
     private backgroundColor: number;
     private clearValue: boolean = true;
 
@@ -16,7 +17,6 @@ export abstract class Scene extends PIXI.Container {
      *   Creates a new scene instance.
      *   @param name - the scene name.
      */
-
     constructor(name: string) {
         super();
         this.backgroundColor = 0x0;
@@ -65,6 +65,7 @@ export abstract class Scene extends PIXI.Container {
     public get BackGroundColor(): number {
         return this.backgroundColor;
     }
+
     /**
      * Sets the scene background color.
      */
@@ -78,6 +79,7 @@ export abstract class Scene extends PIXI.Container {
     public get HudOverlay(): PIXI.Container | null {
         return this.hudScene;
     }
+
     /**
      * Sets the scene hud overlay container.
      */
@@ -90,6 +92,30 @@ export abstract class Scene extends PIXI.Container {
         if (this.hudScene) {
             const maxIndex = this.children.length;
             this.addChildAt(this.hudScene, maxIndex);
+        }
+    }
+
+    /**
+     * Adds a modal dialog over the scene.
+     */
+    public ShowDialog(dialog: PIXI.Container) {
+        if (this.modalDialog) {
+            this.removeChild(this.modalDialog);
+        }
+        this.modalDialog = dialog;
+
+        if (this.modalDialog) {
+            const maxIndex = this.children.length;
+            this.addChildAt(this.modalDialog, maxIndex);
+        }
+    }
+
+    /**
+     * Closes the modal dialog.
+     */
+    public CloseDialog(){
+        if (this.modalDialog) {
+            this.removeChild(this.modalDialog);
         }
     }
 
@@ -127,18 +153,21 @@ export abstract class Scene extends PIXI.Container {
     public pause(): void {
         this.paused = true;
     }
+
     /**
      * Resumes the scene.
      */
     public resume(): void {
         this.paused = false;
     }
+
     /**
      * Returns true if the scene is paused.
      */
     public isPaused(): boolean {
         return this.paused;
     }
+
     /**
      * Gets the clear flag used by the PIXI renderer.
      */
