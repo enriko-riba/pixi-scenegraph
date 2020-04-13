@@ -2,6 +2,7 @@ import { Scene } from './Scene';
 
 /**
  * Defines a controller. Controllers are non renderable objects whos update() method is invoked once per frame.
+ * A controller can run either for all scopes or in the scope of a scene. If scope is defined, the Controller.update() is invoked only if the ActiveScene.NAme matches the scope.
  */
 export interface IController {
     /**
