@@ -130,6 +130,11 @@ export abstract class Scene extends PIXI.Container {
             const maxIndex = this.children.length - 1;
             this.setChildIndex(this.hudScene, maxIndex);
         }
+
+        if (this.modalDialog) {
+            const maxIndex = this.children.length - 1;
+            this.setChildIndex(this.modalDialog, maxIndex);
+        }
         return dispObj;
     }
 
@@ -143,6 +148,11 @@ export abstract class Scene extends PIXI.Container {
         if (this.hudScene) {
             const maxIndex = this.children.length - 1;
             this.setChildIndex(this.hudScene, maxIndex);
+        }
+
+        if (this.modalDialog) {
+            const maxIndex = this.children.length - 1;
+            this.setChildIndex(this.modalDialog, maxIndex);
         }
         return dispObj as T;
     }
