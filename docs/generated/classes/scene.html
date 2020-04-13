@@ -134,6 +134,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#issprite" class="tsd-kind-icon">is<wbr>Sprite</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#localtransform" class="tsd-kind-icon">local<wbr>Transform</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#mask" class="tsd-kind-icon">mask</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="scene.html#modaldialog" class="tsd-kind-icon">modal<wbr>Dialog</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#name-1" class="tsd-kind-icon">name</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#parent" class="tsd-kind-icon">parent</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="scene.html#paused" class="tsd-kind-icon">paused</a></li>
@@ -167,12 +168,14 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scene.html#closedialog" class="tsd-kind-icon">Close<wbr>Dialog</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="scene.html#showdialog" class="tsd-kind-icon">Show<wbr>Dialog</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_calculatebounds" class="tsd-kind-icon">_calculate<wbr>Bounds</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#_recursivepostupdatetransform" class="tsd-kind-icon">_recursive<wbr>Post<wbr>Update<wbr>Transform</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="scene.html#_render" class="tsd-kind-icon">_render</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="scene.html#addchild" class="tsd-kind-icon">add<wbr>Child</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="scene.html#addchildat" class="tsd-kind-icon">add<wbr>Child<wbr>At</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="scene.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#destroy" class="tsd-kind-icon">destroy</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#displayobjectupdatetransform" class="tsd-kind-icon">display<wbr>Object<wbr>Update<wbr>Transform</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="scene.html#getbounds" class="tsd-kind-icon">get<wbr>Bounds</a></li>
@@ -225,7 +228,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Container.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L13">src/core/Scene.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L14">src/core/Scene.ts:14</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -257,7 +260,7 @@
 					<div class="tsd-signature tsd-kind-icon">Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L8">src/core/Scene.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L8">src/core/Scene.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -269,7 +272,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_accessibleactive">_accessibleActive</a></p>
 						<p>Overrides DisplayObject._accessibleActive</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8470</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8477</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -294,7 +297,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_accessiblediv">_accessibleDiv</a></p>
 						<p>Overrides DisplayObject._accessibleDiv</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8476</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8483</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -319,7 +322,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_bounds">_bounds</a></p>
 						<p>Overrides DisplayObject._bounds</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8588</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8595</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -341,7 +344,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_destroyed">_destroyed</a></p>
 						<p>Overrides DisplayObject._destroyed</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8602</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8609</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -363,7 +366,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_lastsortedindex">_lastSortedIndex</a></p>
 						<p>Overrides DisplayObject._lastSortedIndex</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8556</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8563</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -386,7 +389,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_mask">_mask</a></p>
 						<p>Overrides DisplayObject._mask</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8595</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8602</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -408,7 +411,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_tempdisplayobjectparent">_tempDisplayObjectParent</a></p>
 						<p>Overrides DisplayObject._tempDisplayObjectParent</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8617</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8624</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -427,7 +430,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_zindex">_zIndex</a></p>
 						<p>Overrides DisplayObject._zIndex</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8564</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8571</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -450,7 +453,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#accessible">accessible</a></p>
 						<p>Overrides DisplayObject.accessible</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8449</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8456</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -476,7 +479,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#accessiblechildren">accessibleChildren</a></p>
 						<p>Overrides DisplayObject.accessibleChildren</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8503</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8510</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -505,7 +508,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#accessiblehint">accessibleHint</a></p>
 						<p>Overrides DisplayObject.accessibleHint</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8464</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8471</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -530,7 +533,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#accessiblepointerevents">accessiblePointerEvents</a></p>
 						<p>Overrides DisplayObject.accessiblePointerEvents</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8494</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8501</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -559,7 +562,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#accessibletitle">accessibleTitle</a></p>
 						<p>Overrides DisplayObject.accessibleTitle</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8457</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8464</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -585,7 +588,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#accessibletype">accessibleType</a></p>
 						<p>Overrides DisplayObject.accessibleType</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8485</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8492</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -614,7 +617,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#alpha">alpha</a></p>
 						<p>Overrides DisplayObject.alpha</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8516</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8523</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -636,7 +639,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#angle">angle</a></p>
 						<p>Overrides DisplayObject.angle</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8752</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8759</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -657,7 +660,7 @@
 					<div class="tsd-signature tsd-kind-icon">background<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L12">src/core/Scene.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L13">src/core/Scene.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -669,7 +672,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#buttonmode">buttonMode</a></p>
 						<p>Overrides DisplayObject.buttonMode</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8834</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8841</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -700,7 +703,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#cacheasbitmap">cacheAsBitmap</a></p>
 						<p>Overrides DisplayObject.cacheAsBitmap</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8861</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8868</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -729,7 +732,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#children">children</a></p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8258</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8265</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -751,7 +754,7 @@
 					<div class="tsd-signature tsd-kind-icon">clear<wbr>Value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L13">src/core/Scene.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L14">src/core/Scene.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -763,7 +766,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#cursor">cursor</a></p>
 						<p>Overrides DisplayObject.cursor</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8848</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8855</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -797,7 +800,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#filterarea">filterArea</a></p>
 						<p>Overrides DisplayObject.filterArea</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8573</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8580</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -821,7 +824,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#filters">filters</a></p>
 						<p>Overrides DisplayObject.filters</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8581</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8588</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -846,7 +849,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#height">height</a></p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8424</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8431</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -868,7 +871,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#hitarea">hitArea</a></p>
 						<p>Overrides DisplayObject.hitArea</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8822</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8829</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -897,7 +900,7 @@
 					<div class="tsd-signature tsd-kind-icon">hud<wbr>Scene<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Container</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L11">src/core/Scene.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L11">src/core/Scene.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -909,7 +912,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#interactive">interactive</a></p>
 						<p>Overrides DisplayObject.interactive</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8810</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8817</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -941,7 +944,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#interactivechildren">interactiveChildren</a></p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8432</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8439</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -967,7 +970,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#ismask">isMask</a></p>
 						<p>Overrides DisplayObject.isMask</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8612</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8619</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -989,7 +992,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#issprite">isSprite</a></p>
 						<p>Overrides DisplayObject.isSprite</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8607</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8614</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1011,7 +1014,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#localtransform">localTransform</a></p>
 						<p>Overrides DisplayObject.localTransform</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8710</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8717</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1030,12 +1033,12 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="mask" class="tsd-anchor"></a>
 					<h3>mask</h3>
-					<div class="tsd-signature tsd-kind-icon">mask<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Graphics</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Sprite</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<div class="tsd-signature tsd-kind-icon">mask<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Container</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">MaskData</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#mask">mask</a></p>
 						<p>Overrides DisplayObject.mask</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8788</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8795</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1059,10 +1062,20 @@
 							<dd><p>At the moment, PIXI.CanvasRenderer doesn&#39;t support PIXI.Sprite as mask.</p>
 							</dd>
 							<dt>member</dt>
-							<dd><p>{PIXI.Graphics|PIXI.Sprite|null}</p>
+							<dd><p>{PIXI.Container|PIXI.MaskData}</p>
 							</dd>
 						</dl>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="modaldialog" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> modal<wbr>Dialog</h3>
+					<div class="tsd-signature tsd-kind-icon">modal<wbr>Dialog<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Container</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L12">src/core/Scene.ts:12</a></li>
+						</ul>
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="name-1" class="tsd-anchor"></a>
@@ -1072,7 +1085,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#name-1">name</a></p>
 						<p>Overrides DisplayObject.name</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8868</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8875</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1097,7 +1110,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#parent">parent</a></p>
 						<p>Overrides DisplayObject.parent</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8541</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8548</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1119,7 +1132,7 @@
 					<div class="tsd-signature tsd-kind-icon">paused<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L10">src/core/Scene.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L10">src/core/Scene.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1131,7 +1144,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#pivot">pivot</a></p>
 						<p>Overrides DisplayObject.pivot</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8731</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8738</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1154,7 +1167,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#position">position</a></p>
 						<p>Overrides DisplayObject.position</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8717</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8724</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1177,7 +1190,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#renderable">renderable</a></p>
 						<p>Overrides DisplayObject.renderable</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8534</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8541</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1201,7 +1214,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#rotation">rotation</a></p>
 						<p>Overrides DisplayObject.rotation</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8745</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8752</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1224,7 +1237,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#scale">scale</a></p>
 						<p>Overrides DisplayObject.scale</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8724</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8731</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1247,7 +1260,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#skew">skew</a></p>
 						<p>Overrides DisplayObject.skew</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8738</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8745</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1269,7 +1282,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#sortdirty">sortDirty</a></p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8281</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8288</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1291,7 +1304,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#sortablechildren">sortableChildren</a></p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8274</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8281</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1322,7 +1335,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#transform">transform</a></p>
 						<p>Overrides DisplayObject.transform</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8510</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8517</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1345,7 +1358,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#visible">visible</a></p>
 						<p>Overrides DisplayObject.visible</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8525</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8532</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1368,7 +1381,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#width">width</a></p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8418</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8425</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1390,7 +1403,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#worldalpha">worldAlpha</a></p>
 						<p>Overrides DisplayObject.worldAlpha</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8548</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8555</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1414,7 +1427,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#worldtransform">worldTransform</a></p>
 						<p>Overrides DisplayObject.worldTransform</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8703</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8710</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1438,7 +1451,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#worldvisible">worldVisible</a></p>
 						<p>Overrides DisplayObject.worldVisible</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8768</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8775</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1462,7 +1475,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#x">x</a></p>
 						<p>Overrides DisplayObject.x</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8689</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8696</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1485,7 +1498,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#y">y</a></p>
 						<p>Overrides DisplayObject.y</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8696</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8703</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1508,7 +1521,7 @@
 						<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#zindex">zIndex</a></p>
 						<p>Overrides DisplayObject.zIndex</p>
 						<ul>
-							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8761</li>
+							<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8768</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1539,7 +1552,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L65">src/core/Scene.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L65">src/core/Scene.ts:65</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1552,7 +1565,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L71">src/core/Scene.ts:71</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L72">src/core/Scene.ts:72</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1581,7 +1594,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L78">src/core/Scene.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L79">src/core/Scene.ts:79</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1594,7 +1607,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L84">src/core/Scene.ts:84</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L86">src/core/Scene.ts:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1623,7 +1636,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L145">src/core/Scene.ts:145</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L174">src/core/Scene.ts:174</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1636,7 +1649,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L152">src/core/Scene.ts:152</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L181">src/core/Scene.ts:181</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1657,6 +1670,56 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="closedialog" class="tsd-anchor"></a>
+					<h3>Close<wbr>Dialog</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Close<wbr>Dialog<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L116">src/core/Scene.ts:116</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Closes the modal dialog.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="showdialog" class="tsd-anchor"></a>
+					<h3>Show<wbr>Dialog</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Show<wbr>Dialog<span class="tsd-signature-symbol">(</span>dialog<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Container</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L101">src/core/Scene.ts:101</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a modal dialog over the scene.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dialog: <span class="tsd-signature-type">Container</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="_calculatebounds" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> _calculate<wbr>Bounds</h3>
@@ -1668,7 +1731,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_calculatebounds">_calculateBounds</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8374</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8381</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1693,7 +1756,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_recursivepostupdatetransform">_recursivePostUpdateTransform</a></p>
 								<p>Overrides DisplayObject._recursivePostUpdateTransform</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8622</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8629</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1717,7 +1780,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#_render">_render</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8394</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8401</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1749,7 +1812,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Container.addChild</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L101">src/core/Scene.ts:101</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L127">src/core/Scene.ts:127</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1788,7 +1851,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Container.addChildAt</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L115">src/core/Scene.ts:115</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L141">src/core/Scene.ts:141</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1821,18 +1884,19 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="calculatebounds" class="tsd-anchor"></a>
 					<h3>calculate<wbr>Bounds</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">calculate<wbr>Bounds<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#calculatebounds">calculateBounds</a></p>
+								<p>Overrides DisplayObject.calculateBounds</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8367</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8374</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1856,7 +1920,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#destroy">destroy</a></p>
 								<p>Overrides DisplayObject.destroy</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8408</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8415</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1887,7 +1951,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#displayobjectupdatetransform">displayObjectUpdateTransform</a></p>
 								<p>Overrides DisplayObject.displayObjectUpdateTransform</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8796</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8803</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1920,7 +1984,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#getbounds">getBounds</a></p>
 								<p>Overrides DisplayObject.getBounds</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8632</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8639</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1953,7 +2017,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#getchildat">getChildAt</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8332</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8339</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1986,7 +2050,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#getchildbyname">getChildByName</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8441</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8448</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2027,7 +2091,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#getchildindex">getChildIndex</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8318</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8325</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2061,7 +2125,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#getglobalposition">getGlobalPosition</a></p>
 								<p>Overrides DisplayObject.getGlobalPosition</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8880</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8887</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2103,7 +2167,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#getlocalbounds">getLocalBounds</a></p>
 								<p>Overrides DisplayObject.getLocalBounds</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8639</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8646</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2132,7 +2196,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L139">src/core/Scene.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L167">src/core/Scene.ts:167</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2155,7 +2219,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#off">off</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:23990</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:24092</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2186,7 +2250,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#on">on</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:23986</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:24088</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2225,7 +2289,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#on">on</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:23988</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:24090</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2254,7 +2318,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L30">src/core/Scene.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L30">src/core/Scene.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2282,7 +2346,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#onchildrenchange">onChildrenChange</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8287</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8294</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2304,7 +2368,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L37">src/core/Scene.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L37">src/core/Scene.ts:37</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2326,7 +2390,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L58">src/core/Scene.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L58">src/core/Scene.ts:58</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2343,7 +2407,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L45">src/core/Scene.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L45">src/core/Scene.ts:45</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2370,7 +2434,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L54">src/core/Scene.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L54">src/core/Scene.ts:54</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2409,7 +2473,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#once">once</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:23983</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:24085</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2448,7 +2512,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#once">once</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:23985</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:24087</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2477,7 +2541,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L127">src/core/Scene.ts:127</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L153">src/core/Scene.ts:153</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2500,7 +2564,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#removechild">removeChild</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8339</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8346</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2539,7 +2603,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#removechildat">removeChildAt</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8346</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8353</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2572,7 +2636,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#removechildren">removeChildren</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8354</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8361</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2606,7 +2670,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#render">render</a></p>
 								<p>Overrides DisplayObject.render</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8380</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8387</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2638,7 +2702,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#renderadvanced">renderAdvanced</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8387</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8394</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2669,7 +2733,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/902b32e/src/core/Scene.ts#L133">src/core/Scene.ts:133</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/7044c0a/src/core/Scene.ts#L160">src/core/Scene.ts:160</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2692,7 +2756,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#setchildindex">setChildIndex</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8325</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8332</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2731,7 +2795,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#setparent">setParent</a></p>
 								<p>Overrides DisplayObject.setParent</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8667</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8674</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2765,7 +2829,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#settransform">setTransform</a></p>
 								<p>Overrides DisplayObject.setTransform</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8682</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8689</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2819,7 +2883,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#sortchildren">sortChildren</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8358</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8365</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2842,7 +2906,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#swapchildren">swapChildren</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8311</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8318</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2881,7 +2945,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#toglobal">toGlobal</a></p>
 								<p>Overrides DisplayObject.toGlobal</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8649</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8656</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2921,7 +2985,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#tolocal">toLocal</a></p>
 								<p>Overrides DisplayObject.toLocal</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8660</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8667</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2964,7 +3028,7 @@
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#updatetransform">updateTransform</a></p>
 								<p>Overrides DisplayObject.updateTransform</p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8362</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8369</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -2987,7 +3051,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="scene.html">Scene</a>.<a href="scene.html#mixin">mixin</a></p>
 								<ul>
-									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8960</li>
+									<li>Defined in node_modules/pixi.js/pixi.js.d.ts:8967</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -3133,6 +3197,9 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 								<a href="scene.html#mask" class="tsd-kind-icon">mask</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="scene.html#modaldialog" class="tsd-kind-icon">modal<wbr>Dialog</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 								<a href="scene.html#name-1" class="tsd-kind-icon">name</a>
 							</li>
@@ -3202,6 +3269,12 @@
 							<li class=" tsd-kind-accessor tsd-parent-kind-class">
 								<a href="scene.html#clear" class="tsd-kind-icon">clear</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="scene.html#closedialog" class="tsd-kind-icon">Close<wbr>Dialog</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="scene.html#showdialog" class="tsd-kind-icon">Show<wbr>Dialog</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="scene.html#_calculatebounds" class="tsd-kind-icon">_calculate<wbr>Bounds</a>
 							</li>
@@ -3217,7 +3290,7 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
 								<a href="scene.html#addchildat" class="tsd-kind-icon">add<wbr>Child<wbr>At</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 								<a href="scene.html#calculatebounds" class="tsd-kind-icon">calculate<wbr>Bounds</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">

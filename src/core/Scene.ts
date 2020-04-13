@@ -113,7 +113,7 @@ export abstract class Scene extends PIXI.Container {
     /**
      * Closes the modal dialog.
      */
-    public CloseDialog(){
+    public CloseDialog() {
         if (this.modalDialog) {
             this.removeChild(this.modalDialog);
         }
