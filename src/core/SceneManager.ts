@@ -34,6 +34,7 @@ export class SceneManager {
     private masterContainer: PIXI.Container;
 
     private masterHudOverlay: PIXI.Container;
+    private modalDialog: PIXI.Container | null = null;
     private currentScene: Scene | null = null;
     private lastScene: Scene;
     private scenes: Scene[] = [];
@@ -237,6 +238,30 @@ export class SceneManager {
     }
 
     /**
+     * Adds a modal dialog over the scene.
+     */
+    public ShowDialog(dialog: PIXI.Container) {
+        if (this.modalDialog) {
+            this.masterContainer.removeChild(this.modalDialog);
+        }
+        if (dialog) {
+            this.modalDialog = dialog;
+            this.masterContainer.addChild(this.modalDialog);
+            this.resizeHandler();
+        }
+    }
+
+    /**
+     * Closes the modal dialog.
+     */
+    public CloseDialog() {
+        if (this.modalDialog) {
+            this.masterContainer.removeChild(this.modalDialog);
+            this.modalDialog = null;
+        }
+    }
+
+    /**
      * Renders the current scene in a rendertexture.
      */
     public CaptureScene(): PIXI.RenderTexture {
@@ -272,17 +297,8 @@ export class SceneManager {
         const aspect = screenSizeCalculator.GetAspectRatio();
         const size = screenSizeCalculator.CalculateSize(avlSize, aspect);
         this.app.renderer.resize(size.x, size.y);
-
         const scale = screenSizeCalculator.CalculateScale(size);
-
-        if (this.currentScene) {
-            this.currentScene.scale.set(scale.x, scale.y);
-            this.currentScene.onResize();
-        }
-
-        if (this.masterHudOverlay) {
-            this.masterHudOverlay.scale.set(scale.x, scale.y);
-        }
+        this.masterContainer.scale.set(scale.x, scale.y);
     }
 
     /**

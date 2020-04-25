@@ -9,7 +9,6 @@ export abstract class Scene extends PIXI.Container {
 
     private paused: boolean = false;
     private hudScene: PIXI.Container | null = null;
-    private modalDialog: PIXI.Container | null = null;
     private backgroundColor: number;
     private clearValue: boolean = true;
 
@@ -94,31 +93,6 @@ export abstract class Scene extends PIXI.Container {
             this.addChildAt(this.hudScene, maxIndex);
         }
     }
-
-    /**
-     * Adds a modal dialog over the scene.
-     */
-    public ShowDialog(dialog: PIXI.Container) {
-        if (this.modalDialog) {
-            this.removeChild(this.modalDialog);
-        }
-        this.modalDialog = dialog;
-
-        if (this.modalDialog) {
-            const maxIndex = this.children.length;
-            this.addChildAt(this.modalDialog, maxIndex);
-        }
-    }
-
-    /**
-     * Closes the modal dialog.
-     */
-    public CloseDialog() {
-        if (this.modalDialog) {
-            this.removeChild(this.modalDialog);
-        }
-    }
-
     /**
      * Adds one or more children to the container.
      * Multiple items can be added like: `myScene.addChild(childOne, childTwo, childThree)`
@@ -129,11 +103,6 @@ export abstract class Scene extends PIXI.Container {
         if (this.hudScene) {
             const maxIndex = this.children.length - 1;
             this.setChildIndex(this.hudScene, maxIndex);
-        }
-
-        if (this.modalDialog) {
-            const maxIndex = this.children.length - 1;
-            this.setChildIndex(this.modalDialog, maxIndex);
         }
         return dispObj;
     }
@@ -148,11 +117,6 @@ export abstract class Scene extends PIXI.Container {
         if (this.hudScene) {
             const maxIndex = this.children.length - 1;
             this.setChildIndex(this.hudScene, maxIndex);
-        }
-
-        if (this.modalDialog) {
-            const maxIndex = this.children.length - 1;
-            this.setChildIndex(this.modalDialog, maxIndex);
         }
         return dispObj as T;
     }
