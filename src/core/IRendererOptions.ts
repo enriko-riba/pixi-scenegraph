@@ -2,6 +2,7 @@
  * Defines PIXI.RenderOptions
  */
 export interface IRendererOptions {
+    autoStart?: boolean;
     width?: number;
     height?: number;
     view?: HTMLCanvasElement;
@@ -9,10 +10,12 @@ export interface IRendererOptions {
     autoDensity?: boolean;
     antialias?: boolean;
     preserveDrawingBuffer?: boolean;
-    backgroundColor?: number;
-    clearBeforeRender?: boolean;
     resolution?: number;
     forceCanvas?: boolean;
-    forceFXAA?: boolean;
+    backgroundColor?: number;
+    clearBeforeRender?: boolean;
     powerPreference?: string;
+    sharedTicker?: boolean;
+    sharedLoader?: boolean;
+    resizeTo?: Window | HTMLElement;
 }
