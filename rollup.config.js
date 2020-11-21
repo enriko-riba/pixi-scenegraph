@@ -6,7 +6,7 @@ export default {
   output: [
     {
       file: pkg.main,
-      format: 'cjs',
+      format: 'cjs'
     },
     {
       file: pkg.module,
@@ -19,7 +19,7 @@ export default {
 //     ...Object.keys(pkg.dependencies || {}),
 //     ...Object.keys(pkg.peerDependencies || {}),
 //   ],
-
+external:['pixi.js'],
 plugins: [
     typescript({
       typescript: require('typescript'),
