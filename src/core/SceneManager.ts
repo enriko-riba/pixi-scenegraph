@@ -102,7 +102,7 @@ export class SceneManager {
      */
     public RemoveController(controllerOrId: IController | string) {
         const id = typeof controllerOrId !== 'string' ? controllerOrId.id : controllerOrId;
-        this.controllers = this.controllers.filter(ctrl => ctrl.id !== id);
+        this.controllers = this.controllers.filter((ctrl) => ctrl.id !== id);
     }
 
     /**
@@ -319,7 +319,7 @@ export class SceneManager {
             dt = 50;
         }
 
-        this.controllers.forEach(ctrl => {
+        this.controllers.forEach((ctrl) => {
             if (!ctrl.scope || (this.currentScene && this.currentScene.name === ctrl.scope)) {
                 ctrl.update(dt, this.currentScene);
             }

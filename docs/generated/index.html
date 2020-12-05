@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>pixi-scenegraph</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for pixi-scenegraph">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -87,7 +87,8 @@
 				</a>
 				<p>A Scene is like a PIXI stage, a container holding all objects we want to display. Think of scenes as game state containers e.g: loading scene, menu scene, options scene, in-game scene etc. </p>
 				<p>A scene <strong>must have a unique name</strong> and the SceneManager can reference scenes by that name:</p>
-				<pre><code>sceneManager.ActivateScene(<span class="hljs-string">"sceneName"</span>)<span class="hljs-comment">;</span></code></pre><p>Only one scene at a time is active and only the active scene is rendered. A scene can have a HudOverlay which is a container object rendered over the scene. In addition a MasterHudOverlay can be attached to the SceneManager. The MasterHudOverlay is rendered over all other content.</p>
+				<pre><code>sceneManager.ActivateScene(<span class="hljs-string">&quot;sceneName&quot;</span>)<span class="hljs-comment">;</span></code></pre>
+				<p>Only one scene at a time is active and only the active scene is rendered. A scene can have a HudOverlay which is a container object rendered over the scene. In addition a MasterHudOverlay can be attached to the SceneManager. The MasterHudOverlay is rendered over all other content.</p>
 				<p>Z-Index</p>
 				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/zindex.png" alt="z ordering" title="Z Ordering"></p>
 				<a href="#show-me-a-39hello-world39-example" id="show-me-a-39hello-world39-example" style="color: inherit; text-decoration: none;">
@@ -96,18 +97,19 @@
 				<pre><code>const scm = <span class="hljs-keyword">new</span> <span class="hljs-constructor">SceneManager(<span class="hljs-params">renderOptions</span>)</span>;
 const myScene = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene()</span>;
 scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene</span>)</span>;
-scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">myScene</span>)</span>; <span class="hljs-comment">// or by name scm.ActivateScene('scene_name')</span></code></pre>
+scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">myScene</span>)</span>; <span class="hljs-comment">// or by name scm.ActivateScene(&#x27;scene_name&#x27;)</span></code></pre>
 				<a href="#how-do-i-switch-scenes" id="how-do-i-switch-scenes" style="color: inherit; text-decoration: none;">
 					<h3>How do I switch scenes?</h3>
 				</a>
-				<pre><code>const myScene1 = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene1()</span>;     <span class="hljs-comment">//  name id 'scene_1'</span>
-const myScene2 = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene2()</span>;     <span class="hljs-comment">//  name id 'scene_2'</span>
-const menuScene = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MenuScene()</span>;   <span class="hljs-comment">//  name id 'menu'</span>
+				<pre><code>const myScene1 = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene1()</span>;     <span class="hljs-comment">//  name id &#x27;scene_1&#x27;</span>
+const myScene2 = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MyScene2()</span>;     <span class="hljs-comment">//  name id &#x27;scene_2&#x27;</span>
+const menuScene = <span class="hljs-keyword">new</span> <span class="hljs-constructor">MenuScene()</span>;   <span class="hljs-comment">//  name id &#x27;menu&#x27;</span>
 scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene1</span>)</span>;
 scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">myScene2</span>)</span>;
 scm.<span class="hljs-constructor">AddScene(<span class="hljs-params">menuScene</span>)</span>;
-scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">menuScene</span>)</span>;</code></pre><p>inside the MenuScene class:</p>
-				<pre><code>btnStart.onClick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.sceneManager.ActivateScene(<span class="hljs-string">"scene_1"</span>);</code></pre>
+scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">menuScene</span>)</span>;</code></pre>
+				<p>inside the MenuScene class:</p>
+				<pre><code>btnStart.onClick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">this</span>.sceneManager.ActivateScene(<span class="hljs-string">&quot;scene_1&quot;</span>);</code></pre>
 				<a href="#angular-7-based-example" id="angular-7-based-example" style="color: inherit; text-decoration: none;">
 					<h3>Angular 7 based example</h3>
 				</a>
@@ -162,57 +164,25 @@ scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">menuS
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
 			</ul>
 		</div>
 	</div>
@@ -222,6 +192,5 @@ scm.<span class="hljs-constructor">ActivateScene(<span class="hljs-params">menuS
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
