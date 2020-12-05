@@ -65,6 +65,7 @@ export class SceneManager {
         this.app = new PIXI.Application(options);
         this.app.ticker.add(this.onRender, this);
         this.app.stage = this.masterContainer;
+        console.info('pixi-scenegraph: renderer plugins: ', this.app.renderer.plugins);
 
         this.designWidth = options.width || window.innerWidth;
         this.designHeight = options.height || window.innerHeight;
@@ -135,7 +136,7 @@ export class SceneManager {
      *   Removes a scene from the graph.
      */
     public RemoveScene(scene: Scene): void {
-        this.scenes = this.scenes.filter((item: Scene, index: number, arr) => {
+        this.scenes = this.scenes.filter((item: Scene) => {
             return item !== scene;
         });
         scene.onDestroy();
@@ -308,7 +309,7 @@ export class SceneManager {
         this.onResize(this.screenSizeCalculator);
     };
 
-    private onRender = (time: number) => {
+    private onRender = () => {
         if (!this.startTime) {
             this.startTime = Date.now();
         }

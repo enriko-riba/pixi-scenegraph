@@ -2,9 +2,9 @@
   "compilerOptions": {
     "moduleResolution": "node",            
     "target": "es5",     
-    "module": "es6",
+    "module": "ESNext",
     "lib": ["es2017", "dom"],
-    "outDir": "dist",                    
+    "outDir": "dist",
     "strict": false,                       
     "declaration": true,                   
     "esModuleInterop": true,
@@ -17,8 +17,15 @@
     "noUnusedLocals": true,                
     "noImplicitReturns": true,             
     "noFallthroughCasesInSwitch": true,  
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "noUnusedParameters": false,
     "removeComments": true,  
-    "sourceMap": true
+    "sourceMap": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "typings"
+    ]
   },
   "exclude": [
     "node_modules",
