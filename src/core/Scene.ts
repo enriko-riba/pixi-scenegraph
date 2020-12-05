@@ -50,7 +50,7 @@ export abstract class Scene extends PIXI.Container {
      * @param dt - ellapsed time delta
      * @param timestamp - total time, usefull for TWEEN.update and other libs depending on total time
      */
-    public onUpdate(dt: number, timestamp: number) : void {
+    public onUpdate(dt: number, timestamp: number): void {
         // tslint ignore
     }
 
