@@ -1,6 +1,6 @@
 {
   "name": "pixi-scenegraph",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "typescript scene engine for pixi.js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -25,10 +25,7 @@
     "url": "git+https://github.com/enriko-riba/pixi-scenegraph.git"
   },
   "author": "Enriko Riba",
-  "license": "MIT",
-  "dependencies": {
-    "pixi.js": "^5.3.3"
-  },
+  "license": "MIT",  
   "devDependencies": {
     "prettier": "^1.19.1",
     "rimraf": "3.0.0",
@@ -40,6 +37,6 @@
     "typescript": "^3.9.7"
   },
   "peerDependencies": {
-    "pixi.js": ">=5.2"
+    "pixi.js": "^5.3.3"    
   }
 }
