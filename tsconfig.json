@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+
     "moduleResolution": "node",            
-    "target": "es5",     
-    "module": "ESNext",
     "lib": ["es2017", "dom"],
-    "outDir": "dist",
     "strict": false,                       
-    "declaration": true,                   
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "noImplicitAny": true,                 
     "strictNullChecks": true,              
     "strictFunctionTypes": true,           
     "noImplicitThis": true,                
@@ -22,6 +24,7 @@
     "noUnusedParameters": false,
     "removeComments": true,  
     "sourceMap": true,
+    "declaration" : true,
     "typeRoots": [
       "node_modules/@types"
     ]
