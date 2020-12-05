@@ -6,6 +6,13 @@ import { Scene } from './Scene';
 import { IRendererOptions } from './IRendererOptions';
 import { IController } from './IController';
 
+import { AccessibilityManager } from 'pixi.js';
+import { AbstractBatchRenderer } from 'pixi.js';
+import { InteractionManager } from 'pixi.js';
+import { ParticleRenderer } from 'pixi.js';
+import { AppLoaderPlugin } from 'pixi.js';
+import { TickerPlugin } from 'pixi.js';
+
 /**
  *   Handles multiple scenes, scene activation, rendering and updates.
  */
@@ -70,7 +77,12 @@ export class SceneManager {
         this.designWidth = options.width || window.innerWidth;
         this.designHeight = options.height || window.innerHeight;
         this.screenSizeCalculator = screenSizeCalculator || new DefaultScreenSizeCalculator(this.designWidth, this.designHeight);
-
+        var a1 = AccessibilityManager;
+        var a2 = AbstractBatchRenderer;
+        var a3 = InteractionManager;
+        var a4 = ParticleRenderer;
+        var a5 = AppLoaderPlugin;
+        var a6 = TickerPlugin;
         window.removeEventListener('resize', this.resizeHandler);
         window.addEventListener('resize', this.resizeHandler, true);
     }

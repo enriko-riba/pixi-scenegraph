@@ -14,7 +14,7 @@
     "strictFunctionTypes": true,           
     "noImplicitThis": true,                
     "alwaysStrict": true,                  
-    "noUnusedLocals": true,                
+    "noUnusedLocals": false,                
     "noImplicitReturns": true,             
     "noFallthroughCasesInSwitch": true,  
     "allowSyntheticDefaultImports": true,
