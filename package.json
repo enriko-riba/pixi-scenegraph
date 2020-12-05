@@ -1,18 +1,18 @@
 {
   "name": "pixi-scenegraph",
-  "version": "1.8.8",
+  "version": "1.8.9",
   "description": "typescript scene engine for pixi.js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "_clear": "rimraf ./dist",
-    "_version": "node version.js",
+    "clean": "rimraf ./dist",
+    "bump": "node version.js",
     "doc": "./node_modules/.bin/typedoc --out docs/generated --mode file",
     "format": "prettier --write \"./**/*.ts\"",
     "lint": "eslint",
-    "prePublish": "npm run _version && npm run format && npm run build && npm run doc",
-    "build": "npm run _clear && rollup -c",
+    "prePublish": "npm run bump && npm run format && npm run build && npm run doc",
+    "build": "npm run clean && parcel build src/index.ts ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -32,10 +32,9 @@
     "eslint-plugin-prettier": "^3.2.0",
     "prettier": "2.2.1",
     "rimraf": "^3.0.2",
-    "rollup": "^2.34.1",
-    "rollup-plugin-typescript2": "^0.29.0",
+    "parcel-bundler": "~1.12.4",
     "typedoc": "^0.19.2",
-    "typescript": "^3.9.7"
+    "typescript": "^4.1.2"
   },
   "dependencies": {
     "pixi.js": "^5.3.3"
