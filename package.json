@@ -1,16 +1,17 @@
 {
   "name": "pixi-scenegraph",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "description": "typescript scene engine for pixi.js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+
   "scripts": {
-    "_clear": "rimraf dist/*",
+    "_clear": "rimraf ./dist",
     "_version": "node version.js",
     "doc": "./node_modules/.bin/typedoc --out docs/generated --mode file",
     "format": "prettier --write \"./**/*.ts\"",
-    "lint": "tslint -p tsconfig.json",
+    "lint": "eslint",
     "prePublish": "npm run _version && npm run format && npm run build && npm run doc",
     "build": "npm run _clear && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +19,8 @@
   "keywords": [
     "pixi",
     "scenegraph",
-    "engine"
+    "game-engine",
+    "game-dev"
   ],
   "repository": {
     "type": "git",

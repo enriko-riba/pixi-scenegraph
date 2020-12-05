@@ -13,12 +13,6 @@ export default {
       format: 'es',
     },
   ],
-  
-//    not needed, the dependencies are external by default
-//   external: [ 
-//     ...Object.keys(pkg.dependencies || {}),
-//     ...Object.keys(pkg.peerDependencies || {}),
-//   ],
 external:['pixi.js'],
 plugins: [
     typescript({
