@@ -25,7 +25,7 @@
     "url": "git+https://github.com/enriko-riba/pixi-scenegraph.git"
   },
   "author": "Enriko Riba",
-  "license": "MIT",  
+  "license": "MIT",
   "devDependencies": {
     "prettier": "^1.19.1",
     "rimraf": "3.0.0",
@@ -35,8 +35,8 @@
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.16.11",
     "typescript": "^3.9.7"
-  },
-  "peerDependencies": {
-    "pixi.js": "^5.3.3"    
+  },  
+  "dependencies": {
+    "pixi.js": "^5.3.3"
   }
 }
