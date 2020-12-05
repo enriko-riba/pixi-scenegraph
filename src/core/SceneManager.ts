@@ -77,12 +77,7 @@ export class SceneManager {
         this.designWidth = options.width || window.innerWidth;
         this.designHeight = options.height || window.innerHeight;
         this.screenSizeCalculator = screenSizeCalculator || new DefaultScreenSizeCalculator(this.designWidth, this.designHeight);
-        var a1 = AccessibilityManager;
-        var a2 = AbstractBatchRenderer;
-        var a3 = InteractionManager;
-        var a4 = ParticleRenderer;
-        var a5 = AppLoaderPlugin;
-        var a6 = TickerPlugin;
+        console.log(AccessibilityManager, AbstractBatchRenderer, InteractionManager, ParticleRenderer, AppLoaderPlugin, TickerPlugin);
         window.removeEventListener('resize', this.resizeHandler);
         window.addEventListener('resize', this.resizeHandler, true);
     }
