@@ -3,7 +3,7 @@ import { IScreenSizeCalculator, ISize } from '..';
 /**
  * Calculates viewport that horizontaly fits in the device and still preserves the designed aspect ratio.
  */
-export class DefaultScreenSizeCalculator implements IScreenSizeCalculator {
+export class NoResizeScreenSizeCalculator implements IScreenSizeCalculator {
     constructor(protected designedWidth: number, protected designedHeight: number) {}
 
     /**
@@ -25,9 +25,7 @@ export class DefaultScreenSizeCalculator implements IScreenSizeCalculator {
      * @param aspect - the aspect ratio
      */
     public CalculateSize(availableSize: ISize, aspect: number): ISize {
-        const maxWidth = Math.floor(aspect * availableSize.y);
-        const maxHeight = Math.floor(window.innerHeight);
-        return { x: Math.min(maxWidth, availableSize.x), y: Math.min(maxHeight, availableSize.y) };
+        return { x: window.innerWidth, y: window.innerHeight };
     }
 
     /**
@@ -36,8 +34,8 @@ export class DefaultScreenSizeCalculator implements IScreenSizeCalculator {
      */
     public CalculateScale(calculatedSize: ISize): ISize {
         return {
-            x: calculatedSize.x / this.designedWidth,
-            y: calculatedSize.x / this.designedWidth,
+            x: 1,
+            y: 1,
         };
     }
 }
