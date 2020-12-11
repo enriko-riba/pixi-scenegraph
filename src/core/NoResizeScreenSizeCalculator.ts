@@ -12,7 +12,7 @@ export class NoResizeScreenSizeCalculator implements IScreenSizeCalculator {
     public GetAvailableSize(): ISize {
         return { x: window.innerWidth, y: window.innerHeight };
     }
-    
+
     /**
      * Returns the aspect ratio of the designedWidth and designedHeight.
      */

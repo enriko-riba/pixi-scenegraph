@@ -306,7 +306,7 @@ export class SceneManager {
      */
     private resizeHandler = () => {
         this.onResize(this.screenSizeCalculator);
-        if(this.currentScene){
+        if (this.currentScene) {
             this.currentScene.onResize();
         }
     };
