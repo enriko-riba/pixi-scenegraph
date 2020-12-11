@@ -4,7 +4,7 @@ import { IScreenSizeCalculator, ISize } from '..';
  * Simply returns the available screen size without any scaling.
  */
 export class NoResizeScreenSizeCalculator implements IScreenSizeCalculator {
-    constructor(protected designedWidth: number, protected designedHeight: number) {}
+    constructor() {}
 
     /**
      * Returns the available window size.
@@ -12,11 +12,12 @@ export class NoResizeScreenSizeCalculator implements IScreenSizeCalculator {
     public GetAvailableSize(): ISize {
         return { x: window.innerWidth, y: window.innerHeight };
     }
+    
     /**
      * Returns the aspect ratio of the designedWidth and designedHeight.
      */
     public GetAspectRatio(): number {
-        return this.designedWidth / this.designedHeight;
+        return 1;
     }
 
     /**
