@@ -8,4 +8,5 @@ export { SceneManager } from './core/SceneManager';
 export { Scene } from './core/Scene';
 export { IController } from './core/IController';
 export { IRendererOptions } from './core/IRendererOptions';
+export { IResizable } from './core/IResizable';
 export { VERSION } from './_version';

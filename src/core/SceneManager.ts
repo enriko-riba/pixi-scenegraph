@@ -5,6 +5,7 @@ import { DefaultScreenSizeCalculator } from './DefaultScreenSizeCalculator';
 import { Scene } from './Scene';
 import { IRendererOptions } from './IRendererOptions';
 import { IController } from './IController';
+import { IResizable } from './IResizable';
 
 /**
  *   Handles multiple scenes, scene activation, rendering and updates.
@@ -290,9 +291,9 @@ export class SceneManager {
     };
 
     /**
-     * Resize handler, invoked on screen size change. Override to change default implementation.
+     * Resize handler, invoked on screen size change.
      */
-    public onResize(screenSizeCalculator: IScreenSizeCalculator) {
+    private adjustSceneSize(screenSizeCalculator: IScreenSizeCalculator) {
         const avlSize = screenSizeCalculator.GetAvailableSize();
         const aspect = screenSizeCalculator.GetAspectRatio();
         const size = screenSizeCalculator.CalculateSize(avlSize, aspect);
@@ -305,9 +306,14 @@ export class SceneManager {
      * DOM event handler, invokes onResize to allow overriding resize logic.
      */
     private resizeHandler = () => {
-        this.onResize(this.screenSizeCalculator);
+        this.adjustSceneSize(this.screenSizeCalculator);
         if (this.currentScene) {
             this.currentScene.onResize();
+        }
+
+        var resizable = (this.masterHudOverlay as any) as IResizable;
+        if (resizable) {
+            resizable.onResize();
         }
     };
 

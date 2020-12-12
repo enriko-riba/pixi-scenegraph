@@ -1,10 +1,11 @@
 ﻿import * as PIXI from 'pixi.js';
+import { IResizable } from './IResizable';
 
 /**
  *   Represents a scene instance.
  *   Only one scene at a time is rendered.
  */
-export abstract class Scene extends PIXI.Container {
+export abstract class Scene extends PIXI.Container implements IResizable {
     public Name: string;
 
     private paused: boolean = false;
