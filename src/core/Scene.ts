@@ -9,7 +9,7 @@ export abstract class Scene extends PIXI.Container implements IResizable {
     public Name: string;
 
     private paused: boolean = false;
-    private hudScene: PIXI.Container | null = null;
+    private hud: PIXI.Container | null = null;
     private backgroundColor: number;
     private clearValue: boolean = true;
 
@@ -77,23 +77,16 @@ export abstract class Scene extends PIXI.Container implements IResizable {
      * Gets the scene hud overlay container.
      */
     public get HudOverlay(): PIXI.Container | null {
-        return this.hudScene;
+        return this.hud;
     }
 
     /**
      * Sets the scene hud overlay container.
      */
     public set HudOverlay(hud: PIXI.Container | null) {
-        if (this.hudScene) {
-            this.removeChild(this.hudScene);
-        }
-        this.hudScene = hud;
-
-        if (this.hudScene) {
-            const maxIndex = this.children.length;
-            this.addChildAt(this.hudScene, maxIndex);
-        }
+        this.hud = hud;
     }
+
     /**
      * Adds one or more children to the container.
      * Multiple items can be added like: `myScene.addChild(childOne, childTwo, childThree)`
@@ -101,9 +94,9 @@ export abstract class Scene extends PIXI.Container implements IResizable {
      */
     public addChild<T extends PIXI.DisplayObject[]>(...child: T): T[0] {
         const dispObj = super.addChild(...child);
-        if (this.hudScene) {
+        if (this.hud) {
             const maxIndex = this.children.length - 1;
-            this.setChildIndex(this.hudScene, maxIndex);
+            this.setChildIndex(this.hud, maxIndex);
         }
         return dispObj;
     }
@@ -115,9 +108,9 @@ export abstract class Scene extends PIXI.Container implements IResizable {
      */
     public addChildAt<T extends PIXI.DisplayObject>(child: T, index: number): T {
         const dispObj = super.addChildAt(child, index);
-        if (this.hudScene) {
+        if (this.hud) {
             const maxIndex = this.children.length - 1;
-            this.setChildIndex(this.hudScene, maxIndex);
+            this.setChildIndex(this.hud, maxIndex);
         }
         return dispObj as T;
     }
