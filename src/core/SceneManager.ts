@@ -202,8 +202,8 @@ export class SceneManager {
 
         this.masterContainer.removeChildren();
         this.masterContainer.addChild(this.currentScene);
-        
-        if(this.currentScene.HudOverlay){
+
+        if (this.currentScene.HudOverlay) {
             this.masterContainer.addChild(this.currentScene.HudOverlay);
         }
 
