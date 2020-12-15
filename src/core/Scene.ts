@@ -94,10 +94,6 @@ export abstract class Scene extends PIXI.Container implements IResizable {
      */
     public addChild<T extends PIXI.DisplayObject[]>(...child: T): T[0] {
         const dispObj = super.addChild(...child);
-        if (this.hud) {
-            const maxIndex = this.children.length - 1;
-            this.setChildIndex(this.hud, maxIndex);
-        }
         return dispObj;
     }
 
@@ -108,10 +104,6 @@ export abstract class Scene extends PIXI.Container implements IResizable {
      */
     public addChildAt<T extends PIXI.DisplayObject>(child: T, index: number): T {
         const dispObj = super.addChildAt(child, index);
-        if (this.hud) {
-            const maxIndex = this.children.length - 1;
-            this.setChildIndex(this.hud, maxIndex);
-        }
         return dispObj as T;
     }
 
