@@ -1,4 +1,4 @@
-﻿import * as PIXI from 'pixi.js';
+import * as PIXI from 'pixi.js';
 import { VERSION } from '../_version';
 import { IScreenSizeCalculator } from './IScreenSizeCalculator';
 import { DefaultScreenSizeCalculator } from './DefaultScreenSizeCalculator';
@@ -34,7 +34,7 @@ export class SceneManager {
      */
     private masterContainer: PIXI.Container;
 
-    private masterHudOverlay: PIXI.Container;
+    private masterHudOverlay: PIXI.Container | (PIXI.Container & IResizable);
     private modalDialog: PIXI.Container | null = null;
     private currentScene: Scene | null = null;
     private lastScene: Scene;
@@ -231,7 +231,7 @@ export class SceneManager {
     /**
      * Sets the master HUD overlay container.
      */
-    public set MasterHudOverlay(hud: PIXI.Container) {
+    public set MasterHudOverlay(hud: PIXI.Container | (PIXI.Container & IResizable)) {
         this.masterHudOverlay = hud;
         if (!!hud) {
             this.masterContainer.removeChildren();
@@ -312,12 +312,20 @@ export class SceneManager {
      */
     private resizeHandler = () => {
         this.adjustSceneSize(this.screenSizeCalculator);
+
+        //  resize current scene
         if (this.currentScene) {
             this.currentScene.onResize();
+
+            //  resize current hud
+            if (this.currentScene.HudOverlay && ((this.currentScene.HudOverlay as any) as IResizable).onResize) {
+                this.currentScene.onResize();
+            }
         }
 
+        //  resize current master hud
         var resizable = (this.masterHudOverlay as any) as IResizable;
-        if (resizable) {
+        if (resizable && resizable.onResize) {
             resizable.onResize();
         }
     };

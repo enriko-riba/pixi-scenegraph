@@ -1,0 +1,12 @@
+.vscode
+docs
+dist
+.prettierrc
+.prettierrc.json
+package-lock.json
+package.json
+README.md
+rollup.config.js
+tsconfig.json
+tslint.json
+version.js

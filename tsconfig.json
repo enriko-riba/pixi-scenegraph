@@ -1,37 +1,29 @@
 {
-  "compilerOptions": {
-    "moduleResolution": "node",            
-    "target": "es5",     
-    "module": "ESNext",
-    "lib": ["es2017", "dom"],
-    "outDir": "dist",
-    "strict": false,                       
-    "declaration": true,                   
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "noImplicitAny": true,                 
-    "strictNullChecks": true,              
-    "strictFunctionTypes": true,           
-    "noImplicitThis": true,                
-    "alwaysStrict": true,                  
-    "noUnusedLocals": false,                
-    "noImplicitReturns": true,             
-    "noFallthroughCasesInSwitch": true,  
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "noUnusedParameters": false,
-    "removeComments": true,  
-    "sourceMap": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "typings"
-    ]
-  },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]   ,
-  "include":[
-    "src"
-  ]
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "target": "es6",
+        "module": "ESNext",
+        "lib": ["es2017", "dom"],
+        "outDir": "dist",
+        "strict": false,
+        "declaration": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "noUnusedParameters": false,
+        "removeComments": true,
+        "sourceMap": true,
+        "typeRoots": ["node_modules/@types", "typings"]
+    },
+    "exclude": ["node_modules", "dist"],
+    "include": ["src"]
 }

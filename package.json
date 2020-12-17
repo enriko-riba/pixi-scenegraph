@@ -1,43 +1,40 @@
 {
-  "name": "pixi-scenegraph",
-  "version": "1.8.20",
-  "description": "typescript scene engine for pixi.js",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "_clear": "rimraf ./dist",
-    "_version": "node version.js",
-    "doc": "./node_modules/.bin/typedoc --out docs/generated --mode file",
-    "format": "prettier --write \"./**/*.ts\"",
-    "lint": "eslint",
-    "prePublish": "npm run _version && npm run format && npm run build && npm run doc",
-    "build": "npm run _clear && rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "pixi",
-    "scenegraph",
-    "game-engine",
-    "game-dev"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/enriko-riba/pixi-scenegraph.git"
-  },
-  "author": "Enriko Riba",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint": "^7.15.0",
-    "eslint-plugin-prettier": "^3.2.0",
-    "prettier": "2.2.1",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.34.2",
-    "rollup-plugin-typescript2": "^0.29.0",
-    "typedoc": "^0.19.2",
-    "typescript": "^4.1.3"
-  },
-  "dependencies": {
-    "pixi.js": "^5.3.4"
-  }
+    "name": "pixi-scenegraph",
+    "version": "1.8.21",
+    "description": "typescript scene engine for pixi.js",
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "_clear": "rimraf ./dist",
+        "_version": "node version.js",
+        "doc": "./node_modules/.bin/typedoc --out docs/generated --mode file",
+        "format": "npx  prettier --write .",
+        "prePublish": "npm run _version && npm run format && npm run build && npm run doc",
+        "build": "npm run _clear && npx rollup -c",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "pixi",
+        "scenegraph",
+        "game-engine",
+        "game-dev"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/enriko-riba/pixi-scenegraph.git"
+    },
+    "author": "Enriko Riba",
+    "license": "MIT",
+    "devDependencies": {
+        "prettier": "^2.2.1",
+        "rimraf": "^3.0.2",
+        "rollup": "^2.35.1",
+        "rollup-plugin-typescript2": "^0.29.0",
+        "typedoc": "^0.19.2",
+        "typescript": "^4.1.3"
+    },
+    "dependencies": {
+        "pixi.js": "^5.3.4"
+    }
 }
