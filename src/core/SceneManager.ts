@@ -319,7 +319,7 @@ export class SceneManager {
 
             //  resize current hud
             if (this.currentScene.HudOverlay && ((this.currentScene.HudOverlay as any) as IResizable).onResize) {
-                this.currentScene.onResize();
+                ((this.currentScene.HudOverlay as any) as IResizable).onResize();
             }
         }
 
