@@ -296,12 +296,10 @@ export class SceneManager {
     };
 
     /**
-     * Resize handler, invoked on screen size change.
+     * Calculates and sets the mastercontainer scale.
      */
     private adjustSceneSize(screenSizeCalculator: IScreenSizeCalculator) {
-        const avlSize = screenSizeCalculator.GetAvailableSize();
-        const aspect = screenSizeCalculator.GetAspectRatio();
-        const size = screenSizeCalculator.CalculateSize(avlSize, aspect);
+        const size = screenSizeCalculator.CalculateSize();
         this.app.renderer.resize(size.x, size.y);
         const scale = screenSizeCalculator.CalculateScale(size);
         this.masterContainer.scale.set(scale.x, scale.y);

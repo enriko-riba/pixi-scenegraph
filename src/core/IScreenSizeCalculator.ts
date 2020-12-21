@@ -1,9 +1,10 @@
 /**
  * Contract for screen size and aspect ratio calculation.
  * The `SceneManager` delegates all screen size measurements to an `IScreenSizeCalculator` instance.
- * @remarks An implementor can return any value it sees fit for a particular implementation.
- *
- * The `CalculateSize()` could always return a fixed value like 800x600, regardless of the actual screen size.
+ * @remarks The calculated screen size is game specific and can return any value fit for a particular game design.
+ * Two implementations are provided out of the box: the default {@link DefaultScreenSizeCalculator} and {@link NoResizeScreenSizeCalculator}.
+ * The {@link DefaultScreenSizeCalculator} caluclates a viewport that horizontally fits on screen and preserves the given aspect rastio
+ * while the {@link NoResizeScreenSizeCalculator} always returns the full screen size disregarding any aspect ratio constraints.
  *
  * The IScreenSizeCalculator is used in resize events in the following manner:
  * ```
@@ -14,15 +15,6 @@
  * ```
  */
 export interface IScreenSizeCalculator {
-    /**
-     * Returns the available or desired screen size. This value is passed to the `CalculateSize()` and `CalculateScale` functions.
-     */
-    GetAvailableSize: () => ISize;
-
-    /**
-     * Returns the desired aspect ratio. This value is passed to the `CalculateSize()` function.
-     */
-    GetAspectRatio: () => number;
 
     /**
      * Returns the screen size the renderer will actually use.
@@ -30,13 +22,13 @@ export interface IScreenSizeCalculator {
      * @param availableSize - the available screen dimensions.
      * @param aspect - the required aspect ratio
      */
-    CalculateSize(availableSize: ISize, aspect: number): ISize;
+    CalculateSize(): ISize;
 
     /**
      * Returns the scale to be applied to all scenes.
      * @param availableScreenSize
      */
-    CalculateScale(availableScreenSize: ISize): ISize;
+    CalculateScale(size:ISize): ISize;
 }
 
 export interface ISize {

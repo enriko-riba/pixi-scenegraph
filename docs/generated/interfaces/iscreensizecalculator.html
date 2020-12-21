@@ -74,8 +74,10 @@
 					</div>
 					<dl class="tsd-comment-tags">
 						<dt>remarks</dt>
-						<dd><p>An implementor can return any value it sees fit for a particular implementation.</p>
-							<p>The <code>CalculateSize()</code> could always return a fixed value like 800x600, regardless of the actual screen size.</p>
+						<dd><p>The calculated screen size is game specific and can return any value fit for a particular game design.
+								Two implementations are provided out of the box: the default <a href="../classes/defaultscreensizecalculator.html">DefaultScreenSizeCalculator</a> and <a href="../classes/noresizescreensizecalculator.html">NoResizeScreenSizeCalculator</a>.
+								The <a href="../classes/defaultscreensizecalculator.html">DefaultScreenSizeCalculator</a> caluclates a viewport that horizontally fits on screen and preserves the given aspect rastio
+							while the <a href="../classes/noresizescreensizecalculator.html">NoResizeScreenSizeCalculator</a> always returns the full screen size disregarding any aspect ratio constraints.</p>
 							<p>The IScreenSizeCalculator is used in resize events in the following manner:</p>
 							<pre><code><span class="hljs-keyword">const</span> avlSize = <span class="hljs-keyword">this</span>.screenSizeCalculator.GetAvailableSize();
 <span class="hljs-keyword">const</span> <span class="hljs-class"><span class="hljs-keyword">aspect</span> </span>= <span class="hljs-keyword">this</span>.screenSizeCalculator.GetAspectRatio();
@@ -129,7 +131,7 @@
 					<div class="tsd-signature tsd-kind-icon">Get<wbr>Aspect<wbr>Ratio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/9c92990/src/core/IScreenSizeCalculator.ts#L25">src/core/IScreenSizeCalculator.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/IScreenSizeCalculator.ts#L26">src/core/IScreenSizeCalculator.ts:26</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -159,7 +161,7 @@
 					<div class="tsd-signature tsd-kind-icon">Get<wbr>Available<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="isize.html" class="tsd-signature-type">ISize</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/9c92990/src/core/IScreenSizeCalculator.ts#L20">src/core/IScreenSizeCalculator.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/IScreenSizeCalculator.ts#L21">src/core/IScreenSizeCalculator.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -196,7 +198,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/9c92990/src/core/IScreenSizeCalculator.ts#L39">src/core/IScreenSizeCalculator.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/IScreenSizeCalculator.ts#L40">src/core/IScreenSizeCalculator.ts:40</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -226,7 +228,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/9c92990/src/core/IScreenSizeCalculator.ts#L33">src/core/IScreenSizeCalculator.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/IScreenSizeCalculator.ts#L34">src/core/IScreenSizeCalculator.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
