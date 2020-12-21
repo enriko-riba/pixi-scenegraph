@@ -15,7 +15,6 @@
  * ```
  */
 export interface IScreenSizeCalculator {
-
     /**
      * Returns the screen size the renderer will actually use.
      *
@@ -28,7 +27,7 @@ export interface IScreenSizeCalculator {
      * Returns the scale to be applied to all scenes.
      * @param availableScreenSize
      */
-    CalculateScale(size:ISize): ISize;
+    CalculateScale(size: ISize): ISize;
 }
 
 export interface ISize {

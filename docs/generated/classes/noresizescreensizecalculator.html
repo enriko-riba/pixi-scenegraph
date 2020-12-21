@@ -102,8 +102,6 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="noresizescreensizecalculator.html#calculatescale" class="tsd-kind-icon">Calculate<wbr>Scale</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="noresizescreensizecalculator.html#calculatesize" class="tsd-kind-icon">Calculate<wbr>Size</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="noresizescreensizecalculator.html#getaspectratio" class="tsd-kind-icon">Get<wbr>Aspect<wbr>Ratio</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="noresizescreensizecalculator.html#getavailablesize" class="tsd-kind-icon">Get<wbr>Available<wbr>Size</a></li>
 							</ul>
 						</section>
 					</div>
@@ -121,7 +119,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/NoResizeScreenSizeCalculator.ts#L6">src/core/NoResizeScreenSizeCalculator.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/119effa/src/core/NoResizeScreenSizeCalculator.ts#L6">src/core/NoResizeScreenSizeCalculator.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="noresizescreensizecalculator.html" class="tsd-signature-type">NoResizeScreenSizeCalculator</a></h4>
@@ -142,12 +140,12 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iscreensizecalculator.html">IScreenSizeCalculator</a>.<a href="../interfaces/iscreensizecalculator.html#calculatescale">CalculateScale</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/NoResizeScreenSizeCalculator.ts#L36">src/core/NoResizeScreenSizeCalculator.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/119effa/src/core/NoResizeScreenSizeCalculator.ts#L20">src/core/NoResizeScreenSizeCalculator.ts:20</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns a scale applied to scenes so that they fit inside the calculated size.</p>
+									<p>Returns a fixed scale with value (1, 1).</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -155,7 +153,7 @@
 								<li>
 									<h5>calculatedSize: <a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>the maximum available screen size, usually returned by <code>CalculateSize()</code></p>
+										<p>unused, represents the maximum available screen size usually returned by <code>CalculateSize()</code></p>
 									</div>
 								</li>
 							</ul>
@@ -167,78 +165,19 @@
 					<a name="calculatesize" class="tsd-anchor"></a>
 					<h3>Calculate<wbr>Size</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Calculate<wbr>Size<span class="tsd-signature-symbol">(</span>availableSize<span class="tsd-signature-symbol">: </span><a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a>, aspect<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></li>
+						<li class="tsd-signature tsd-kind-icon">Calculate<wbr>Size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iscreensizecalculator.html">IScreenSizeCalculator</a>.<a href="../interfaces/iscreensizecalculator.html#calculatesize">CalculateSize</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/NoResizeScreenSizeCalculator.ts#L28">src/core/NoResizeScreenSizeCalculator.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/119effa/src/core/NoResizeScreenSizeCalculator.ts#L12">src/core/NoResizeScreenSizeCalculator.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns the largest size that fits in the <code>availableSize</code> and preserves the aspect ratio.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>availableSize: <a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>the screen size that can be used</p>
-									</div>
-								</li>
-								<li>
-									<h5>aspect: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>the aspect ratio</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getaspectratio" class="tsd-anchor"></a>
-					<h3>Get<wbr>Aspect<wbr>Ratio</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Get<wbr>Aspect<wbr>Ratio<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/NoResizeScreenSizeCalculator.ts#L19">src/core/NoResizeScreenSizeCalculator.ts:19</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns the aspect ratio of the designedWidth and designedHeight.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getavailablesize" class="tsd-anchor"></a>
-					<h3>Get<wbr>Available<wbr>Size</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">Get<wbr>Available<wbr>Size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/NoResizeScreenSizeCalculator.ts#L12">src/core/NoResizeScreenSizeCalculator.ts:12</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns the available window size.</p>
+									<p>Returns the largest physical screen dimensions.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/isize.html" class="tsd-signature-type">ISize</a></h4>
@@ -273,12 +212,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="noresizescreensizecalculator.html#calculatesize" class="tsd-kind-icon">Calculate<wbr>Size</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="noresizescreensizecalculator.html#getaspectratio" class="tsd-kind-icon">Get<wbr>Aspect<wbr>Ratio</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="noresizescreensizecalculator.html#getavailablesize" class="tsd-kind-icon">Get<wbr>Available<wbr>Size</a>
 							</li>
 						</ul>
 					</li>

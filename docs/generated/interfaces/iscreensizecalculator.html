@@ -107,13 +107,6 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iscreensizecalculator.html#getaspectratio" class="tsd-kind-icon">Get<wbr>Aspect<wbr>Ratio</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iscreensizecalculator.html#getavailablesize" class="tsd-kind-icon">Get<wbr>Available<wbr>Size</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iscreensizecalculator.html#calculatescale" class="tsd-kind-icon">Calculate<wbr>Scale</a></li>
@@ -124,81 +117,18 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="getaspectratio" class="tsd-anchor"></a>
-					<h3>Get<wbr>Aspect<wbr>Ratio</h3>
-					<div class="tsd-signature tsd-kind-icon">Get<wbr>Aspect<wbr>Ratio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/IScreenSizeCalculator.ts#L26">src/core/IScreenSizeCalculator.ts:26</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Returns the desired aspect ratio. This value is passed to the <code>CalculateSize()</code> function.</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="getavailablesize" class="tsd-anchor"></a>
-					<h3>Get<wbr>Available<wbr>Size</h3>
-					<div class="tsd-signature tsd-kind-icon">Get<wbr>Available<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="isize.html" class="tsd-signature-type">ISize</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/IScreenSizeCalculator.ts#L21">src/core/IScreenSizeCalculator.ts:21</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Returns the available or desired screen size. This value is passed to the <code>CalculateSize()</code> and <code>CalculateScale</code> functions.</p>
-						</div>
-					</div>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="isize.html" class="tsd-signature-type">ISize</a></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-returns-title">Returns <a href="isize.html" class="tsd-signature-type">ISize</a></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="calculatescale" class="tsd-anchor"></a>
 					<h3>Calculate<wbr>Scale</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">Calculate<wbr>Scale<span class="tsd-signature-symbol">(</span>availableScreenSize<span class="tsd-signature-symbol">: </span><a href="isize.html" class="tsd-signature-type">ISize</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="isize.html" class="tsd-signature-type">ISize</a></li>
+						<li class="tsd-signature tsd-kind-icon">Calculate<wbr>Scale<span class="tsd-signature-symbol">(</span>size<span class="tsd-signature-symbol">: </span><a href="isize.html" class="tsd-signature-type">ISize</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="isize.html" class="tsd-signature-type">ISize</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/IScreenSizeCalculator.ts#L40">src/core/IScreenSizeCalculator.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/119effa/src/core/IScreenSizeCalculator.ts#L30">src/core/IScreenSizeCalculator.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -209,9 +139,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>availableScreenSize: <a href="isize.html" class="tsd-signature-type">ISize</a></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
+									<h5>size: <a href="isize.html" class="tsd-signature-type">ISize</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="isize.html" class="tsd-signature-type">ISize</a></h4>
@@ -222,13 +150,13 @@
 					<a name="calculatesize" class="tsd-anchor"></a>
 					<h3>Calculate<wbr>Size</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">Calculate<wbr>Size<span class="tsd-signature-symbol">(</span>availableSize<span class="tsd-signature-symbol">: </span><a href="isize.html" class="tsd-signature-type">ISize</a>, aspect<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="isize.html" class="tsd-signature-type">ISize</a></li>
+						<li class="tsd-signature tsd-kind-icon">Calculate<wbr>Size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="isize.html" class="tsd-signature-type">ISize</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/aa2d3ea/src/core/IScreenSizeCalculator.ts#L34">src/core/IScreenSizeCalculator.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/enriko-riba/pixi-scenegraph/blob/119effa/src/core/IScreenSizeCalculator.ts#L24">src/core/IScreenSizeCalculator.ts:24</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -236,21 +164,6 @@
 									<p>Returns the screen size the renderer will actually use.</p>
 								</div>
 							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>availableSize: <a href="isize.html" class="tsd-signature-type">ISize</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>the available screen dimensions.</p>
-									</div>
-								</li>
-								<li>
-									<h5>aspect: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>the required aspect ratio</p>
-									</div>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="isize.html" class="tsd-signature-type">ISize</a></h4>
 						</li>
 					</ul>
@@ -293,12 +206,6 @@
 					<li class="current tsd-kind-interface">
 						<a href="iscreensizecalculator.html" class="tsd-kind-icon">IScreen<wbr>Size<wbr>Calculator</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iscreensizecalculator.html#getaspectratio" class="tsd-kind-icon">Get<wbr>Aspect<wbr>Ratio</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iscreensizecalculator.html#getavailablesize" class="tsd-kind-icon">Get<wbr>Available<wbr>Size</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iscreensizecalculator.html#calculatescale" class="tsd-kind-icon">Calculate<wbr>Scale</a>
 							</li>

@@ -4,12 +4,11 @@ import { IScreenSizeCalculator, ISize } from '..';
  * Calculates viewport that horizontaly fits in the device and still preserves the designed aspect ratio.
  */
 export class DefaultScreenSizeCalculator implements IScreenSizeCalculator {
-    private aspect:number;
+    private aspect: number;
     constructor(protected designedWidth: number, protected designedHeight: number) {
         this.aspect = this.designedWidth / this.designedHeight;
     }
 
-    
     /**
      * Returns the largest size that fits in the physical screen dimensions while preserving the aspect ratio.
      */
