@@ -1,15 +1,15 @@
-﻿import * as PIXI from 'pixi.js';
+﻿import { Container, DisplayObject } from 'pixi.js';
 import { IResizable } from './IResizable';
 
 /**
  *   Represents a scene instance.
  *   Only one scene at a time is rendered.
  */
-export abstract class Scene extends PIXI.Container implements IResizable {
+export abstract class Scene extends Container implements IResizable {
     public Name: string;
 
     private paused: boolean = false;
-    private hud: PIXI.Container | null = null;
+    private hud: Container | null = null;
     private backgroundColor: number;
     private clearValue: boolean = true;
 
@@ -76,14 +76,14 @@ export abstract class Scene extends PIXI.Container implements IResizable {
     /**
      * Gets the scene hud overlay container.
      */
-    public get HudOverlay(): PIXI.Container | null {
+    public get HudOverlay(): Container | null {
         return this.hud;
     }
 
     /**
      * Sets the scene hud overlay container.
      */
-    public set HudOverlay(hud: PIXI.Container | null) {
+    public set HudOverlay(hud: Container | null) {
         this.hud = hud;
     }
 
@@ -92,7 +92,7 @@ export abstract class Scene extends PIXI.Container implements IResizable {
      * Multiple items can be added like: `myScene.addChild(childOne, childTwo, childThree)`
      * @param child PIXI.DisplayObject
      */
-    public addChild<T extends PIXI.DisplayObject[]>(...child: T): T[0] {
+    public addChild<T extends DisplayObject[]>(...child: T): T[0] {
         const dispObj = super.addChild(...child);
         return dispObj;
     }
@@ -102,7 +102,7 @@ export abstract class Scene extends PIXI.Container implements IResizable {
      * @param child PIXI.DisplayObject
      * @param index position in the display object list where the child is inserted
      */
-    public addChildAt<T extends PIXI.DisplayObject>(child: T, index: number): T {
+    public addChildAt<T extends DisplayObject>(child: T, index: number): T {
         const dispObj = super.addChildAt(child, index);
         return dispObj as T;
     }

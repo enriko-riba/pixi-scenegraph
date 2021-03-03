@@ -1,9 +1,8 @@
-import * as PIXI from 'pixi.js';
+import { Container, Application, IApplicationOptions, Renderer, settings, RenderTexture, IRendererRenderOptions } from 'pixi.js';
 import { VERSION } from '../_version';
 import { IScreenSizeCalculator } from './IScreenSizeCalculator';
 import { DefaultScreenSizeCalculator } from './DefaultScreenSizeCalculator';
 import { Scene } from './Scene';
-import { IRendererOptions } from './IRendererOptions';
 import { IController } from './IController';
 import { IResizable } from './IResizable';
 
@@ -32,15 +31,15 @@ export class SceneManager {
     /**
      * This object is only to support rendering masterHudOverlay together with the current scene!
      */
-    private masterContainer: PIXI.Container;
+    private masterContainer: Container;
 
-    private masterHudOverlay: PIXI.Container | (PIXI.Container & IResizable);
-    private modalDialog: PIXI.Container | null = null;
+    private masterHudOverlay: Container | (Container & IResizable);
+    private modalDialog: Container | null = null;
     private currentScene: Scene | null = null;
     private lastScene: Scene;
     private scenes: Scene[] = [];
     private controllers: IController[] = [];
-    private app: PIXI.Application;
+    private app: Application;
 
     private designWidth: number;
     private designHeight: number;
@@ -58,12 +57,12 @@ export class SceneManager {
      * @remarks The DefaultScreenSizeCalculator returns screen dimensions that horizontaly fit in available screen
      * space but preserve the aspect ratio of the given width and height values.
      */
-    constructor(options: IRendererOptions, screenSizeCalculator?: IScreenSizeCalculator) {
+    constructor(options: IApplicationOptions, screenSizeCalculator?: IScreenSizeCalculator) {
         SceneManager.logVersion();
 
-        this.masterContainer = new PIXI.Container();
+        this.masterContainer = new Container();
 
-        this.app = new PIXI.Application(options);
+        this.app = new Application(options);
         this.app.ticker.add(this.onRender, this);
         this.app.stage = this.masterContainer;
         console.info('pixi-scenegraph: renderer plugins: ', this.app.renderer.plugins);
@@ -78,14 +77,14 @@ export class SceneManager {
     /**
      *   Returns the PIXI.Renderer instance.
      */
-    public get Renderer(): PIXI.Renderer {
-        return this.app.renderer;
+    public get Renderer(): Renderer {
+        return this.app.renderer as Renderer;
     }
 
     /**
      *   Returns the PIXI.Application instance.
      */
-    public get Application(): PIXI.Application {
+    public get Application(): Application {
         return this.app;
     }
 
@@ -211,7 +210,7 @@ export class SceneManager {
             this.masterContainer.addChild(this.masterHudOverlay);
         }
 
-        PIXI.settings.RESOLUTION = window.devicePixelRatio;
+        settings.RESOLUTION = window.devicePixelRatio;
     }
 
     /**
@@ -231,7 +230,7 @@ export class SceneManager {
     /**
      * Sets the master HUD overlay container.
      */
-    public set MasterHudOverlay(hud: PIXI.Container | (PIXI.Container & IResizable)) {
+    public set MasterHudOverlay(hud: Container | (Container & IResizable)) {
         this.masterHudOverlay = hud;
         if (!!hud) {
             this.masterContainer.removeChildren();
@@ -246,7 +245,7 @@ export class SceneManager {
     /**
      * Adds a modal dialog over the scene.
      */
-    public ShowDialog(dialog: PIXI.Container) {
+    public ShowDialog(dialog: Container) {
         if (this.modalDialog) {
             this.masterContainer.removeChild(this.modalDialog);
         }
@@ -270,11 +269,13 @@ export class SceneManager {
     /**
      * Renders the current scene in a rendertexture.
      */
-    public CaptureScene(): PIXI.RenderTexture {
+    public CaptureScene(): RenderTexture {
         console.log(`Capturing scene, width: ${this.app.renderer.width}, height: ${this.app.renderer.height}`);
-        const renderTexture = PIXI.RenderTexture.create({ width: this.app.renderer.width, height: this.app.renderer.height });
-        this.app.renderer.render(this.currentScene as Scene, renderTexture);
-        return renderTexture;
+        const options: IRendererRenderOptions = {
+            renderTexture: RenderTexture.create({ width: this.app.renderer.width, height: this.app.renderer.height }),
+        };
+        this.app.renderer.render(this.currentScene as Scene, options);
+        return options.renderTexture as RenderTexture;
     }
 
     /**
