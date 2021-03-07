@@ -3,7 +3,7 @@
 Link to [API documentation](https://enriko-riba.github.io/pixi-scenegraph/generated/index.html)
 
 ## What is pixi-scenegraph?
-**pixi-scenegraph** is a package providing scene management features for **PIXI v5**
+**pixi-scenegraph** is a package providing scene management features for **PIXI v6**
 It allows defining scenes and switching between them e.g. MainMenuScene, GameScene, OptionsScene etc.
 
 The following image represents the object hierarchy:
