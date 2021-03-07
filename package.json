@@ -1,6 +1,6 @@
 {
     "name": "pixi-scenegraph",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "typescript scene engine for pixi.js",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
@@ -31,8 +31,8 @@
         "rimraf": "^3.0.2",
         "rollup": "^2.40.0",
         "rollup-plugin-typescript2": "^0.30.0",
-        "typedoc": "^0.20.28",
-        "typescript": "^4.2.2"
+        "typedoc": "^0.20.30",
+        "typescript": "^4.2.3"
     },
     "dependencies": {
         "pixi.js": "^6.0.0"

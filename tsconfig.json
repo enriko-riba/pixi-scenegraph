@@ -3,7 +3,10 @@
         "moduleResolution": "node",
         "target": "es6",
         "module": "ESNext",
-        "lib": ["es2017", "dom"],
+        "lib": [
+            "es2017",
+            "dom"
+        ],
         "outDir": "dist",
         "strict": false,
         "declaration": true,
@@ -22,8 +25,22 @@
         "noUnusedParameters": false,
         "removeComments": true,
         "sourceMap": true,
-        "typeRoots": ["node_modules/@types", "typings"]
+        "typeRoots": [
+            "node_modules/@types",
+            "typings"
+        ],
+        "paths": {
+            "mini-signals": [
+                "node_modules/resource-loader/typings/mini-signals.d.ts"
+            ]
+        },
+        "baseUrl": "./",
     },
-    "exclude": ["node_modules", "dist"],
-    "include": ["src"]
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "include": [
+        "src"
+    ]
 }

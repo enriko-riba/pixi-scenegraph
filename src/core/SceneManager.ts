@@ -116,6 +116,10 @@ export class SceneManager {
      *   Adds a scene to the graph.
      */
     public AddScene(scene: Scene): void {
+        const found = this.scenes.filter((item: Scene) => item.Name === scene.Name);
+        if (found && found.length > 0) {
+            throw Error("Scene: '" + scene.Name + "' already exists!");
+        }
         this.scenes.push(scene);
     }
 
