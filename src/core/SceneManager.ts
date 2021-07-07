@@ -321,13 +321,13 @@ export class SceneManager {
             this.currentScene.onResize();
 
             //  resize current hud
-            if (this.currentScene.HudOverlay && ((this.currentScene.HudOverlay as any) as IResizable).onResize) {
-                ((this.currentScene.HudOverlay as any) as IResizable).onResize();
+            if (this.currentScene.HudOverlay && (this.currentScene.HudOverlay as any as IResizable).onResize) {
+                (this.currentScene.HudOverlay as any as IResizable).onResize();
             }
         }
 
         //  resize current master hud
-        var resizable = (this.masterHudOverlay as any) as IResizable;
+        var resizable = this.masterHudOverlay as any as IResizable;
         if (resizable && resizable.onResize) {
             resizable.onResize();
         }

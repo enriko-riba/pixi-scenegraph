@@ -88,6 +88,27 @@ export abstract class Scene extends Container implements IResizable {
     }
 
     /**
+     * Invokes the action on every child display object, no matter how deep they are nested.
+     */
+    public enumerateChilds(action: (d: DisplayObject) => void): void {
+        const container = this;
+        Scene.enumerateChilds(container, action);
+    }
+
+    /**
+     * Invokes the action on every child display object, no matter how deep they are nested.
+     */
+    public static enumerateChilds(container: Container, action: (d: DisplayObject) => void): void {
+        for (let i = 0; i < container.children.length; i++) {
+            let c = container.children[i] as Container;
+            action(c);
+            if (c.children && c.children.length > 0) {
+                Scene.enumerateChilds(c, action);
+            }
+        }
+    }
+
+    /**
      * Adds one or more children to the container.
      * Multiple items can be added like: `myScene.addChild(childOne, childTwo, childThree)`
      * @param child PIXI.DisplayObject
