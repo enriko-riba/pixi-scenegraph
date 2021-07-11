@@ -1,6 +1,6 @@
 {
     "name": "pixi-scenegraph",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "typescript scene engine for pixi.js",
     "main": "dist/index.js",
     "module": "dist/index.es.js",

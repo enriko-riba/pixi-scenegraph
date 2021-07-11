@@ -345,7 +345,7 @@ export class SceneManager {
         }
 
         this.controllers.forEach((ctrl) => {
-            if (!ctrl.scope || (this.currentScene && this.currentScene.name === ctrl.scope)) {
+            if (!ctrl.scope || (this.currentScene && this.currentScene.Name === ctrl.scope)) {
                 ctrl.update(dt, this.currentScene);
             }
         });
