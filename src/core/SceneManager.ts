@@ -5,7 +5,7 @@ import { DefaultScreenSizeCalculator } from './DefaultScreenSizeCalculator';
 import { Scene } from './Scene';
 import { IController } from './IController';
 import { IResizable } from './IResizable';
-import { IUpdateable } from './IUpdateable';
+import { IUpdatable } from './IUpdatable';
 
 /**
  *   Handles multiple scenes, scene activation, rendering and updates.
@@ -34,7 +34,7 @@ export class SceneManager {
      */
     private masterContainer: Container;
 
-    private masterHudOverlay: Container | (Container & IResizable & IUpdateable);
+    private masterHudOverlay: Container | (Container & IResizable & IUpdatable);
     private modalDialog: Container | null = null;
     private currentScene: Scene | null = null;
     private lastScene: Scene;
@@ -235,7 +235,7 @@ export class SceneManager {
     /**
      * Sets the master HUD overlay container.
      */
-    public set MasterHudOverlay(hud: Container | (Container & IResizable)) {
+    public set MasterHudOverlay(hud: Container | (Container & IResizable & IUpdatable)) {
         this.masterHudOverlay = hud;
         if (!!hud) {
             this.masterContainer.removeChildren();
@@ -356,12 +356,12 @@ export class SceneManager {
             return;
         }
 
-        if (this.masterHudOverlay && (this.masterHudOverlay as IUpdateable).onUpdate) {
-            (this.masterHudOverlay as IUpdateable).onUpdate(dt, this.timeStamp);
+        if (this.masterHudOverlay && (this.masterHudOverlay as IUpdatable).onUpdate) {
+            (this.masterHudOverlay as IUpdatable).onUpdate(dt, this.timeStamp);
         }
 
-        if (this.currentScene.HudOverlay && (this.currentScene.HudOverlay as IUpdateable).onUpdate) {
-            (this.currentScene.HudOverlay as IUpdateable).onUpdate(dt, this.timeStamp);
+        if (this.currentScene.HudOverlay && (this.currentScene.HudOverlay as IUpdatable).onUpdate) {
+            (this.currentScene.HudOverlay as IUpdatable).onUpdate(dt, this.timeStamp);
         }
 
         this.currentScene.onUpdate(dt, this.timeStamp);

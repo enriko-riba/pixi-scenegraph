@@ -3,6 +3,6 @@
  * @param dt - ellapsed time delta
  * @param timestamp - total time, usefull for TWEEN.update and other libs depending on total time
  */
-export interface IUpdateable {
+export interface IUpdatable {
     onUpdate(dt: number, timestamp: number): void;
 }
