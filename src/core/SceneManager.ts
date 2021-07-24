@@ -356,11 +356,11 @@ export class SceneManager {
             return;
         }
 
-        if(this.masterHudOverlay && (this.masterHudOverlay as IUpdateable).onUpdate){
+        if (this.masterHudOverlay && (this.masterHudOverlay as IUpdateable).onUpdate) {
             (this.masterHudOverlay as IUpdateable).onUpdate(dt, this.timeStamp);
         }
-        
-        if(this.currentScene.HudOverlay && (this.currentScene.HudOverlay as IUpdateable).onUpdate){
+
+        if (this.currentScene.HudOverlay && (this.currentScene.HudOverlay as IUpdateable).onUpdate) {
             (this.currentScene.HudOverlay as IUpdateable).onUpdate(dt, this.timeStamp);
         }
 

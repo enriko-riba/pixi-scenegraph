@@ -77,14 +77,14 @@ export abstract class Scene extends Container implements IResizable, IUpdateable
     /**
      * Gets the scene hud overlay container.
      */
-    public get HudOverlay(): Container | Container & IUpdateable | null {
+    public get HudOverlay(): Container | (Container & IUpdateable) | null {
         return this.hud;
     }
 
     /**
      * Sets the scene hud overlay container.
      */
-    public set HudOverlay(hud: Container | null) {
+    public set HudOverlay(hud: Container | (Container & IUpdateable) | null) {
         this.hud = hud;
     }
 
