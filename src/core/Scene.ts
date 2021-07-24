@@ -1,11 +1,12 @@
 ﻿import { Container, DisplayObject } from 'pixi.js';
 import { IResizable } from './IResizable';
+import { IUpdateable } from './IUpdateable';
 
 /**
  *   Represents a scene instance.
  *   Only one scene at a time is rendered.
  */
-export abstract class Scene extends Container implements IResizable {
+export abstract class Scene extends Container implements IResizable, IUpdateable {
     public Name: string;
 
     private paused: boolean = false;
@@ -76,7 +77,7 @@ export abstract class Scene extends Container implements IResizable {
     /**
      * Gets the scene hud overlay container.
      */
-    public get HudOverlay(): Container | null {
+    public get HudOverlay(): Container | Container & IUpdateable | null {
         return this.hud;
     }
 

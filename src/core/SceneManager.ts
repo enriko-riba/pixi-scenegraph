@@ -5,6 +5,7 @@ import { DefaultScreenSizeCalculator } from './DefaultScreenSizeCalculator';
 import { Scene } from './Scene';
 import { IController } from './IController';
 import { IResizable } from './IResizable';
+import { IUpdateable } from './IUpdateable';
 
 /**
  *   Handles multiple scenes, scene activation, rendering and updates.
@@ -33,7 +34,7 @@ export class SceneManager {
      */
     private masterContainer: Container;
 
-    private masterHudOverlay: Container | (Container & IResizable);
+    private masterHudOverlay: Container | (Container & IResizable & IUpdateable);
     private modalDialog: Container | null = null;
     private currentScene: Scene | null = null;
     private lastScene: Scene;
@@ -353,6 +354,14 @@ export class SceneManager {
         //  exit if no scene or paused
         if (!this.currentScene || this.currentScene.isPaused()) {
             return;
+        }
+
+        if(this.masterHudOverlay && (this.masterHudOverlay as IUpdateable).onUpdate){
+            (this.masterHudOverlay as IUpdateable).onUpdate(dt, this.timeStamp);
+        }
+        
+        if(this.currentScene.HudOverlay && (this.currentScene.HudOverlay as IUpdateable).onUpdate){
+            (this.currentScene.HudOverlay as IUpdateable).onUpdate(dt, this.timeStamp);
         }
 
         this.currentScene.onUpdate(dt, this.timeStamp);
