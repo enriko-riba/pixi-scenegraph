@@ -1,12 +1,9 @@
 {
     "compilerOptions": {
         "moduleResolution": "node",
-        "target": "es6",
+        "target": "ESNext",
         "module": "ESNext",
-        "lib": [
-            "es2017",
-            "dom"
-        ],
+        "lib": ["ESNext", "DOM"],
         "outDir": "dist",
         "strict": false,
         "declaration": true,
@@ -25,10 +22,7 @@
         "noUnusedParameters": false,
         "removeComments": true,
         "sourceMap": true,
-        "typeRoots": [
-            "node_modules/@types",
-            "typings"
-        ],
+        "types": ["offscreencanvas"],        
         "paths": {
             "mini-signals": [
                 "node_modules/resource-loader/typings/mini-signals.d.ts"

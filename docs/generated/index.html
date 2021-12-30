@@ -1,199 +1,57 @@
-<!doctype html>
-<html class="default no-js">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>pixi-scenegraph</title>
-	<meta name="description" content="Documentation for pixi-scenegraph">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
-	<script async src="assets/js/search.js" id="search-script"></script>
-</head>
-<body>
-<header>
-	<div class="tsd-page-toolbar">
-		<div class="container">
-			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
-					<div class="field">
-						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
-						<input id="tsd-search-field" type="text" />
-					</div>
-					<ul class="results">
-						<li class="state loading">Preparing search index...</li>
-						<li class="state failure">The search index is not available</li>
-					</ul>
-					<a href="index.html" class="title">pixi-scenegraph</a>
-				</div>
-				<div class="table-cell" id="tsd-widgets">
-					<div id="tsd-filter">
-						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
-						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-						</div>
-					</div>
-					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="tsd-page-title">
-		<div class="container">
-			<h1>pixi-scenegraph</h1>
-		</div>
-	</div>
-</header>
-<div class="container container-main">
-	<div class="row">
-		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<a href="#scene-graph-engine-for-pixi" id="scene-graph-engine-for-pixi" style="color: inherit; text-decoration: none;">
-					<h1>Scene Graph Engine for PIXI</h1>
-				</a>
-				<p>Link to <a href="https://enriko-riba.github.io/pixi-scenegraph/generated/index.html">API documentation</a></p>
-				<a href="#what-is-pixi-scenegraph" id="what-is-pixi-scenegraph" style="color: inherit; text-decoration: none;">
-					<h2>What is pixi-scenegraph?</h2>
-				</a>
-				<p><strong>pixi-scenegraph</strong> is a package providing scene management features for <strong>PIXI v6</strong>
-				It allows defining scenes and switching between them e.g. MainMenuScene, GameScene, OptionsScene etc.</p>
-				<p>The following image represents the object hierarchy:</p>
-				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/Hierarchy.png" alt="Hierarchy" title="Object hierarchy"></p>
-				<p><strong>pixi-scenegraph</strong> is written in typescript and aimed for typescript users but not limited to typescript only projects.</p>
-				<blockquote>
-					<p>*.ts -&gt; import {SceneManager} from &quot;pixi-scenegraph&quot;;</p>
-				</blockquote>
-				<blockquote>
-					<p>*.js -&gt; var sg = require(&quot;pixi-scenegraph&quot;); let scm = new sg.SceneManager();</p>
-				</blockquote>
-				<a href="#what-is-a-scene" id="what-is-a-scene" style="color: inherit; text-decoration: none;">
-					<h3>What is a Scene</h3>
-				</a>
-				<p>A Scene is like a PIXI stage, a container holding all objects we want to display. Think of scenes as game state containers e.g: loading scene, menu scene, options scene, in-game scene etc. </p>
-				<p>A scene <strong>must have a unique name</strong> and the SceneManager can reference scenes by that name:</p>
-				<pre><code><span style="color: #001080">sceneManager</span><span style="color: #000000">.</span><span style="color: #795E26">ActivateScene</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;sceneName&quot;</span><span style="color: #000000">);</span>
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>pixi-scenegraph</title><meta name="description" content="Documentation for pixi-scenegraph"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">pixi-scenegraph</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>pixi-scenegraph</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#scene-graph-engine-for-pixi" id="scene-graph-engine-for-pixi" style="color: inherit; text-decoration: none;">
+  <h1>Scene Graph Engine for PIXI</h1>
+</a>
+<p>Link to <a href="https://enriko-riba.github.io/pixi-scenegraph/generated/index.html">API documentation</a></p>
+
+<a href="#what-is-pixi-scenegraph" id="what-is-pixi-scenegraph" style="color: inherit; text-decoration: none;">
+  <h2>What is pixi-scenegraph?</h2>
+</a>
+<p><strong>pixi-scenegraph</strong> is a package providing scene management features for <strong>PIXI v6</strong>
+It allows defining scenes and switching between them e.g. MainMenuScene, GameScene, OptionsScene etc.</p>
+<p>The following image represents the object hierarchy:</p>
+<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/Hierarchy.png" alt="Hierarchy" title="Object hierarchy"></p>
+<p><strong>pixi-scenegraph</strong> is written in typescript and aimed for typescript users but not limited to typescript only projects.</p>
+<blockquote>
+<p>*.ts -&gt; import {SceneManager} from &quot;pixi-scenegraph&quot;;</p>
+</blockquote>
+<blockquote>
+<p>*.js -&gt; var sg = require(&quot;pixi-scenegraph&quot;); let scm = new sg.SceneManager();</p>
+</blockquote>
+
+<a href="#what-is-a-scene" id="what-is-a-scene" style="color: inherit; text-decoration: none;">
+  <h3>What is a Scene</h3>
+</a>
+<p>A Scene is like a PIXI stage, a container holding all objects we want to display. Think of scenes as game state containers e.g: loading scene, menu scene, options scene, in-game scene etc. </p>
+<p>A scene <strong>must have a unique name</strong> and the SceneManager can reference scenes by that name:</p>
+<pre><code><span class="hl-0">sceneManager</span><span class="hl-1">.</span><span class="hl-2">ActivateScene</span><span class="hl-1">(</span><span class="hl-3">&quot;sceneName&quot;</span><span class="hl-1">);</span>
 </code></pre>
-				<p>Only one scene at a time is active and only the active scene is rendered. A scene can have a HudOverlay which is a container object rendered over the scene. In addition a MasterHudOverlay can be attached to the SceneManager. The MasterHudOverlay is rendered over all other content.</p>
-				<p>Z-Index</p>
-				<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/zindex.png" alt="z ordering" title="Z Ordering"></p>
-				<a href="#show-me-a-39hello-world39-example" id="show-me-a-39hello-world39-example" style="color: inherit; text-decoration: none;">
-					<h3>Show me a &#39;Hello World&#39; example</h3>
-				</a>
-				<pre><code><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">scm</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">SceneManager</span><span style="color: #000000">(</span><span style="color: #001080">renderOptions</span><span style="color: #000000">);</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myScene</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">MyScene</span><span style="color: #000000">();</span>
-<span style="color: #001080">scm</span><span style="color: #000000">.</span><span style="color: #795E26">AddScene</span><span style="color: #000000">(</span><span style="color: #001080">myScene</span><span style="color: #000000">);</span>
-<span style="color: #001080">scm</span><span style="color: #000000">.</span><span style="color: #795E26">ActivateScene</span><span style="color: #000000">(</span><span style="color: #001080">myScene</span><span style="color: #000000">); </span><span style="color: #008000">// or by name scm.ActivateScene(&#039;scene_name&#039;)</span>
+<p>Only one scene at a time is active and only the active scene is rendered. A scene can have a HudOverlay which is a container object rendered over the scene. In addition a MasterHudOverlay can be attached to the SceneManager. The MasterHudOverlay is rendered over all other content.</p>
+<p>Z-Index</p>
+<p><img src="https://enriko-riba.github.io/pixi-scenegraph/img/zindex.png" alt="z ordering" title="Z Ordering"></p>
+
+<a href="#show-me-a-39hello-world39-example" id="show-me-a-39hello-world39-example" style="color: inherit; text-decoration: none;">
+  <h3>Show me a &#39;Hello World&#39; example</h3>
+</a>
+<pre><code><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">scm</span><span class="hl-1"> = </span><span class="hl-4">new</span><span class="hl-1"> </span><span class="hl-2">SceneManager</span><span class="hl-1">(</span><span class="hl-0">renderOptions</span><span class="hl-1">);</span><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">myScene</span><span class="hl-1"> = </span><span class="hl-4">new</span><span class="hl-1"> </span><span class="hl-2">MyScene</span><span class="hl-1">();</span><br/><span class="hl-0">scm</span><span class="hl-1">.</span><span class="hl-2">AddScene</span><span class="hl-1">(</span><span class="hl-0">myScene</span><span class="hl-1">);</span><br/><span class="hl-0">scm</span><span class="hl-1">.</span><span class="hl-2">ActivateScene</span><span class="hl-1">(</span><span class="hl-0">myScene</span><span class="hl-1">); </span><span class="hl-6">// or by name scm.ActivateScene(&#39;scene_name&#39;)</span>
 </code></pre>
-				<a href="#how-do-i-switch-scenes" id="how-do-i-switch-scenes" style="color: inherit; text-decoration: none;">
-					<h3>How do I switch scenes?</h3>
-				</a>
-				<pre><code><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myScene1</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">MyScene1</span><span style="color: #000000">();     </span><span style="color: #008000">//  name id &#039;scene_1&#039;</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">myScene2</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">MyScene2</span><span style="color: #000000">();     </span><span style="color: #008000">//  name id &#039;scene_2&#039;</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">menuScene</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">MenuScene</span><span style="color: #000000">();   </span><span style="color: #008000">//  name id &#039;menu&#039;</span>
-<span style="color: #001080">scm</span><span style="color: #000000">.</span><span style="color: #795E26">AddScene</span><span style="color: #000000">(</span><span style="color: #001080">myScene1</span><span style="color: #000000">);</span>
-<span style="color: #001080">scm</span><span style="color: #000000">.</span><span style="color: #795E26">AddScene</span><span style="color: #000000">(</span><span style="color: #001080">myScene2</span><span style="color: #000000">);</span>
-<span style="color: #001080">scm</span><span style="color: #000000">.</span><span style="color: #795E26">AddScene</span><span style="color: #000000">(</span><span style="color: #001080">menuScene</span><span style="color: #000000">);</span>
-<span style="color: #001080">scm</span><span style="color: #000000">.</span><span style="color: #795E26">ActivateScene</span><span style="color: #000000">(</span><span style="color: #001080">menuScene</span><span style="color: #000000">);</span>
+
+<a href="#how-do-i-switch-scenes" id="how-do-i-switch-scenes" style="color: inherit; text-decoration: none;">
+  <h3>How do I switch scenes?</h3>
+</a>
+<pre><code><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">myScene1</span><span class="hl-1"> = </span><span class="hl-4">new</span><span class="hl-1"> </span><span class="hl-2">MyScene1</span><span class="hl-1">();     </span><span class="hl-6">//  name id &#39;scene_1&#39;</span><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">myScene2</span><span class="hl-1"> = </span><span class="hl-4">new</span><span class="hl-1"> </span><span class="hl-2">MyScene2</span><span class="hl-1">();     </span><span class="hl-6">//  name id &#39;scene_2&#39;</span><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">menuScene</span><span class="hl-1"> = </span><span class="hl-4">new</span><span class="hl-1"> </span><span class="hl-2">MenuScene</span><span class="hl-1">();   </span><span class="hl-6">//  name id &#39;menu&#39;</span><br/><span class="hl-0">scm</span><span class="hl-1">.</span><span class="hl-2">AddScene</span><span class="hl-1">(</span><span class="hl-0">myScene1</span><span class="hl-1">);</span><br/><span class="hl-0">scm</span><span class="hl-1">.</span><span class="hl-2">AddScene</span><span class="hl-1">(</span><span class="hl-0">myScene2</span><span class="hl-1">);</span><br/><span class="hl-0">scm</span><span class="hl-1">.</span><span class="hl-2">AddScene</span><span class="hl-1">(</span><span class="hl-0">menuScene</span><span class="hl-1">);</span><br/><span class="hl-0">scm</span><span class="hl-1">.</span><span class="hl-2">ActivateScene</span><span class="hl-1">(</span><span class="hl-0">menuScene</span><span class="hl-1">);</span>
 </code></pre>
-				<p>inside the MenuScene class:</p>
-				<pre><code><span style="color: #001080">btnStart</span><span style="color: #000000">.</span><span style="color: #795E26">onClick</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">sceneManager</span><span style="color: #000000">.</span><span style="color: #795E26">ActivateScene</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;scene_1&quot;</span><span style="color: #000000">);</span>
+<p>inside the MenuScene class:</p>
+<pre><code><span class="hl-0">btnStart</span><span class="hl-1">.</span><span class="hl-2">onClick</span><span class="hl-1"> = () </span><span class="hl-4">=&gt;</span><span class="hl-1"> </span><span class="hl-4">this</span><span class="hl-1">.</span><span class="hl-0">sceneManager</span><span class="hl-1">.</span><span class="hl-2">ActivateScene</span><span class="hl-1">(</span><span class="hl-3">&quot;scene_1&quot;</span><span class="hl-1">);</span>
 </code></pre>
-				<a href="#angular-7-based-example" id="angular-7-based-example" style="color: inherit; text-decoration: none;">
-					<h3>Angular 7 based example</h3>
-				</a>
-				<p><a href="https://github.com/enriko-riba/scenegraph-ng">git repository</a></p>
-				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
-					<h2>Documentation</h2>
-				</a>
-				<p><a href="https://enriko-riba.github.io/pixi-scenegraph/generated/index.html">API documentation</a></p>
-			</div>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-			<nav class="tsd-navigation primary">
-				<ul>
-					<li class=" ">
-						<a href="modules.html">Exports</a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="tsd-navigation secondary menu-sticky">
-				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="classes/defaultscreensizecalculator.html" class="tsd-kind-icon">Default<wbr>Screen<wbr>Size<wbr>Calculator</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/noresizescreensizecalculator.html" class="tsd-kind-icon">No<wbr>Resize<wbr>Screen<wbr>Size<wbr>Calculator</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/scene.html" class="tsd-kind-icon">Scene</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/scenemanager.html" class="tsd-kind-icon">Scene<wbr>Manager</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/icontroller.html" class="tsd-kind-icon">IController</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iresizable.html" class="tsd-kind-icon">IResizable</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iscreensizecalculator.html" class="tsd-kind-icon">IScreen<wbr>Size<wbr>Calculator</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/isize.html" class="tsd-kind-icon">ISize</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iupdatable.html" class="tsd-kind-icon">IUpdatable</a>
-					</li>
-					<li class=" tsd-kind-variable">
-						<a href="modules.html#version" class="tsd-kind-icon">VERSION</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-</div>
-<footer class="with-border-bottom">
-	<div class="container">
-		<h2>Legend</h2>
-		<div class="tsd-legend-group">
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
-			</ul>
-		</div>
-	</div>
-</footer>
-<div class="container tsd-generator">
-	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
-</div>
-<div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+
+<a href="#angular-7-based-example" id="angular-7-based-example" style="color: inherit; text-decoration: none;">
+  <h3>Angular 7 based example</h3>
+</a>
+<p><a href="https://github.com/enriko-riba/scenegraph-ng">git repository</a></p>
+
+<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+  <h2>Documentation</h2>
+</a>
+<p><a href="https://enriko-riba.github.io/pixi-scenegraph/generated/index.html">API documentation</a></p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-class"><a href="classes/DefaultScreenSizeCalculator.html" class="tsd-kind-icon">Default<wbr/>Screen<wbr/>Size<wbr/>Calculator</a></li><li class="tsd-kind-class"><a href="classes/NoResizeScreenSizeCalculator.html" class="tsd-kind-icon">No<wbr/>Resize<wbr/>Screen<wbr/>Size<wbr/>Calculator</a></li><li class="tsd-kind-class"><a href="classes/Scene.html" class="tsd-kind-icon">Scene</a></li><li class="tsd-kind-class"><a href="classes/SceneManager.html" class="tsd-kind-icon">Scene<wbr/>Manager</a></li><li class="tsd-kind-interface"><a href="interfaces/IController.html" class="tsd-kind-icon">IController</a></li><li class="tsd-kind-interface"><a href="interfaces/IResizable.html" class="tsd-kind-icon">IResizable</a></li><li class="tsd-kind-interface"><a href="interfaces/IScreenSizeCalculator.html" class="tsd-kind-icon">IScreen<wbr/>Size<wbr/>Calculator</a></li><li class="tsd-kind-interface"><a href="interfaces/ISize.html" class="tsd-kind-icon">ISize</a></li><li class="tsd-kind-interface"><a href="interfaces/IUpdatable.html" class="tsd-kind-icon">IUpdatable</a></li><li class="tsd-kind-variable"><a href="modules.html#VERSION" class="tsd-kind-icon">VERSION</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li><li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li><li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li><li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li><li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li><li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>

@@ -237,14 +237,16 @@ export class SceneManager {
      */
     public set MasterHudOverlay(hud: Container | (Container & IResizable & IUpdatable)) {
         this.masterHudOverlay = hud;
-        if (!!hud) {
-            this.masterContainer.removeChildren();
-            this.masterContainer.addChild(this.currentScene as Scene);
-            if (this.masterHudOverlay) {
-                this.masterContainer.addChild(this.masterHudOverlay);
-            }
-            this.resizeHandler();
+        this.masterContainer.removeChildren();
+        this.masterContainer.addChild(this.currentScene as Scene);
+        if (this.currentScene && this.currentScene.HudOverlay) {
+            this.masterContainer.addChild(this.currentScene.HudOverlay);
         }
+
+        if (this.masterHudOverlay) {
+            this.masterContainer.addChild(this.masterHudOverlay);
+        }
+        this.resizeHandler();
     }
 
     /**
