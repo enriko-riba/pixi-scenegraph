@@ -1,7 +1,7 @@
 {
     "name": "pixi-scenegraph",
-    "version": "2.0.10",
-    "description": "typescript scene engine for pixi.js 6.4",
+    "version": "2.1.0",
+    "description": "typescript scene engine for pixi.js 6.5",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "types": "dist/index.d.ts",
@@ -27,15 +27,15 @@
     "author": "Enriko Riba",
     "license": "MIT",
     "devDependencies": {
-        "prettier": "2.6.1",
+        "prettier": "2.7.1",
         "rimraf": "3.0.2",
-        "rollup": "2.70.1",
-        "rollup-plugin-typescript2": "0.31.1",
-        "typedoc": "0.22.12",
-        "typescript": "4.5.5",
-        "@types/offscreencanvas": "^2019.6.4"
+        "rollup": "2.77.0",
+        "rollup-plugin-typescript2": "0.32.1",
+        "typedoc": "0.23.8",
+        "typescript": "4.7.4",
+        "@types/offscreencanvas": "^2019.7.0"
     },
     "dependencies": {
-        "pixi.js": "6.4.2"
+        "pixi.js": "6.5.0"
     }
 }
