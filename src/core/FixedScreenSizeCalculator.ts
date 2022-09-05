@@ -1,19 +1,21 @@
 import { IScreenSizeCalculator, ISize } from '..';
+
 const Aspect = {
     x: 1,
     y: 1,
 };
+
 /**
- * Simply returns the available screen size without any scaling.
+ * Returns the designed width and height with aspect ratio 1.
  */
 export class NoResizeScreenSizeCalculator implements IScreenSizeCalculator {
-    constructor() {}
+    constructor(private designedWidth: number, private designedHeight: number) {}
 
     /**
      * Returns the largest physical screen dimensions.
      */
     public CalculateSize(): ISize {
-        return { x: window.innerWidth, y: window.innerHeight };
+        return { x: this.designedWidth, y: this.designedHeight };
     }
 
     /**

@@ -1,7 +1,7 @@
 import { IScreenSizeCalculator, ISize } from '..';
 
 /**
- * Calculates viewport that horizontaly fits in the device and still preserves the designed aspect ratio.
+ * Calculates viewport that horizontally fits in the device and still preserves the designed aspect ratio.
  */
 export class DefaultScreenSizeCalculator implements IScreenSizeCalculator {
     private aspect: number;

@@ -55,7 +55,7 @@ export class SceneManager {
      *
      * @param options - the PIXI RendererOptions
      * @param screenSizeCalculator - custom screen size calculator implementation, if undefined the default is used
-     * @remarks The DefaultScreenSizeCalculator returns screen dimensions that horizontaly fit in available screen
+     * @remarks The DefaultScreenSizeCalculator returns screen dimensions that horizontally fit in available screen
      * space but preserve the aspect ratio of the given width and height values.
      */
     constructor(options: IApplicationOptions, screenSizeCalculator?: IScreenSizeCalculator) {
@@ -304,7 +304,7 @@ export class SceneManager {
     };
 
     /**
-     * Calculates and sets the mastercontainer scale.
+     * Calculates and sets the master container scale.
      */
     private adjustSceneSize(screenSizeCalculator: IScreenSizeCalculator) {
         const size = screenSizeCalculator.CalculateSize();
