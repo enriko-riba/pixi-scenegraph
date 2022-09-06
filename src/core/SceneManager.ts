@@ -1,7 +1,7 @@
 import { Container, Application, IApplicationOptions, Renderer, settings, RenderTexture, IRendererRenderOptions } from 'pixi.js';
 import { VERSION } from '../_version';
 import { IScreenSizeCalculator } from './IScreenSizeCalculator';
-import { DefaultScreenSizeCalculator } from './DefaultScreenSizeCalculator';
+import { DefaultScreenSizeCalculator } from './screen-size/DefaultScreenSizeCalculator';
 import { Scene } from './Scene';
 import { IController } from './IController';
 import { IResizable } from './IResizable';

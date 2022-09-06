@@ -49,8 +49,8 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
 
     /**
      * Fired on each animation frame
-     * @param dt - ellapsed time delta
-     * @param timestamp - total time, usefull for TWEEN.update and other libs depending on total time
+     * @param dt - elapsed time delta
+     * @param timestamp - total time, useful for TWEEN.update and other libs depending on total time
      */
     public onUpdate(dt: number, timestamp: number): void {
         // tslint ignore
@@ -115,8 +115,8 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
      * @param child PIXI.DisplayObject
      */
     public addChild<T extends DisplayObject[]>(...child: T): T[0] {
-        const dispObj = super.addChild(...child);
-        return dispObj;
+        const displayObject = super.addChild(...child);
+        return displayObject;
     }
 
     /**
@@ -125,8 +125,8 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
      * @param index position in the display object list where the child is inserted
      */
     public addChildAt<T extends DisplayObject>(child: T, index: number): T {
-        const dispObj = super.addChildAt(child, index);
-        return dispObj as T;
+        const displayObject = super.addChildAt(child, index);
+        return displayObject as T;
     }
 
     /**

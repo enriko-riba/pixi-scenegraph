@@ -1,8 +1,9 @@
 //  resizing
 export { ISize, IScreenSizeCalculator } from './core/IScreenSizeCalculator';
-export { DefaultScreenSizeCalculator } from './core/DefaultScreenSizeCalculator';
-export { NoResizeScreenSizeCalculator } from './core/NoResizeScreenSizeCalculator';
-export { FixedScreenSizeCalculator } from './core/FixedScreenSizeCalculator';
+export { DefaultScreenSizeCalculator } from './core/screen-size/DefaultScreenSizeCalculator';
+export { NoResizeScreenSizeCalculator } from './core/screen-size/NoResizeScreenSizeCalculator';
+export { FixedSizeCalculator } from './core/screen-size/FixedSizeCalculator';
+export { ContainerSizeCalculator } from './core/screen-size/ContainerSizeCalculator';
 
 //  scenegraph
 export { SceneManager } from './core/SceneManager';

@@ -1,8 +1,10 @@
-import { IScreenSizeCalculator, ISize } from '..';
+import { IScreenSizeCalculator, ISize } from '../IScreenSizeCalculator';
+
 const Aspect = {
     x: 1,
     y: 1,
 };
+
 /**
  * Simply returns the available screen size without any scaling.
  */

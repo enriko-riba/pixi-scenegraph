@@ -1,4 +1,4 @@
-import { IScreenSizeCalculator, ISize } from '..';
+import { IScreenSizeCalculator, ISize } from '../IScreenSizeCalculator';
 
 /**
  * Calculates viewport that horizontally fits in the device and still preserves the designed aspect ratio.
