@@ -53,22 +53,21 @@ export class SceneManager {
     /**
      * Creates a new SceneManager instance.
      *
-     * @param options - the PIXI ApplicationOptions
+     * @param pixiApplication - the initialized PIXI Application
+     * @param designWidth - the design width, if undefined the window.innerWidth is used
+     * @param designHeight - the design height, if undefined the window.innerHeight is used
      * @param screenSizeCalculator - custom screen size calculator implementation, if undefined the default is used
      * @remarks The DefaultScreenSizeCalculator returns screen dimensions that horizontally fit in available screen
      * space but preserve the aspect ratio of the given width and height values.
      */
-    constructor(options?: Partial<ApplicationOptions>, screenSizeCalculator?: IScreenSizeCalculator) {
+    constructor(pixiApplication: Application, designWidth?: number, designHeight?: number, screenSizeCalculator?: IScreenSizeCalculator) {
         SceneManager.logVersion();
-
         this.masterContainer = new Container();
-
-        this.app = new Application();
-        this.app.init(options);
+        this.app = pixiApplication;
         this.app.ticker.add(this.onRender, this);
         this.app.stage = this.masterContainer;
-        this.designWidth = options?.width || window.innerWidth;
-        this.designHeight = options?.height || window.innerHeight;
+        this.designWidth = designWidth || window.innerWidth;
+        this.designHeight = designHeight || window.innerHeight;
         this.screenSizeCalculator = screenSizeCalculator || new DefaultScreenSizeCalculator(this.designWidth, this.designHeight);
         window.removeEventListener('resize', this.resizeHandler);
         window.addEventListener('resize', this.resizeHandler, true);

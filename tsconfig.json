@@ -22,7 +22,7 @@
         "noUnusedParameters": false,
         "removeComments": true,
         
-        "types": ["offscreencanvas"],        
+        //"types": ["offscreencanvas"],        
         "paths": {
             "mini-signals": [
                 "node_modules/resource-loader/typings/mini-signals.d.ts"
