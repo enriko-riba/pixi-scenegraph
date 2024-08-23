@@ -1,4 +1,4 @@
-import { Container, Application, IApplicationOptions, Renderer, settings, RenderTexture, IRendererRenderOptions } from 'pixi.js';
+import { Container, Application, ApplicationOptions, Renderer, RenderTexture, RendererOptions } from 'pixi.js';
 import { VERSION } from '../_version';
 import { IScreenSizeCalculator } from './IScreenSizeCalculator';
 import { DefaultScreenSizeCalculator } from './screen-size/DefaultScreenSizeCalculator';
@@ -53,23 +53,22 @@ export class SceneManager {
     /**
      * Creates a new SceneManager instance.
      *
-     * @param options - the PIXI RendererOptions
+     * @param options - the PIXI ApplicationOptions
      * @param screenSizeCalculator - custom screen size calculator implementation, if undefined the default is used
      * @remarks The DefaultScreenSizeCalculator returns screen dimensions that horizontally fit in available screen
      * space but preserve the aspect ratio of the given width and height values.
      */
-    constructor(options: IApplicationOptions, screenSizeCalculator?: IScreenSizeCalculator) {
+    constructor(options?: Partial<ApplicationOptions>, screenSizeCalculator?: IScreenSizeCalculator) {
         SceneManager.logVersion();
 
         this.masterContainer = new Container();
 
-        this.app = new Application(options);
+        this.app = new Application();
+        this.app.init(options);
         this.app.ticker.add(this.onRender, this);
         this.app.stage = this.masterContainer;
-        console.info('pixi-scenegraph: renderer plugins: ', this.app.renderer.plugins);
-
-        this.designWidth = options.width || window.innerWidth;
-        this.designHeight = options.height || window.innerHeight;
+        this.designWidth = options?.width || window.innerWidth;
+        this.designHeight = options?.height || window.innerHeight;
         this.screenSizeCalculator = screenSizeCalculator || new DefaultScreenSizeCalculator(this.designWidth, this.designHeight);
         window.removeEventListener('resize', this.resizeHandler);
         window.addEventListener('resize', this.resizeHandler, true);
@@ -130,7 +129,7 @@ export class SceneManager {
     public RemoveAllScenes(): void {
         this.scenes.forEach((scene: Scene) => {
             scene.onDestroy();
-            scene.destroy({ children: true, texture: true, baseTexture: true });
+            scene.destroy({ children: true, texture: true, textureSource: true });
         });
         this.scenes = [];
         this.currentScene = null;
@@ -144,7 +143,7 @@ export class SceneManager {
             return item !== scene;
         });
         scene.onDestroy();
-        scene.destroy({ children: true, texture: true, baseTexture: true });
+        scene.destroy({ children: true, texture: true, textureSource: true });
     }
 
     /**
@@ -199,7 +198,7 @@ export class SceneManager {
         this.startTime = 0;
         this.lastScene = (this.currentScene !== scene ? this.currentScene : this.lastScene) as Scene;
         this.currentScene = scene;
-        this.app.renderer.backgroundColor = scene.BackGroundColor;
+        this.app.renderer.background.color = scene.BackGroundColor;
         this.resizeHandler();
 
         scene.onActivate();
@@ -214,8 +213,6 @@ export class SceneManager {
         if (this.masterHudOverlay) {
             this.masterContainer.addChild(this.masterHudOverlay);
         }
-
-        settings.RESOLUTION = window.devicePixelRatio;
     }
 
     /**
@@ -276,14 +273,14 @@ export class SceneManager {
     /**
      * Renders the current scene in a rendertexture.
      */
-    public CaptureScene(): RenderTexture {
-        console.log(`Capturing scene, width: ${this.app.renderer.width}, height: ${this.app.renderer.height}`);
-        const options: IRendererRenderOptions = {
-            renderTexture: RenderTexture.create({ width: this.app.renderer.width, height: this.app.renderer.height }),
-        };
-        this.app.renderer.render(this.currentScene as Scene, options);
-        return options.renderTexture as RenderTexture;
-    }
+    // public CaptureScene(): RenderTexture {
+    //     console.log(`Capturing scene, width: ${this.app.renderer.width}, height: ${this.app.renderer.height}`);
+    //     const options: RendererOptions = {
+    //         renderTexture: RenderTexture.create({ width: this.app.renderer.width, height: this.app.renderer.height }),
+    //     };
+    //     this.app.renderer.render(this.currentScene as Scene, options);
+    //     return options.renderTexture as RenderTexture;
+    // }
 
     /**
      *   Cancels the animationFrame loop, removes all scenes and finally destroys the renderer.
@@ -299,7 +296,7 @@ export class SceneManager {
         this.app.destroy(true, {
             children: true,
             texture: true,
-            baseTexture: true,
+            textureSource: true,
         });
     };
 

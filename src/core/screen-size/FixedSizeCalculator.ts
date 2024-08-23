@@ -9,7 +9,10 @@ const Aspect = {
  * Returns the designed width and height with aspect ratio 1.
  */
 export class FixedSizeCalculator implements IScreenSizeCalculator {
-    constructor(private designedWidth: number, private designedHeight: number) {}
+    constructor(
+        private designedWidth: number,
+        private designedHeight: number,
+    ) {}
 
     /**
      * Returns the designed dimensions.

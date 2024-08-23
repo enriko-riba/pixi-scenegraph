@@ -5,7 +5,10 @@ import { IScreenSizeCalculator, ISize } from '../IScreenSizeCalculator';
  */
 export class DefaultScreenSizeCalculator implements IScreenSizeCalculator {
     private aspect: number;
-    constructor(protected designedWidth: number, protected designedHeight: number) {
+    constructor(
+        protected designedWidth: number,
+        protected designedHeight: number,
+    ) {
         this.aspect = this.designedWidth / this.designedHeight;
     }
 

@@ -21,7 +21,7 @@
         "experimentalDecorators": true,
         "noUnusedParameters": false,
         "removeComments": true,
-        "sourceMap": true,
+        
         "types": ["offscreencanvas"],        
         "paths": {
             "mini-signals": [

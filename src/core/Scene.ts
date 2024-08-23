@@ -1,4 +1,4 @@
-﻿import { Container, DisplayObject } from 'pixi.js';
+﻿import { Container } from 'pixi.js';
 import { IResizable } from './IResizable';
 import { IUpdatable } from './IUpdatable';
 
@@ -91,7 +91,7 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
     /**
      * Invokes the action on every child display object, no matter how deep they are nested.
      */
-    public enumerateChilds(action: (d: DisplayObject) => void): void {
+    public enumerateChilds(action: (d: Container) => void): void {
         const container = this;
         Scene.enumerateChilds(container, action);
     }
@@ -99,7 +99,7 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
     /**
      * Invokes the action on every child display object, no matter how deep they are nested.
      */
-    public static enumerateChilds(container: Container, action: (d: DisplayObject) => void): void {
+    public static enumerateChilds(container: Container, action: (d: Container) => void): void {
         for (let i = 0; i < container.children.length; i++) {
             let c = container.children[i] as Container;
             action(c);
@@ -112,19 +112,19 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
     /**
      * Adds one or more children to the container.
      * Multiple items can be added like: `myScene.addChild(childOne, childTwo, childThree)`
-     * @param child PIXI.DisplayObject
+     * @param child PIXI.Container
      */
-    public addChild<T extends DisplayObject[]>(...child: T): T[0] {
+    public addChild<T extends Container[]>(...child: T): T[0] {
         const displayObject = super.addChild(...child);
         return displayObject;
     }
 
     /**
      * Adds a child object to the scene.
-     * @param child PIXI.DisplayObject
+     * @param child PIXI.Container
      * @param index position in the display object list where the child is inserted
      */
-    public addChildAt<T extends DisplayObject>(child: T, index: number): T {
+    public addChildAt<T extends Container>(child: T, index: number): T {
         const displayObject = super.addChildAt(child, index);
         return displayObject as T;
     }
