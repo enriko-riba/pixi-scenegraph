@@ -1,4 +1,4 @@
-import { Container, Application, ApplicationOptions, Renderer, RenderTexture, RendererOptions } from 'pixi.js';
+import { Container, Application, Renderer } from 'pixi.js';
 import { VERSION } from '../_version';
 import { IScreenSizeCalculator } from './IScreenSizeCalculator';
 import { DefaultScreenSizeCalculator } from './screen-size/DefaultScreenSizeCalculator';
@@ -230,6 +230,7 @@ export class SceneManager {
 
     /**
      * Sets the master HUD overlay container.
+     * Note: in order to set a master hud overlay, a scene must be active.
      */
     public set MasterHudOverlay(hud: Container | (Container & IResizable & IUpdatable)) {
         this.masterHudOverlay = hud;

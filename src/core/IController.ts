@@ -19,7 +19,7 @@ export interface IController {
 
     /**
      * Invoked once per frame, depending on scope.
-     * @param dt - the ellapsed time in milliseconds
+     * @param dt - the elapsed time in milliseconds
      * @param activeScene - the current scene
      */
     update(dt: number, activeScene: Scene | null): void;

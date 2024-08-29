@@ -34,6 +34,7 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
 
     /**
      * Fired every time the scene is deactivated.
+     * Note: this function has no implementation, override in derived class to add functionality.
      */
     public onDeactivate(): void {
         // tslint ignore
@@ -41,6 +42,7 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
 
     /**
      * Fired every time the window resizes, the scene is about to be activated (before `onActivate()`) and after a MasterHudOverlay is set.
+     * Note: this function has no implementation, override in derived class to add functionality.
      * @remarks Note that this function is fired only for the current (active) scene!
      */
     public onResize(): void {
@@ -48,7 +50,8 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
     }
 
     /**
-     * Fired on each animation frame
+     * Fired on each animation frame.
+     * Note: this function has no implementation, override in derived class to add functionality.
      * @param dt - elapsed time delta
      * @param timestamp - total time, useful for TWEEN.update and other libs depending on total time
      */
@@ -56,6 +59,10 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
         // tslint ignore
     }
 
+    /**
+     * Fired when the scene is destroyed.
+     * Note: this function has no implementation, override in derived class to add functionality.
+     */
     public onDestroy(): void {
         // tslint ignore
     }
@@ -91,20 +98,20 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
     /**
      * Invokes the action on every child display object, no matter how deep they are nested.
      */
-    public enumerateChilds(action: (d: Container) => void): void {
+    public enumerateChildren(action: (d: Container) => void): void {
         const container = this;
-        Scene.enumerateChilds(container, action);
+        Scene.enumerateChildren(container, action);
     }
 
     /**
      * Invokes the action on every child display object, no matter how deep they are nested.
      */
-    public static enumerateChilds(container: Container, action: (d: Container) => void): void {
+    public static enumerateChildren(container: Container, action: (d: Container) => void): void {
         for (let i = 0; i < container.children.length; i++) {
             let c = container.children[i] as Container;
             action(c);
             if (c.children && c.children.length > 0) {
-                Scene.enumerateChilds(c, action);
+                Scene.enumerateChildren(c, action);
             }
         }
     }
