@@ -1,4 +1,4 @@
-﻿import { Container } from 'pixi.js';
+﻿import { Color, ColorSource, Container, ContainerChild, IRenderLayer } from 'pixi.js';
 import { IResizable } from './IResizable';
 import { IUpdatable } from './IUpdatable';
 
@@ -11,7 +11,7 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
 
     private paused: boolean = false;
     private hud: Container | null = null;
-    private backgroundColor: number;
+    private backgroundColor: Color;
     private clearValue: boolean = true;
 
     /**
@@ -20,7 +20,7 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
      */
     constructor(name: string) {
         super();
-        this.backgroundColor = 0x0;
+        this.backgroundColor = new Color(0x0);
         this.Name = name;
     }
 
@@ -70,15 +70,15 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
     /**
      * Gets the scene background color.
      */
-    public get BackGroundColor(): number {
+    public get BackGroundColor(): Color {
         return this.backgroundColor;
     }
 
     /**
      * Sets the scene background color.
      */
-    public set BackGroundColor(color: number) {
-        this.backgroundColor = color;
+    public set BackGroundColor(color: ColorSource) {
+        this.backgroundColor = new Color(color);
     }
 
     /**
@@ -121,7 +121,7 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
      * Multiple items can be added like: `myScene.addChild(childOne, childTwo, childThree)`
      * @param child PIXI.Container
      */
-    public addChild<T extends Container[]>(...child: T): T[0] {
+    public addChild<T extends (ContainerChild | IRenderLayer)[]>(...child: T): T[0] {
         const displayObject = super.addChild(...child);
         return displayObject;
     }
@@ -131,7 +131,7 @@ export abstract class Scene extends Container implements IResizable, IUpdatable 
      * @param child PIXI.Container
      * @param index position in the display object list where the child is inserted
      */
-    public addChildAt<T extends Container>(child: T, index: number): T {
+    public addChildAt<T extends ContainerChild | IRenderLayer>(child: T, index: number): T {
         const displayObject = super.addChildAt(child, index);
         return displayObject as T;
     }

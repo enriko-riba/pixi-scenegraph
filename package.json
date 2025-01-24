@@ -1,7 +1,7 @@
 {
     "name": "pixi-scenegraph",
-    "version": "2.7.0",
-    "description": "typescript scene engine for pixi.js 8.3.3",
+    "version": "2.9.0",
+    "description": "typescript scene engine for pixi.js 8.7",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "types": "dist/index.d.ts",
@@ -12,7 +12,8 @@
         "format": "npx  prettier --write .",
         "prePublish": "npm run _version && npm run format && npm run build && npm run doc",
         "build": "npm run _clear && npx rollup -c rollup.config.ts --configPlugin typescript",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "update": "npx npm-check-updates -u && npm install"
     },
     "keywords": [
         "pixi",
@@ -27,16 +28,16 @@
     "author": "Enriko Riba",
     "license": "MIT",
     "devDependencies": {
-        "@rollup/plugin-typescript": "11.1.6",
+        "@rollup/plugin-typescript": "12.1.2",
         "@types/offscreencanvas": "^2019.7.3",
-        "prettier": "3.3.3",
+        "prettier": "3.4.2",
         "rimraf": "6.0.1",
-        "rollup": "4.21.0",
-        "tslib": "^2.6.3",
-        "typedoc": "0.26.6",
-        "typescript": "5.5.4"
+        "rollup": "4.32.0",
+        "tslib": "^2.8.1",
+        "typedoc": "0.27.6",
+        "typescript": "5.7.3"
     },
     "peerDependencies": {
-        "pixi.js": "^8.3.3"
+        "pixi.js": "^8.7.2"
     }
 }

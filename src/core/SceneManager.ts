@@ -247,6 +247,13 @@ export class SceneManager {
     }
 
     /**
+     * Returns true if a modal dialog is open.
+     */
+    public get IsDialogOpen(): boolean {
+        return this.modalDialog !== null;
+    }
+
+    /**
      * Adds a modal dialog over the scene.
      */
     public ShowDialog(dialog: Container) {
